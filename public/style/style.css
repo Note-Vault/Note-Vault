@@ -1,0 +1,91 @@
+.hidden {
+    display: none;
+}
+#title{
+    background-color: #ff4c68;
+    color: white;
+    font-size: 25px;
+}
+.testimonial-section{
+    height:auto;
+    background-color: #ef8172;
+    color: white;
+    font-size: 25px;
+}
+.testimonial-message{
+    background-color: antiquewhite;
+}
+.mtop-4, .my-4 {
+    margin-top: 7.5rem!important;
+    padding: 33px;
+}
+.login-form{
+    font-size: 30px;
+}
+.login-section{
+    color: white;
+    background-color: antiquewhite;
+}
+.group-login ::placeholder {
+    text-align: center;
+    font-size: 30px;
+}
+.login-label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 50px;
+}
+.control-form{
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+}
+.login-button {
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin-top: 20px;
+    font-size: inherit;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.login-heading {
+    font-size: 4.5rem;
+    font-weight: bolder;
+    color: darkslategray;
+}
+.group-login {
+    margin-bottom: 1rem;
+    width: 115%;
+}
+.login-button:hover{
+    background-color: gainsboro;
+    color: darkblue;
+}
+.note-nav{
+    background-color:#ff4c68;
+}
+.note-tag{
+    font-weight: 700;
+    background-color: chartreuse;
+    color: floralwhite;
+    border-radius: 3%;
+}
+.note-description{
+    background-color: aquamarine;
+    font-weight: 300;
+}
+.modal-content{
+    top: 100px;
+}
+.modal-label{
+    font-size:xx-large;
+    font-weight: 700;
+}
+.modal-body{
+    background-color: bisque;
+    color: darkslategray;
+}
+.modal-header{
+    background-color: burlywood;
+}

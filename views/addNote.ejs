@@ -1,0 +1,8 @@
+<%- include("partials/header") -%>
+<h1 class="text-center">Add a note</h1>
+<form method="post" action="/note/add">
+<input type="text" name="tag" placeholder="tag" required><br>
+<input type="text" name="description" placeholder="description" required><br>
+<button type="submit"> Add Note</button>
+</form>
+<%- include("partials/footer") -%>

@@ -1,0 +1,46 @@
+<%- include("partials/header") -%>
+<section class="login-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="login-heading">Create Account</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white text-center">
+        <div class="row align-items-center mtop-4 login-form rounded">
+            <div class="col-lg-4 ">
+                <img class="img-fluid" src="/image/earth.jpg" alt="login" style="height: 100%;">
+            </div>
+            <div class="col-lg-8">
+                <% if (errorMessage) { %>
+                <p style="color: red;"><%= errorMessage %></p>
+                <% } %>
+                <form method="post" action="/user/register" class="rounded"
+                    style="background-color: #ff4c68; margin-top: 20px;">
+                    <div style="display: inline-block;">
+                        <div class="form-group group-login">
+                            <label class="login-label" for="exampleInputName1">Name</label>
+                            <input type="text" class="form-control control-form" id="exampleInputName1"
+                                aria-describedby="emailHelp" placeholder="Enter name" name="name" required>
+                        </div>
+                        <div class="form-group group-login">
+                            <label class="login-label" for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control control-form" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+                        </div>
+                        <div class="form-group group-login">
+                            <label class="login-label" for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control control-form" id="exampleInputPassword1"
+                                placeholder="Password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary login-button">Create Account</button>
+                    </div>
+                </form>
+                <a class="text-white" href="/user/login"><button
+                        class="btn btn-success login-button bg-success text-white">Login Here</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("partials/footer") -%>
