@@ -1,91 +1,79 @@
 .hidden {
-    display: none;
+	display: none;
 }
-#title{
-    background-color: #ff4c68;
-    color: white;
-    font-size: 25px;
+
+#title {
+	background-color: #ff4c68;
+	color: white;
+	font-size: 25px;
 }
-.testimonial-section{
-    height:auto;
-    background-color: #ef8172;
-    color: white;
-    font-size: 25px;
+
+.testimonial-section {
+	height: auto;
+	background-color: #ef8172;
+	color: white;
+	font-size: 25px;
 }
-.testimonial-message{
-    background-color: antiquewhite;
+
+.testimonial-message {
+	background-color: antiquewhite;
 }
-.mtop-4, .my-4 {
-    margin-top: 7.5rem!important;
-    padding: 33px;
+
+.mtop-4,
+.my-4 {
+	margin-top: 7.5rem !important;
+	padding: 33px;
 }
-.login-form{
-    font-size: 30px;
+
+.container-log {
+	display: flex;
+	align-items: center;
+	height: 100vh;
 }
-.login-section{
-    color: white;
-    background-color: antiquewhite;
+
+.w-half {
+	width: 50%;
 }
-.group-login ::placeholder {
-    text-align: center;
-    font-size: 30px;
+
+.center {
+	width: 100%;
+	margin: 0 auto;
 }
-.login-label{
-    display: inline-block;
-    margin-bottom: .5rem;
-    font-size: 50px;
+
+.auth-bg {
+	height: 100vh;
 }
-.control-form{
-    text-align: center;
-    font-size: 30px;
-    width: 100%;
+
+.note-nav {
+	background-color: #ff4c68;
 }
-.login-button {
-    background-color: white;
-    color: black;
-    width: 80%;
-    margin-top: 20px;
-    font-size: inherit;
-    font-weight: 600;
-    margin-bottom: 25px;
+
+.note-tag {
+	font-weight: 700;
+	background-color: chartreuse;
+	color: floralwhite;
+	border-radius: 3%;
 }
-.login-heading {
-    font-size: 4.5rem;
-    font-weight: bolder;
-    color: darkslategray;
+
+.note-description {
+	background-color: aquamarine;
+	font-weight: 300;
 }
-.group-login {
-    margin-bottom: 1rem;
-    width: 115%;
+
+.modal-content {
+	top: 100px;
 }
-.login-button:hover{
-    background-color: gainsboro;
-    color: darkblue;
+
+.modal-label {
+	font-size: xx-large;
+	font-weight: 700;
 }
-.note-nav{
-    background-color:#ff4c68;
+
+.modal-body {
+	background-color: bisque;
+	color: darkslategray;
 }
-.note-tag{
-    font-weight: 700;
-    background-color: chartreuse;
-    color: floralwhite;
-    border-radius: 3%;
-}
-.note-description{
-    background-color: aquamarine;
-    font-weight: 300;
-}
-.modal-content{
-    top: 100px;
-}
-.modal-label{
-    font-size:xx-large;
-    font-weight: 700;
-}
-.modal-body{
-    background-color: bisque;
-    color: darkslategray;
-}
-.modal-header{
-    background-color: burlywood;
+
+.modal-header {
+	background-color: burlywood;
 }
