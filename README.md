@@ -108,15 +108,12 @@ To get started, simply clone the repository and open the `terminal` in your code
 
 ## 🤝 Our Contributors
 
-<details>
-  <summary>Contributors</summary>
-    <div>
+  <div>
       <a href="https://github.com/Note-Vault/Note-Vault/graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=MAVRICK-1/e-commerce_website"/>
+      <img src="https://contrib.rocks/image?repo=Note-Vault/Note-Vault"/>
       </a>
-    </div>
-</details>
-
+  </div>
+    <br>
 Thank you for your interest in contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
 
 We value the time and effort you put into contributing, and we look forward to reviewing and merging your contributions. Join us on this exciting journey of creativity and collaboration, and let your projects shine on NestOndc!
