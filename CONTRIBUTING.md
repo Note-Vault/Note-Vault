@@ -14,7 +14,6 @@ Thank you for considering contributing to Note-Vault. We welcome contributions f
 - [Push Local Changes](#push-local-changes)
 - [Pull Request](#pull-request)
 - [Review](#review)
-- [Other Ways to Contribute](#other-ways-to-contribute)
 
 ## First Time Contributor
 
