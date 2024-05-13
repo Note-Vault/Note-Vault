@@ -77,3 +77,21 @@
 .modal-header {
 	background-color: burlywood;
 }
+
+@media (max-width: 768px) {
+	.container-log {
+		flex-direction: column;
+	}
+	.w-half {
+		width: 100%;
+	}
+	.auth-bg {
+		height: 18%;
+	}
+	.p-5 {
+		padding: 0rem !important;
+	}
+	.offset-5 {
+		margin-left: 8rem !important;
+	}
+}
