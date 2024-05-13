@@ -2,8 +2,12 @@ import express from 'express';
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/userSchema.js";
+import { config as configDotenv } from "dotenv";
+configDotenv();
 
 const router = express.Router();
+
+console.log(process.env.JWTSECRETKEY)
 
 // GET Register Page
 router.get("/user/register", (req, res) => {

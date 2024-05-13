@@ -11,15 +11,15 @@ configDotenv();
 var noteMessage = false;
 
 //Declaring all the routes
-import homeRoute from "./routes/home.js";
-import addRoute from "./routes/add.js";
-import deleteRoute from "./routes/delete.js";
-import loginRoute from "./routes/login.js";
-import logoutRoute from "./routes/logout.js";
-import registerRoute from "./routes/register.js";
-import searchRoute from "./routes/search.js";
-import showRoute from "./routes/show.js";
-import updateRoute from "./routes/update.js";
+import homeRoute from "./src/routes/home.js";
+import addRoute from "./src/routes/add.js";
+import deleteRoute from "./src/routes/delete.js";
+import loginRoute from "./src/routes/login.js";
+import logoutRoute from "./src/routes/logout.js";
+import registerRoute from "./src/routes/register.js";
+import searchRoute from "./src/routes/search.js";
+import showRoute from "./src/routes/show.js";
+import updateRoute from "./src/routes/update.js";
 
 const app = express();
 const port = 3000; // Change this to the desired port number
@@ -47,7 +47,7 @@ app.use("", showRoute);
 app.use("", updateRoute);
 
 mongoose
-    .connect(process.env.MONGODB)
+    .connect(process.env.MONGODBURI)
     .then(() => {
         console.log("Connected to MongoDB");
     })

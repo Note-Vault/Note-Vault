@@ -3,6 +3,8 @@ import express from 'express';
 import jwt from "jsonwebtoken";
 import isAuthenticatedLogin from "../controllers/isAuthenticatedLogin.js";
 import User from "../models/userSchema.js"; // Assuming User is exported as default from userSchema.js
+import { config as configDotenv } from "dotenv";
+configDotenv();
 
 const router = express.Router();
 
