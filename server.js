@@ -119,6 +119,34 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
+// Route to download all notes as PDF
+app.get("/note/download/pdf", isAuthenticated, async (req, res) => {
+  try {
+    const userId = req.userID;
+    const userNotes = await Notebook.find({ user: userId });
+
+    // Create a new PDF document
+    const doc = new PDFDocument();
+
+    // Add each note to the PDF
+    userNotes.forEach((note) => {
+      doc.text(`Tag: ${note.tag}`);
+      doc.text(`Description: ${note.description}`);
+      doc.moveDown();
+    });
+
+    // Finalize the PDF and send it as a response
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment; filename="user_notes.pdf"');
+    doc.pipe(res);
+    doc.end();
+  } catch (error) {
+    console.error('Error generating PDF:', error);
+    res.status(500).send('Error generating PDF');
+  }
+});
+
+
 const isAuthenticatedlogin = (req, res, next) => {
   const token = req.cookies.token;
   if (token) {
