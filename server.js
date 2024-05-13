@@ -72,6 +72,12 @@ const notebookSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+  createdAt: {
+    type: String,
+    default: function() {
+        return new Date().toLocaleString();
+    }
+  }
 });
 
 const Notebook = mongoose.model("Notebook", notebookSchema);
