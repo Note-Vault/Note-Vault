@@ -74,9 +74,15 @@ const notebookSchema = new mongoose.Schema({
   },
   createdAt: {
     type: String,
-    default: function() {
-        return new Date().toLocaleString();
+    default: function () {
+      const date = new Date();
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      return date.toLocaleDateString('en-GB', options).replace(/\//g, '-') + '.' + date.toLocaleTimeString();
     }
+  },
+
+  finishDate: {
+    type: String
   }
 });
 
@@ -332,13 +338,15 @@ app.get("/note/add", (req, res) => {
 
 // POST - Add the note in the DB of the current user
 app.post("/note/add", isAuthenticated, (req, res) => {
-  const { tag, description } = req.body;
+  const { tag, description, finishDate } = req.body;
   const userId = req.userID; // Assuming you have set the user object in req.user during authentication
   // Create a new notebook document
+  const finishDateString = new Date(finishDate).toISOString().split('T')[0];
   const notebook = new Notebook({
     tag,
     description,
     user: userId,
+    finishDate: finishDateString
   });
   // Save the notebook to the database
   notebook
