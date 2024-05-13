@@ -77,7 +77,7 @@ const notebookSchema = new mongoose.Schema({
     default: function () {
       const date = new Date();
       const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-      return date.toLocaleDateString('en-GB', options).replace(/\//g, '-') + '.' + date.toLocaleTimeString();
+      return date.toLocaleDateString('en-GB', options).replace(/\//g, '-') + ' ' + date.toLocaleTimeString();
     }
   },
 
