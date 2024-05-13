@@ -1,46 +1,67 @@
 <%- include("partials/header") -%>
-<section class="login-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="login-heading">Create Account</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-white text-center">
-        <div class="row align-items-center mtop-4 login-form rounded">
-            <div class="col-lg-4 ">
-                <img class="img-fluid" src="/image/earth.jpg" alt="login" style="height: 100%;">
-            </div>
-            <div class="col-lg-8">
-                <% if (errorMessage) { %>
-                <p style="color: red;"><%= errorMessage %></p>
-                <% } %>
-                <form method="post" action="/user/register" class="rounded"
-                    style="background-color: #ff4c68; margin-top: 20px;">
-                    <div style="display: inline-block;">
-                        <div class="form-group group-login">
-                            <label class="login-label" for="exampleInputName1">Name</label>
-                            <input type="text" class="form-control control-form" id="exampleInputName1"
-                                aria-describedby="emailHelp" placeholder="Enter name" name="name" required>
-                        </div>
-                        <div class="form-group group-login">
-                            <label class="login-label" for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control control-form" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
-                        </div>
-                        <div class="form-group group-login">
-                            <label class="login-label" for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control control-form" id="exampleInputPassword1"
-                                placeholder="Password" name="password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary login-button">Create Account</button>
-                    </div>
-                </form>
-                <a class="text-white" href="/user/login"><button
-                        class="btn btn-success login-button bg-success text-white">Login Here</button></a>
-            </div>
-        </div>
-    </div>
+
+<section class="login">
+	<div class="container-log">
+		<img class="auth-bg w-half img-fluid" src="/image/signin.jpg" alt="login" />
+
+		<div class="row mt-3 w-half">
+			<h1 class="offset-5 mb-3">Signup</h1>
+			<div class="col-7 offset-3">
+				<% if (errorMessage) { %>
+				<p style="color: red"><%= errorMessage %></p>
+				<% } %>
+				<form method="post" action="/user/register">
+					<div class="mb-3">
+						<label class="form-label" for="name">Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="name"
+							placeholder="User"
+							name="name"
+							required
+						/>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="email">Email ID</label>
+						<input
+							type="email"
+							class="form-control"
+							id="email"
+							placeholder="abc1@site.com"
+							name="email"
+							required
+						/>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="password">Password</label>
+						<input
+							type="password"
+							class="form-control"
+							id="password"
+							placeholder="••••••"
+							name="password"
+							required
+							aria-describedby="passwordHelpBlock"
+						/>
+						<div id="passwordHelpBlock" class="form-text">
+							Your password must be 8-20 characters long.
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-dark login-button mb-3 center">
+						Login
+					</button>
+				</form>
+				<hr />
+				<span class="mx-auto p-5"
+					>Already have an account?<a href="/user/login" style="color: black">
+						<b>Login</b></a
+					>
+				</span>
+			</div>
+		</div>
+	</div>
 </section>
+
 <%- include("partials/footer") -%>
