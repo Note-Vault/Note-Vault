@@ -87,6 +87,10 @@
                 <textarea class="form-control" id="description" name="description" rows="3" placeholder="description"
                   required></textarea>
               </div>
+              <div>
+                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                <input type="date" name="finishDate" placeholder="finish date" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
+              </div>
               <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Add</button>
             </form>
           </div>
@@ -115,6 +119,10 @@
                 <textarea class="form-control" id="description" name="description" rows="3"
                   required><%= notes[i].description %></textarea>
               </div>
+              <div>
+                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                <input type="date" name="finishDate" placeholder="finish date"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
+              </div>
               <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Update</button>
             </form>
           </div>
@@ -134,6 +142,12 @@
           <!-- <a href="/note/delete" class="btn btn-danger" style="width: 45%;">Delete</a>
           <a href="/note/update" class="btn btn-primary"style="width: 45%;">Update</a> -->
         </div>
+        <div class="form-group">
+          Created:  <%= (notes[i].createdAt) %> 
+        </div> 
+        <div class="form-group">
+          Finish Date:  <%= (notes[i].finishDate) %> 
+        </div> 
         <div class="flex gap-2">
           <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
             <input type="hidden" name="_method" value="DELETE">
