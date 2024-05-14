@@ -25,25 +25,4 @@ function closeUpdateModal(noteId) {
       modal.style.display = "none";
     }
 }
-// Add event listener for download button click
-document.getElementById('downloadPdfButton').addEventListener('click', async () => {
-    try {
-        // Send a request to the server to initiate PDF download
-        const response = await fetch('/notes/pdf');
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-
-        // Create a temporary link element to trigger the download
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'user_notes.pdf';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    } catch (error) {
-        console.error('Error downloading PDF:', error);
-        // Handle error
-    }
-});
-
-
+  
