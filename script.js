@@ -20,3 +20,6 @@ mongoose
     console.error("Error connecting to MongoDB:", error);
   });
 
+const app = express();
+const port = 3000;
+
