@@ -58,4 +58,10 @@ const isAuthenticated = (req, res, next) => {
     res.status(401).redirect("/");
   }
 };
+// Route to download all notes as PDF
+app.get("/note/download/pdf", isAuthenticated, async (req, res) => {
+  try {
+    const userId = req.userID;
+    const userNotes = await Notebook.find({ user: userId });
 
+   
