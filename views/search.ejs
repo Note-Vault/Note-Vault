@@ -2,6 +2,16 @@
 <h1>Search results for tag: <%= tag %></h1>
 <!-- Notes feteched from the DB  -->
 <div class="row">
+  <!-- Dark mode toggle switch with custom sun and moon icons -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round">
+        <span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
+        <span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+      </span>
+    </label>
+  </div>
     <% for (let i = 0; i < notes.length; i++) { %>
       <div id="updateModal<%= notes[i]._id %>" class="modal">
         <div class="modal-dialog">
@@ -23,7 +33,7 @@
                 </div>
                 <div>
                   <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                  <input type="date" name="finishDate" placeholder="finish date"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
+                  <input type="date" name="finishDate" placeholder="finish date" style="color: black;"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
               </form>
@@ -31,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 note-text">
         <div class="card mb-4">
           <div class="card-header"><%= notes[i].tag %></div>
           <div class="card-body">

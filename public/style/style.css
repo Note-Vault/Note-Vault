@@ -1,3 +1,120 @@
+[data-theme="light"] {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+[data-theme="dark"] {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] #title, 
+[data-theme="dark"] .container-fluid-1{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+[data-theme="dark"] .note-nav {
+    background-color: black;
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .login{
+    background-color: #1A1A1A  ;
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .modal-header{ 
+	background-color: #3c3c3c;
+}
+
+[data-theme="dark"] .modal-body{
+	background-color: #1e1e1e;
+	color: white;
+}
+
+[data-theme="dark"] .note-text{ 
+	color: black;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.sun {
+    left: 5px;
+    opacity: 1;
+}
+
+.moon {
+    right: 5px;
+    opacity: 0;
+    color: black;
+}
+
+.slider.round:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    background-color: black;
+    transition: background-color 0.4s;
+}
+
+input:checked + .slider.round:before {
+    background-color: white;
+}
+
+input:checked + .slider.round .sun {
+    opacity: 0;
+}
+
+input:checked + .slider.round .moon {
+    opacity: 1;
+}
+
+.hidden {
+	display: none;
+}
+
 .hidden {
 	display: none;
 }
