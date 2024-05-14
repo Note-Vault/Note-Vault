@@ -9,3 +9,5 @@ import PDFDocument from 'pdfkit'; // Import PDFKit for PDF generation
 import Notebook from './models/Notebook'; // Import the Notebook model
 
 
+configDotenv();
+
