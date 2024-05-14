@@ -48,7 +48,26 @@
     right: 20px;
     z-index: 9999; 
 }
+.row1:hover{
+    border: 1px solid burlywood;
+    border-radius: 25px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    background-color: #f3ecec;
+}
+.row2:hover{
+    border: 1px solid burlywood;
+    border-radius: 25px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    background-color: #f3ecec;
+}
 
+.row3:hover{
+    border: 1px solid burlywood;
+    border-radius: 25px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    background-color: #f3ecec;
+
+}
 .switch {
     position: relative;
     display: inline-block;
