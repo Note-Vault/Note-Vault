@@ -1,23 +1,24 @@
 # Note-Vault📝
 Welcome to our project!👋
 ## Project Description
-Note Vault" is a comprehensive note taking website designed with user’s productivity and organization in mind. This versatile platform enables users to create, edit, delete, search, and seamlessly organize their notes, providing an all-round solution to their note-taking needs.
+Note Vault" is a comprehensive note-taking website designed with the user’s productivity and organization in mind. This versatile platform enables users to create, edit, delete, search, and seamlessly organize their notes, providing an all-around solution to their note-taking needs.
 
-
-- Deployment Link : [Link]()
+- Deployment Link : [Link](https://note-vault-tkco.onrender.com/)
 
 ## Features 🪶
 - Create, Edit, Delete, Search, and Organize Notes
 
-
 ## Technologies Used ⚙️
-- Frontend: HTML, CSS, JavaScript,Ejs
+- Frontend: HTML, CSS, JavaScript, Ejs
 - Backend: Node.js, Express.js, MongoDB
 - Version Control: Git, GitHub
 
- # How to make a PR in our Project 🤔
+<img width="959" alt="1" src="https://github.com/alishasingh06/Note-Vault/assets/114938485/02b7c3ae-5389-4eee-8bcb-ce85ea54e6e3">
+<img width="959" alt="2" src="https://github.com/alishasingh06/Note-Vault/assets/114938485/660029a3-ead7-4cc7-ac9a-bbece2889f50">
+<img width="959" alt="3" src="https://github.com/alishasingh06/Note-Vault/assets/114938485/8a331d15-75a8-4e56-86fa-4d6a68a13dd8">
 
-If you are interested to contribute in this project how to start contribute
+ # How to make a PR in our Project 🤔
+If you are interested in this project how to start contributing:
 <!-- in detail -->
 
 1. Fork the repo.
@@ -75,7 +76,7 @@ ________________________________________________________________________________
 
 2. Make sure you are on the "Current Repository" view. If not, go to "File" and select "Add Local Repository" to add your repository.
 
-3. In the "Current Repository" view, ensure you are on the branch that you want to submit a pull request for. If you're not on the correct branch, use the "Branch" menu to switch to the correct branch.
+3. In the "Current Repository" view, ensure you are on the branch which you want to submit a pull request for. If you're not on the correct branch, use the "Branch" menu to switch to the correct branch.
 
 4. Once you're on the correct branch, make your changes and commit them to the branch. You can do this by clicking the "+" button in the upper-left corner of the GitHub Desktop window, making your changes, and then entering a commit message.
 
@@ -85,9 +86,9 @@ ________________________________________________________________________________
 
 7. On the pull request page, you can review your changes and add any additional information, such as a title and a description, that you want to include with your pull request.
 
-8. Once you're satisfied with your pull request, click the "Create pull request" button to submit it.
+8. Once you are satisfied with your pull request, click the "Create pull request" button to submit it.
 
-**Note:** In order to create a pull request, you must have a fork of the original repository in your GitHub account and you must have made the changes in that forked repository.
+**Note:** To create a pull request, you must have a fork of the original repository in your GitHub account and you must have made the changes in that forked repository.
 
 
 ## Usage 👀
@@ -114,7 +115,7 @@ To get started, simply clone the repository and open the `terminal` in your code
       </a>
   </div>
     <br>
-Thank you for your interest in contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
+Thank you for contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
 
 We value the time and effort you put into contributing, and we look forward to reviewing and merging your contributions. Join us on this exciting journey of creativity and collaboration, and let your projects shine on NestOndc!
 

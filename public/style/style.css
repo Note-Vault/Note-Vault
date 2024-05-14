@@ -1,91 +1,218 @@
-.hidden {
+[data-theme="light"] {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+[data-theme="dark"] {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] #title, 
+[data-theme="dark"] .container-fluid-1{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+[data-theme="dark"] .note-nav {
+    background-color: black;
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .login{
+    background-color: #1A1A1A  ;
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .modal-header{ 
+	background-color: #3c3c3c;
+}
+
+[data-theme="dark"] .modal-body{
+	background-color: #1e1e1e;
+	color: white;
+}
+
+[data-theme="dark"] .note-text{ 
+	color: black;
+}
+
+[data-theme="dark"] .text-dark {
+    color: white;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
     display: none;
 }
-#title{
-    background-color: #ff4c68;
-    color: white;
-    font-size: 25px;
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
 }
-.testimonial-section{
-    height:auto;
-    background-color: #ef8172;
-    color: white;
-    font-size: 25px;
+
+.slider-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    transition: opacity 0.3s ease;
 }
-.testimonial-message{
-    background-color: antiquewhite;
+
+.sun {
+    left: 5px;
+    opacity: 1;
 }
-.mtop-4, .my-4 {
-    margin-top: 7.5rem!important;
-    padding: 33px;
-}
-.login-form{
-    font-size: 30px;
-}
-.login-section{
-    color: white;
-    background-color: antiquewhite;
-}
-.group-login ::placeholder {
-    text-align: center;
-    font-size: 30px;
-}
-.login-label{
-    display: inline-block;
-    margin-bottom: .5rem;
-    font-size: 50px;
-}
-.control-form{
-    text-align: center;
-    font-size: 30px;
-    width: 100%;
-}
-.login-button {
-    background-color: white;
+
+.moon {
+    right: 5px;
+    opacity: 0;
     color: black;
-    width: 80%;
-    margin-top: 20px;
-    font-size: inherit;
-    font-weight: 600;
-    margin-bottom: 25px;
 }
-.login-heading {
-    font-size: 4.5rem;
-    font-weight: bolder;
-    color: darkslategray;
+
+.slider.round:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    background-color: black;
+    transition: background-color 0.4s;
 }
-.group-login {
-    margin-bottom: 1rem;
-    width: 115%;
+
+input:checked + .slider.round:before {
+    background-color: white;
 }
-.login-button:hover{
-    background-color: gainsboro;
-    color: darkblue;
+
+input:checked + .slider.round .sun {
+    opacity: 0;
 }
-.note-nav{
-    background-color:#ff4c68;
+
+input:checked + .slider.round .moon {
+    opacity: 1;
 }
-.note-tag{
-    font-weight: 700;
-    background-color: chartreuse;
-    color: floralwhite;
-    border-radius: 3%;
+
+.hidden {
+	display: none;
 }
-.note-description{
-    background-color: aquamarine;
-    font-weight: 300;
+
+.hidden {
+	display: none;
 }
-.modal-content{
-    top: 100px;
+
+#title {
+	background-color: #ff4c68;
+	color: white;
+	font-size: 25px;
 }
-.modal-label{
-    font-size:xx-large;
-    font-weight: 700;
+
+.testimonial-section {
+	height: auto;
+	background-color: #ef8172;
+	color: white;
+	font-size: 25px;
 }
-.modal-body{
-    background-color: bisque;
-    color: darkslategray;
+
+.testimonial-message {
+	background-color: antiquewhite;
 }
-.modal-header{
-    background-color: burlywood;
+
+.mtop-4,
+.my-4 {
+	margin-top: 7.5rem !important;
+	padding: 33px;
+}
+
+.container-log {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+
+.w-half {
+	width: 50%;
+}
+
+.center {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.auth-bg {
+	height: 100vh;
+}
+
+.note-nav {
+	background-color: #ff4c68;
+}
+
+.note-tag {
+	font-weight: 700;
+	background-color: chartreuse;
+	color: floralwhite;
+	border-radius: 3%;
+}
+
+.note-description {
+	background-color: aquamarine;
+	font-weight: 300;
+}
+
+.modal-content {
+	top: 100px;
+}
+
+.modal-label {
+	font-size: xx-large;
+	font-weight: 700;
+}
+
+.modal-body {
+	background-color: bisque;
+	color: darkslategray;
+}
+
+.modal-header {
+	background-color: burlywood;
+}
+
+@media (max-width: 768px) {
+	.container-log {
+		flex-direction: column;
+	}
+	.w-half {
+		width: 100%;
+	}
+	.auth-bg {
+		height: 18%;
+	}
+	.p-5 {
+		padding: 0rem !important;
+	}
+	.offset-5 {
+		margin-left: 8rem !important;
+	}
 }
