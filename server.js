@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import { config as configDotenv } from "dotenv"; // Use config method from dotenv
-//making contribution changes on server script.
+//making contribution changes on server script
 
 configDotenv();
 // creating a global variable for success message
