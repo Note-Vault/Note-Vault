@@ -1,40 +1,49 @@
 <%- include("partials/header") -%>
 <section id="title">
-	<!-- container row column -->
-	<div class="container-fluid p-4">
-		<div class="row m-1">
-			<div class="col-lg-8 font-weight-bold" style="font-size: 35px">
-				<a href="/note/show" class="text-white text-decoration-none">
-					NoteVault
-				</a>
-			</div>
-			<div class="col-lg-4">
-				<div class="row p-2 font-weight-light">
-					<div class="col-lg-6 text-center">
-						<a href="/user/login" class="text-white text-decoration-none">
-							Login
-						</a>
-					</div>
-					<div class="col-lg-6 text-center">
-						<a href="/user/register" class="text-white text-decoration-none">
-							Register
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row mt-5 align-items-center">
-			<div class="col-lg-8">
-				<p style="font-size: 100px">
-					Keep your thoughts, ideas, and important information in one secure
-					place.
-				</p>
-			</div>
-			<div class="col-lg-4">
-				<img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
-			</div>
-		</div>
-	</div>
+    <!-- container row column -->
+    <div class="container-fluid p-4">
+        <div class="row m-1">
+            <div class="col-lg-8 font-weight-bold" style="font-size: 35px;">
+                <a href="/note/show" class="text-white text-decoration-none">
+                    NoteVault
+                </a>
+            </div>
+            <!-- Dark mode toggle switch with custom sun and moon icons -->
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="modeToggle">
+                    <span class="slider round">
+                        <span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
+                        <span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+                    </span>
+                </label>
+            </div>  
+            <div class="col-lg-4">
+                <div class="row p-2 font-weight-light">
+                    <div class="col-lg-6 text-center">
+                        <a href="/user/login" class="text-white text-decoration-none">
+                            Login
+                        </a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <a href="/user/register" class="text-white text-decoration-none">
+                            Register
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 align-items-center">
+            <div class="col-lg-8">
+                <p style="font-size: 100px;">Keep your thoughts, ideas, and important information in one secure place.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="/image/notebook.jpg" alt="notebook">
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <section class="features p-5">
@@ -181,6 +190,7 @@
 		</div>
 	</div>
 </section>
+
 <footer style="text-align: center">
 	<div class="col-md-12 mt-5">
 		<p>© Copyright NoteVault</p>
