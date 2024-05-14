@@ -455,3 +455,8 @@ app.get("/", isAuthenticatedlogin, (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+// Custom error handler for 404 Not Found
+app.use((req, res, next) => {
+  res.status(404).render('404', { title: 'Page Not Found' });
+});
