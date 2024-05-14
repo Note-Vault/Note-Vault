@@ -2,6 +2,16 @@
 
 <section class="login">
 	<div class="container-log">
+		<!-- Dark mode toggle switch with custom sun and moon icons -->
+		<div class="toggle-container">
+			<label class="switch">
+				<input type="checkbox" id="modeToggle">
+				<span class="slider round">
+					<span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
+					<span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+				</span>
+			</label>
+		</div>
 		<img class="auth-bg w-half img-fluid" src="/image/signin.jpg" alt="login" />
 
 		<div class="row mt-3 w-half">
@@ -40,7 +50,7 @@
 				</form>
 				<hr />
 				<span class="mx-auto p-5"
-					>Don't have an account?<a href="/user/register" style="color: black">
+					>Don't have an account?<a href="/user/register">
 						<b>Register</b></a
 					>
 				</span>
