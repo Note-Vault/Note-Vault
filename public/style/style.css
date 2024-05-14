@@ -38,6 +38,10 @@
 	color: black;
 }
 
+[data-theme="dark"] .text-dark {
+    color: white;
+}
+
 .toggle-container {
     position: fixed;
     top: 20px;
