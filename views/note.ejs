@@ -23,6 +23,16 @@
 </script>
 
 <div class="container-fluid">
+  <!-- Dark mode toggle switch with custom sun and moon icons -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round">
+        <span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
+        <span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+      </span>
+    </label>
+  </div>
   <div class="row note-nav">
     <div class="col-lg-8 mt-3">
       <a href="/" style="text-decoration: none;">
@@ -90,7 +100,7 @@
               </div>
               <div>
                 <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
+                <input type="date" name="finishDate" placeholder="finish date" class="note-text" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
               </div>
               <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Add</button>
             </form>

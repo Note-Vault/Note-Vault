@@ -25,4 +25,36 @@ function closeUpdateModal(noteId) {
       modal.style.display = "none";
     }
 }
-  
+
+const toggleSwitch = document.getElementById('modeToggle');
+
+// Function to set the theme mode
+function setThemeMode(mode) {
+    document.body.setAttribute('data-theme', mode);
+    localStorage.setItem('themeMode', mode); // Save the theme mode to localStorage
+}
+
+// Function to toggle the theme mode
+function toggleThemeMode() {
+    if (toggleSwitch.checked) {
+        setThemeMode('dark');
+    } else {
+        setThemeMode('light');
+    }
+}
+
+// Event listener for the toggle switch change
+toggleSwitch.addEventListener('change', toggleThemeMode);
+
+// Function to load the theme mode from localStorage
+function loadThemeMode() {
+    const savedMode = localStorage.getItem('themeMode');
+    if (savedMode) {
+        setThemeMode(savedMode);
+        // Update the toggle switch state based on the saved mode
+        toggleSwitch.checked = savedMode === 'dark';
+    }
+}
+
+// Call loadThemeMode when the page loads
+window.addEventListener('load', loadThemeMode);
