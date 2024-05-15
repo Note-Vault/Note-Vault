@@ -1,10 +1,48 @@
 <%- include("partials/header") -%>
+<<<<<<< HEAD
   <div class="container-fluid">
     <!-- Dark mode toggle switch with custom sun and moon icons -->
     <div class="toggle-container ">
       <label class="switch">
         <input type="checkbox" id="modeToggle">
         <div class="d-flex align-items-center pl-4 round" id="modeToggleRound">
+=======
+<div class="container-fluid">
+  <!-- Dark mode toggle switch with custom sun and moon icons -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round">
+        <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
+				<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/>
+      </span>
+    </label>
+  </div>
+  <div class="row note-nav justify-content-between">
+    <div class="col-lg-6 mt-3 p-3">
+      <a href="/" style="text-decoration: none;">
+        <h1 class="text-white display-4">NoteVault</h1>
+      </a>
+    </div>
+    <div class="col-lg-4 mt-3 p-3">
+      <form action="/note/search" class="d-flex">
+        <div class="input-group">
+          <div class="form-outline">
+            <input type="search" id="tag" name="tag" class="form-control" placeholder="Search" />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-2 mt-3 p-3 text-right">
+      <a href="/user/logout" style="text-decoration: none; color: white;">
+        <button class="btn btn-danger">Logout</button>
+      </a>
+    </div>
+  </div>
+>>>>>>> 9a8b33dbd68cca407773a1169eb4b63f2b0ce17a
 
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-moon-stars"
             viewBox="0 0 16 16" style="display: none;">

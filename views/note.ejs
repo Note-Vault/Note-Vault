@@ -1,7 +1,42 @@
 <%- include("partials/header") -%>
 
+<<<<<<< HEAD
   <div id="successMessage" class="success-message hidden">
     <%= successMessage %>
+=======
+<div id="successMessage" class="success-message hidden">
+  <%= successMessage %>
+</div>
+
+<script>
+  // JavaScript code goes here
+  function showSuccessMessage(message) {
+    var successMessage = document.getElementById('successMessage');
+    successMessage.textContent = message;
+    successMessage.classList.remove('hidden');
+    setTimeout(function () {
+      successMessage.classList.add('hidden');
+    }, 3000); // 3000 milliseconds = 3 seconds
+  }
+
+  // Call the function to show the success message
+  if ('<%= successMessage %>' !== 'false') {
+    showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
+  }
+
+</script>
+
+<div class="container-fluid">
+  <!-- Dark mode toggle switch with custom sun and moon icons -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round">
+        <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
+				<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/>
+      </span>
+    </label>
+>>>>>>> 9a8b33dbd68cca407773a1169eb4b63f2b0ce17a
   </div>
 
   <script>
@@ -155,6 +190,7 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <!-- update modal-->
         <div class="col-md-3 col-sm-6">
           <div class="flex flex-col gap-4 border border-black rounded-xl p-4 my-6 h-72 shadow-md shadow-gray-500"
@@ -191,6 +227,37 @@
           </div>
         </div>
         <% } %>
+=======
+      </div>
+    </div>
+    <!-- update modal-->
+    <div class="col-md-3 col-sm-6">
+      <div class="flex flex-col gap-2 border border-black rounded-xl p-4 my-6 h-80 shadow-md shadow-gray-500" style="width: 18rem;">
+        <div>
+          <!-- <h5 class="text-xl font-bold font-serif">Tagg</h5> -->
+          <h5 class="note-tag"><%= notes[i].tag %></h5>
+          <p class="note-date"><%= (notes[i].createdAt) %> </p>
+        </div>
+        <div class="note-divider"></div>
+        <div class="note-description-container">
+          <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
+          <p class="note-description"><%= notes[i].description %></p>
+        </div>
+        <!-- <div class="form-group">
+          Created:  <%= (notes[i].createdAt) %> 
+        </div> 
+        <div class="form-group">
+          Finish Date:  <%= (notes[i].finishDate) %> 
+        </div>  -->
+        <div class="flex gap-2">
+          <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
+          </form>
+          <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i class="fa-solid fa-pencil"></i></button>
+        </div>
+      </div>
+>>>>>>> 9a8b33dbd68cca407773a1169eb4b63f2b0ce17a
     </div>
   </div>
   <%- include("partials/footer") -%>
