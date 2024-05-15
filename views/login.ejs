@@ -13,9 +13,8 @@
 			</label>
 		</div>
 		<img class="auth-bg w-half img-fluid" src="/image/signin.jpg" alt="login" />
-
 		<div class="row mt-3 w-half">
-			<h1 class="offset-5 mb-3">Login</h1>
+			<h1 class="offset-5 mb-3 text-3xl font-bold pl-4">Login</h1>
 			<div class="col-7 offset-3">
 				<% if (errorMessage) { %>
 				<p style="color: red"><%= errorMessage %></p>
@@ -48,12 +47,13 @@
 						Login
 					</button>
 				</form>
-				<hr />
+                <hr />
 				<span class="mx-auto p-5"
 					>Don't have an account?<a href="/user/register">
 						<b>Register</b></a
 					>
 				</span>
+				<span class=" pt-4 pl-[120px]">Go to </span><a style="color: blue" href="/">Home</a>
 			</div>
 		</div>
 	</div>
