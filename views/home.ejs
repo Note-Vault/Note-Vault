@@ -1,41 +1,42 @@
 <%- include("partials/header") -%>
 <section id="title">
     <!-- container row column -->
-    <div class="container-fluid p-4">
+    <div class="container-fluid py-2 px-5">
         <div class="row m-1">
             <div class="col-lg-8 font-weight-bold" style="font-size: 35px;">
-                <a href="/note/show" class="text-white text-decoration-none">
+                <a href="/note/show" class="text-white text-decoration-none font" style="font-family: 'Courier New', Courier, monospace;">
                     NoteVault
                 </a>
             </div>
             <!-- Dark mode toggle switch with custom sun and moon icons -->
-            <div class="toggle-container">
+            <div class="toggle-container" style="max-width: max-content;">
                 <label class="switch">
                     <input type="checkbox" id="modeToggle">
                     <span class="slider round">
-                        <span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
-                        <span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+                        <span class="slider-icon sun"><i class="material-symbols-outlined">Light</i></span>
+                        <span class="slider-icon moon"><i class="material-symbols-outlined">Dark</i></span>
                     </span>
                 </label>
             </div>  
             <div class="col-lg-4">
                 <div class="row p-2 font-weight-light">
                     <div class="col-lg-6 text-center">
-                        <a href="/user/login" class="text-white text-decoration-none">
+                        <a href="/user/login" class="text-white text-decoration-none font-bold">
                             Login
                         </a>
                     </div>
                     <div class="col-lg-6 text-center">
-                        <a href="/user/register" class="text-white text-decoration-none">
+                        <a href="/user/register" class="text-white text-decoration-none font-bold">
                             Register
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5 align-items-center">
+		<hr color="white">
+        <div class="row mt-5 align-items-center pb-5">
             <div class="col-lg-8">
-                <p style="font-size: 100px;">Keep your thoughts, ideas, and important information in one secure place.
+                <p style="font-size: 70px;font-family: 'Times New Roman', Times, serif;">Keep your thoughts, ideas, and important information in one secure place.
                 </p>
             </div>
             <div class="col-lg-4">
@@ -56,18 +57,18 @@
         <div class="row" style="font-size: 30px;padding-top :70px;padding-bottom:60px;">
             <div class="row1 col-lg-4 text-center pt-4">
                 <i class="fa-solid fa-check fa"></i>
-                <h1 style="color:rgb(24, 235, 130); font-style:italic;">Easy Note Organization</h1>
-                <p style="color:rgb(235, 24, 224);font-style:italic;">Create, categorize, and search your notes effortlessly.</p>
+                <h1 style="color: rgb(63, 24, 235); font-style:italic; font-weight: bold;">Easy Note Organization</h1>
+                <p style="color:#ff4c4c;font-style:italic;font-size: 25px;">Create, categorize, and search your notes effortlessly.</p>
             </div>
             <div class="row2 col-lg-4 text-center pt-4" >
                 <i class="fa-solid fa-universal-access fa"></i>
-                <h1 style="color:rgb(24, 235, 130);font-style:italic;">Access Anywhere</h1>
-                <p style="color:rgb(235, 24, 224);font-style:italic;">Access your notes from any device, whether it's your computer, tablet, or smartphone.</p>
+                <h1 style="color: rgb(63, 24, 235);font-style:italic;font-weight: bold;">Access Anywhere</h1>
+                <p style="color:#ff4c4c;font-style:italic;font-size: 25px;">Access your notes from any device, whether it's your computer, tablet, or smartphone.</p>
             </div>
             <div class="row3 col-lg-4 text-center pt-4">
                 <i class="fa-solid fa-lock fa"></i>
-                <h1 style="color:rgb(24, 235, 130);font-style:italic;">Secure and Private</h1>
-                <p style="color:rgb(235, 24, 224);font-style:italic;">Your notes are encrypted and protected, ensuring your data is safe.</p>
+                <h1 style="color: rgb(63, 24, 235);font-style:italic;font-weight: bold;">Secure and Private</h1>
+                <p style="color:#ff4c4c;font-style:italic;font-size: 25px;">Your notes are encrypted and protected, ensuring your data is safe.</p>
             </div>
         </div>
     </div>
@@ -75,7 +76,7 @@
 </section>
 
 <section class="testimonials">
-	<div class="col-lg-12 text-center" style="font-size: 60px">
+	<div class="col-lg-12 text-center" style="font-size: 60px; font-family:cursive;">
 		<p>What Our Clients Say</p>
 	</div>
 	<div class="container-fluid">
@@ -187,7 +188,7 @@
 	</div>
 </section>
 
-<footer style="text-align: center">
+<footer style="text-align: center;">
 	<div class="col-md-12 mt-5">
 		<p>© Copyright NoteVault</p>
 	</div>
