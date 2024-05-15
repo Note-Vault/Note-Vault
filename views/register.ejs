@@ -7,15 +7,15 @@
 			<label class="switch">
 				<input type="checkbox" id="modeToggle">
 				<span class="slider round">
-					<span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
-					<span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+					<img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
+					<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/>
 				</span>
 			</label>
 		</div>
 		<img class="auth-bg w-half img-fluid" src="/image/signin.jpg" alt="login" />
 
 		<div class="row mt-3 w-half">
-			<h1 class="offset-5 mb-3">Signup</h1>
+			<h1 class="offset-5 mb-3 text-3xl font-bold pl-4">Signup</h1>
 			<div class="col-7 offset-3">
 				<% if (errorMessage) { %>
 				<p style="color: red"><%= errorMessage %></p>
@@ -30,6 +30,8 @@
 							placeholder="User"
 							name="name"
 							required
+							pattern="[A-Za-z]+"
+							title="Must container letters only.Numbers and Special characters not allowed"
 						/>
 					</div>
 					<div class="mb-3">
@@ -69,6 +71,7 @@
 						<b>Login</b></a
 					>
 				</span>
+				<span class=" pt-4 pl-[120px]">Go to </span><a style="color: blue" href="/">Home</a>
 			</div>
 		</div>
 	</div>
