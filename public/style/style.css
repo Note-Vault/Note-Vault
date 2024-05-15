@@ -48,17 +48,35 @@
     right: 20px;
     z-index: 9999; 
 }
+.why_choose{
+   text-decoration: underline;
+}
+
 .row1:hover{
     border: 1px solid burlywood;
     border-radius: 25px;
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     background-color: #f3ecec;
+    transition: .7s ease-in-out;
+    scale:1.05;
+}
+
+.row1{
+    border-radius: 25px;
+    border: 1px solid gray;
 }
 .row2:hover{
     border: 1px solid burlywood;
     border-radius: 25px;
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     background-color: #f3ecec;
+    transition: .7s;
+    scale:1.05;
+}
+
+.row2{
+    border-radius: 25px;
+    border: 1px solid gray;
 }
 
 .row3:hover{
@@ -66,7 +84,18 @@
     border-radius: 25px;
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     background-color: #f3ecec;
+    transition: .7s;
+    scale:1.05;
+}
 
+.row3{
+    border-radius: 25px;
+    border: 1px solid gray;
+   
+}
+
+.fa-solid{
+    font-size: 5vmax;
 }
 .switch {
     position: relative;
