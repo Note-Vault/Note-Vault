@@ -4,33 +4,61 @@
     <div class="container-fluid p-4">
         <div class="row m-1">
             <div class="col-lg-8 font-weight-bold" style="font-size: 35px;">
-                <a href="/note/show" class="text-white text-decoration-none">
-                    NoteVault
-                </a>
+				<a href="/note/show" class="text-white text-decoration-none" style="font-family: 'Segoe UI'; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
+					NoteVault
+				</a>
+				
+				
+				
+				
             </div>
             <!-- Dark mode toggle switch with custom sun and moon icons -->
-            <div class="toggle-container">
-                <label class="switch">
-                    <input type="checkbox" id="modeToggle">
-                    <span class="slider round">
-                        <span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
-                        <span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
-                    </span>
-                </label>
-            </div>  
+            
             <div class="col-lg-4">
                 <div class="row p-2 font-weight-light">
-                    <div class="col-lg-6 text-center">
-                        <a href="/user/login" class="text-white text-decoration-none">
-                            Login
-                        </a>
-                    </div>
-                    <div class="col-lg-6 text-center">
-                        <a href="/user/register" class="text-white text-decoration-none">
-                            Register
-                        </a>
-                    </div>
-                </div>
+                    
+							<div class="col-lg-6 text-center">
+								<button onclick="window.location.href='/user/login'" class="btn btn-primary" style="margin-left: 80px;">
+									Login
+								</button>
+							</div>
+					
+					
+							
+									<div class="col-lg-6 text-center">
+										<button onclick="window.location.href='/user/register'" class="btn btn-primary" style="margin-left: -100px;">
+											Regsiter
+										</button>
+									</div>
+
+
+<!-- 
+									<div class="toggle-container">
+										<label class="switch">
+											<input type="checkbox" id="modeToggle">
+											<span class="slider round">
+												<span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
+												<span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+											</span>
+										</label>
+									</div>  -->
+
+
+									<div class="col-lg-3 text-right">
+										<div class="toggle-container">
+											<label class="switch">
+												<input type="checkbox" id="modeToggle">
+												<span class="slider round">
+													<span class="slider-icon sun"><i class="material-symbols-outlined">light_mode</i></span>
+													<span class="slider-icon moon"><i class="material-symbols-outlined">dark_mode</i></span>
+												</span>
+											</label>
+										</div>
+									</div>
+									
+							
+							
+                 
             </div>
         </div>
         <div class="row mt-5 align-items-center">
