@@ -1,137 +1,136 @@
 [data-theme="light"] {
-    background-color: #f0f0f0;
-    color: #333;
+	background-color: #f0f0f0;
+	color: #333;
 }
 
 [data-theme="dark"] {
-    background-color: #333;
-    color: #f0f0f0;
+	background-color: #333;
+	color: #f0f0f0;
 }
 
-[data-theme="dark"] #title, 
-[data-theme="dark"] .container-fluid-1{
-    background-color: black;
-    color: white;
-    font-size: 25px;
+[data-theme="dark"] #title,
+[data-theme="dark"] .container-fluid-1 {
+	background-color: black;
+	color: white;
+	font-size: 25px;
 }
 
 [data-theme="dark"] .note-nav {
-    background-color: black;
-    color: #f0f0f0;
+	background-color: black;
+	color: #f0f0f0;
 }
 
-[data-theme="dark"] .login{
-    background-color: #1A1A1A  ;
-    color: #f0f0f0;
+[data-theme="dark"] .login {
+	background-color: #1a1a1a;
+	color: #f0f0f0;
 }
 
-[data-theme="dark"] .modal-header{ 
+[data-theme="dark"] .modal-header {
 	background-color: #3c3c3c;
 }
 
-[data-theme="dark"] .modal-body{
+[data-theme="dark"] .modal-body {
 	background-color: #1e1e1e;
 	color: white;
 }
 
-[data-theme="dark"] .note-text{ 
+[data-theme="dark"] .note-text {
 	color: black;
 }
 
 [data-theme="dark"] .text-dark {
-    color: white;
+	color: white;
 }
 
 .toggle-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999; 
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 9999;
 }
-.row1:hover{
-    border: 1px solid burlywood;
-    border-radius: 25px;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    background-color: #f3ecec;
+.row1:hover {
+	border: 1px solid burlywood;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: #f3ecec;
 }
-.row2:hover{
-    border: 1px solid burlywood;
-    border-radius: 25px;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    background-color: #f3ecec;
+.row2:hover {
+	border: 1px solid burlywood;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: #f3ecec;
 }
 
-.row3:hover{
-    border: 1px solid burlywood;
-    border-radius: 25px;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    background-color: #f3ecec;
-
+.row3:hover {
+	border: 1px solid burlywood;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: #f3ecec;
 }
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
 }
 
-.switch input { 
-    display: none;
+.switch input {
+	display: none;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+	border-radius: 34px;
 }
 
 .slider-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #fff;
-    transition: opacity 0.3s ease;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 24px;
+	color: #fff;
+	transition: opacity 0.3s ease;
 }
 
 .sun {
-    left: 5px;
-    opacity: 1;
+	left: 5px;
+	opacity: 1;
 }
 
 .moon {
-    right: 5px;
-    opacity: 0;
-    color: black;
+	right: 5px;
+	opacity: 0;
+	color: black;
 }
 
 .slider.round:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 34px;
-    background-color: black;
-    transition: background-color 0.4s;
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 34px;
+	background-color: black;
+	transition: background-color 0.4s;
 }
 
 input:checked + .slider.round:before {
-    background-color: white;
+	background-color: white;
 }
 
 input:checked + .slider.round .sun {
-    opacity: 0;
+	opacity: 0;
 }
 
 input:checked + .slider.round .moon {
-    opacity: 1;
+	opacity: 1;
 }
 
 .hidden {
@@ -259,4 +258,18 @@ input:checked + .slider.round .moon {
 
 .test-abt a {
 	text-decoration: none;
+}
+
+.invisible {
+	display: none;
+}
+
+.scroll-to-top {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	z-index: 9999;
+	padding: 0.2rem 0.6rem;
+	background-color: #ffb499;
+	border-radius: 25px;
 }
