@@ -34,14 +34,24 @@ function setThemeMode(mode) {
     localStorage.setItem('themeMode', mode); // Save the theme mode to localStorage
 }
 
-// Function to toggle the theme mode
+// Function to toggle the theme mode and change icons
 function toggleThemeMode() {
-    if (toggleSwitch.checked) {
-        setThemeMode('dark');
-    } else {
-        setThemeMode('light');
-    }
+  const moonStarsIcon = document.querySelector(' #modeToggleRound .bi-moon-stars');
+  const brightnessHighIcon = document.querySelector('#modeToggleRound .bi-brightness-high');
+  
+  if (toggleSwitch.checked) {
+      setThemeMode('dark');
+      // Change icons for dark mode
+      moonStarsIcon.style.display = 'none';
+      brightnessHighIcon.style.display = 'inline-block';
+  } else {
+      setThemeMode('light');
+      // Change icons for light mode
+      moonStarsIcon.style.display = 'inline-block';
+      brightnessHighIcon.style.display = 'none';
+  }
 }
+
 
 // Event listener for the toggle switch change
 toggleSwitch.addEventListener('change', toggleThemeMode);

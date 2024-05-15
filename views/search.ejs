@@ -1,4 +1,12 @@
 <%- include("partials/header") -%>
+<<<<<<< HEAD
+  <div class="container-fluid">
+    <!-- Dark mode toggle switch with custom sun and moon icons -->
+    <div class="toggle-container ">
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <div class="d-flex align-items-center pl-4 round" id="modeToggleRound">
+=======
 <div class="container-fluid">
   <!-- Dark mode toggle switch with custom sun and moon icons -->
   <div class="toggle-container">
@@ -34,66 +42,117 @@
       </a>
     </div>
   </div>
+>>>>>>> 9a8b33dbd68cca407773a1169eb4b63f2b0ce17a
 
-  <!-- Add padding between rows -->
-  <div class="row mt-4">
-    <div class="col">
-      <h2 class="display-4">Search results for tag: <%= tag %></h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-moon-stars"
+            viewBox="0 0 16 16" style="display: none;">
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+            <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+            class="bi bi-brightness-high" viewBox="0 0 16 16">
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+          </svg>
+
+        </div>
+      </label>
+    </div>
+    <div class="row note-nav justify-content-between">
+      <div class="col-lg-6 mt-3 p-3">
+        <a href="/" style="text-decoration: none;">
+          <h1 class="text-white display-4">NoteVault</h1>
+        </a>
+      </div>
+      <div class="col-lg-4 mt-3 p-3">
+        <form action="/note/search" class="d-flex">
+          <div class="input-group">
+            <div class="form-outline">
+              <input type="search" id="tag" name="tag" class="form-control" placeholder="Search" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-2 mt-3 p-3 text-right">
+        <a href="/user/logout" style="text-decoration: none; color: white;">
+          <button class="btn btn-danger">Logout</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Add padding between rows -->
+    <div class="row mt-4">
+      <div class="col">
+        <h2 class="display-4">Search results for tag: <%= tag %>
+        </h2>
+      </div>
+    </div>
+
+    <!-- Notes fetched from the DB -->
+    <div class="row">
+      <% for (let i=0; i < notes.length; i++) { %>
+        <div id="updateModal<%= notes[i]._id %>" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Update Note</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                  onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
+              </div>
+              <div class="modal-body">
+                <!-- Update form -->
+                <form action="/note/update/<%= notes[i]._id %>" method="POST">
+                  <div class="form-group">
+                    <label for="tag">Tag</label>
+                    <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="3"
+                      required><%= notes[i].description %></textarea>
+                  </div>
+                  <div>
+                    <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                    <input type="date" name="finishDate" placeholder="finish date" style="color: black;"> <span
+                      style="font-size: large; font-weight: bold;">Current:</span>
+                    <%=notes[i].finishDate %><br>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 note-text">
+          <div class="card mb-4">
+            <div class="card-header">
+              <%= notes[i].tag %>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                <%= notes[i].description %>
+              </p>
+            </div>
+            <div>
+              <label for="finishhDate">Finish At:</label>
+              <%=notes[i].finishDate %>
+            </div>
+            <div class="card-footer">
+              <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+              <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+        <% } %>
     </div>
   </div>
 
-  <!-- Notes fetched from the DB -->
-  <div class="row">
-    <% for (let i = 0; i < notes.length; i++) { %>
-    <div id="updateModal<%= notes[i]._id %>" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Update Note</h5>
-            <button type="button" class="close" data-dismiss="modal" onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
-          </div>
-          <div class="modal-body">
-            <!-- Update form -->
-            <form action="/note/update/<%= notes[i]._id %>" method="POST">
-              <div class="form-group">
-                <label for="tag">Tag</label>
-                <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
-              </div>
-              <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3" required><%= notes[i].description %></textarea>
-              </div>
-              <div>
-                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date" style="color: black;"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
-              </div>
-              <button type="submit" class="btn btn-primary">Update</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 note-text">
-      <div class="card mb-4">
-        <div class="card-header"><%= notes[i].tag %></div>
-        <div class="card-body">
-          <p class="card-text"><%= notes[i].description %></p>
-        </div>
-        <div>
-          <label for="finishhDate">Finish At:</label>
-          <%=notes[i].finishDate %>
-        </div>
-        <div class="card-footer">
-          <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
-            <input type="hidden" name="_method" value="DELETE">
-            <button type="submit" class="btn btn-danger">Delete</button>
-          </form>
-          <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="btn btn-primary">Update</button>
-        </div>
-      </div>
-    </div>
-    <% } %>
-  </div>
-</div>
-
-<%- include("partials/footer") -%>
+  <%- include("partials/footer") -%>
