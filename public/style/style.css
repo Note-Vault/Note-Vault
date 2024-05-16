@@ -4,12 +4,13 @@
 }
 
 [data-theme="dark"] {
-    background-color: #333;
+    background-color: #797777;
     color: #f0f0f0;
 }
 
 [data-theme="dark"] #title, 
-[data-theme="dark"] .container-fluid-1{
+[data-theme="dark"] .container-fluid-1,
+[data-theme="dark"] .testimonials{
     background-color: black;
     color: white;
     font-size: 25px;
@@ -99,6 +100,7 @@
     font-size: 24px;
     color: #fff;
     transition: opacity 0.3s ease;
+    padding : 5px;
 }
 
 .sun {
@@ -109,6 +111,7 @@
 .moon {
     opacity: 0;
     color: black;
+    left:5px;
 }
 
 .slider.round:before {
@@ -118,6 +121,9 @@
     transform: translateX(-50%);
     width: 50px;
     height: 50px;
+    left: 5px;
+    width: 120%;
+    height: 110%;
     border-radius: 34px;
     background-color: black;
     transition: background-color 0.4s;
@@ -144,7 +150,7 @@ input:checked + .slider.round .moon {
 }
 
 #title {
-	background-color: #ff4c68;
+	background-color: #121481;
 	color: white;
 	font-size: 25px;
 }
@@ -183,10 +189,12 @@ input:checked + .slider.round .moon {
     margin: 0 4px;
 }
 
-.note-tag{
-	color: #ff4c68;
+
+.note-tag {
 	font-weight: 700;
-	font-size: 25px;
+	background-color: chartreuse;
+	color: floralwhite;
+	border-radius: 3%;
 }
 
 .note-date{
@@ -269,7 +277,7 @@ input:checked + .slider.round .moon {
 
 .testimonials {
 	text-align: center;
-	background-color: #ff4c4c;
+	background-color: #121481;
 	color: white;
 	font-size: 1.5rem;
 }
