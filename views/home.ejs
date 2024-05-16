@@ -81,82 +81,154 @@
 		</div>
 
 <section id="title">
-    <!-- container row column -->
-    <div class="container-fluid py-2 px-5">
-        <div class="row m-1">
-            <div class="col-lg-8 font-weight-bold" style="font-size: 35px;">
-                <a href="/note/show" class="text-white text-decoration-none font" style="font-family: 'Courier New', Courier, monospace;">
-                    NoteVault
-                </a>
-            </div>
-            <!-- Dark mode toggle switch with custom sun and moon icons -->
-            <div class="toggle-container" style="max-width: max-content;">
-                <label class="switch">
-                    <input type="checkbox" id="modeToggle">
-                    <span class="slider round">
-                        <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
-							<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/></span>
-                </label>
-            </div>  
-            <div class="col-lg-4">
-                <div class="row p-2 font-weight-light">
-                    <div class="col-lg-6 text-center">
-                        <a href="/user/login" class="text-white text-decoration-none font-bold">
-                            Login
-                        </a>
-                    </div>
-                    <div class="col-lg-6 text-center">
-                        <a href="/user/register" class="text-white text-decoration-none font-bold">
-                            Register
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<hr color="white">
-        <div class="row mt-5 align-items-center pb-5">
-            <div class="col-lg-8">
-                <p style="font-size: 70px;font-family: 'Times New Roman', Times, serif;">Keep your thoughts, ideas, and important information in one secure place.
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <img class="img-fluid" src="/image/notebook.jpg" alt="notebook">
-            </div>
-        </div>
-    </div>
 
-	</section>
+	<!-- container row column -->
+	<div class="container-fluid p-4">
+		<div class="row m-1">
+			<div class="col-lg-4 font-weight-bold" style="font-size: 35px">
+				<a href="/note/show" class="text-white text-decoration-none">
+					NoteVault
+				</a>
+			</div>
+			<!-- Dark mode toggle switch with custom sun and moon icons -->
+			<div class="toggle-container">
+				<label class="switch">
+					<input type="checkbox" id="modeToggle" />
+					<span class="slider round">
+						<span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
+						<span class="slider-icon moon"
+							><i class="fa-solid fa-moon"></i
+						></span>
+					</span>
+				</label>
+			</div>
+			<div class="col-4">
+				<div class="row p-2 font-weight-light">
+					<div class="col-lg-6 text-center">
+						<a href="#why-us" class="text-white text-decoration-none">
+							Why Us
+						</a>
+					</div>
+					<div class="col-lg-6 text-center">
+						<a href="#testimonials" class="text-white text-decoration-none">
+							Testimonials
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="row p-2 font-weight-light">
+					<div class="col-lg-6 text-center">
+						<a href="/user/login" class="text-white text-decoration-none">
+							Login
+						</a>
+					</div>
+					<div class="col-lg-6 text-center">
+						<a href="/user/register" class="text-white text-decoration-none">
+							Register
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5 align-items-center">
+			<div class="col-lg-8">
+				<p style="font-size: 100px">
+					Keep your thoughts, ideas, and important information in one secure
+					place.
+				</p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
+			</div>
+		</div>
+	</div>
+</section>
 
-<section class="features p-5" >
-    <div class="container-fluid" >
-        <div class="row">
-            <div class="col-lg-12 text-center" style="font-size: 60px; font-family:cursive;">
-                Why Choose NoteVault?
-            </div>
-        </div>
-        <div class="row" style="font-size: 30px;padding-top :70px;padding-bottom:60px;">
-            <div class="row1 col-lg-4 text-center pt-4">
-                <i class="fa-solid fa-check fa"></i>
-                <h1 style="color: rgb(63, 24, 235); font-style:italic; font-weight: bold;">Easy Note Organization</h1>
-                <p style="color:#ff4c4c;font-style:italic;font-size: 25px;">Create, categorize, and search your notes effortlessly.</p>
-            </div>
-            <div class="row2 col-lg-4 text-center pt-4" >
-                <i class="fa-solid fa-universal-access fa"></i>
-                <h1 style="color: rgb(63, 24, 235);font-style:italic;font-weight: bold;">Access Anywhere</h1>
-                <p style="color:#ff4c4c;font-style:italic;font-size: 25px;">Access your notes from any device, whether it's your computer, tablet, or smartphone.</p>
-            </div>
-            <div class="row3 col-lg-4 text-center pt-4">
-                <i class="fa-solid fa-lock fa"></i>
-                <h1 style="color: rgb(63, 24, 235);font-style:italic;font-weight: bold;">Secure and Private</h1>
-                <p style="color:#ff4c4c;font-style:italic;font-size: 25px;">Your notes are encrypted and protected, ensuring your data is safe.</p>
-            </div>
-        </div>
-    </div>
+<section class="features p-5" id="why-us">
+	<div class="container-fluid">
+		<div class="row">
+			<div
+				class="col-lg-12 text-center"
+				style="font-size: 60px; font-family: cursive"
+			>
+				Why Choose NoteVault?
+			</div>
+		</div>
+		<div
+			class="row"
+			style="font-size: 30px; padding-top: 70px; padding-bottom: 60px"
+		>
+			<div class="row1 col-lg-4 text-center pt-4">
+				<i class="fa-solid fa-check fa"></i>
+				<h1 style="color: rgb(24, 235, 130); font-style: italic">
+					Easy Note Organization
+				</h1>
+				<p style="color: rgb(235, 24, 224); font-style: italic">
+					Create, categorize, and search your notes effortlessly.
+				</p>
+			</div>
+			<div class="row2 col-lg-4 text-center pt-4">
+				<i class="fa-solid fa-universal-access fa"></i>
+				<h1 style="color: rgb(24, 235, 130); font-style: italic">
+					Access Anywhere
+				</h1>
+				<p style="color: rgb(235, 24, 224); font-style: italic">
+					Access your notes from any device, whether it's your computer, tablet,
+					or smartphone.
+				</p>
+			</div>
+			<div class="row3 col-lg-4 text-center pt-4">
+				<i class="fa-solid fa-lock fa"></i>
+				<h1 style="color: rgb(24, 235, 130); font-style: italic">
+					Secure and Private
+				</h1>
+				<p style="color: rgb(235, 24, 224); font-style: italic">
+					Your notes are encrypted and protected, ensuring your data is safe.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
 
-	</section>
+<section class="About" style="margin: 0px; padding: 0px; box-sizing: border-box; min-height: 0px; overflow: hidden; background-color: lightblue;">
+	<div class="section" style="width: 100%; min-height: 100vh;">
+		<div class="container_about" style="width: 80%; display: block; margin: auto; padding-top: 55px">
+			<div class="title" style="font-size: 60px; text-align: center;">
+				<h1>About This Website</h1>
+			</div>
+			<div class="content-section" style="font-size: 30px; float: left; width: 55%;">
+				<div class="topic" style="margin-top: 55px;">
+				<h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">NoteVault: Your Ultimate Note-Taking Solution</h2>
+				<p style="margin-top: 10px; font-size: 20px; line-height: 1.5;">Welcome to NoteVault, the perfect platform for enhancing your productivity and organizing your notes efficiently. Whether you're a student or a professional, NoteVault has everything you need.</p>
+				</div>
+				<h3 style="margin-top: 15px;">Key Features:</h3>
+				<ul style="margin-top: 10px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; list-style-type: disc;">
+					<li>EASY NOTE ORGANIZATION</li>
+					<li>EDIT NOTES</li>
+					<li>DELETE NOTES</li>
+					<li>ACCESS ANYWHERE</li>
+					<li>SECURE & PRIVATE</li>
+				</ul>
+				<h3 style="margin-top: 15px;">Getting Started:</h3>
+				<ul style="margin-top: 10px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; list-style-type: disc;">
+					<li>Sign Up/Log In: Create an account or log in.</li>
+					<li>Create Your First Note: Click 'Create Note' to begin.</li>
+					<li>Organize Your Notes: Use tags and categories.</li>
+					<li>Search Efficiently: Use the search bar to find notes quickly.</li>
+				</ul>
+				<p style="margin-top: 10px; margin-bottom: 20px; font-size: 25px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Join NoteVault now and transform your note-taking!</p>
+			</div>
+		</div>
+		<div class="image-sec" style="float: right; width: 40%; padding: 10px;">
+			<img style="width: 70%; height: auto; margin-top: 55px; border-radius: 10px;" src="/image/noteimg.jpg">
+		</div>
+	</div>
+</section>
 
-<section class="testimonials">
-	<div class="col-lg-12 text-center" style="font-size: 60px; font-family:cursive;">
+<section class="testimonials" id="testimonials">
+	<div class="col-lg-12 text-center" style="font-size: 60px">
+
 		<p>What Our Clients Say</p>
 	</div>
 	<div class="container-fluid">
@@ -260,7 +332,13 @@
 		</div>
 	</section>
 
-<footer style="text-align: center;">
+
+<!-- Scroll Up button -->
+<div class="scroll-to-top invisible">
+	<a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
+
+<footer style="text-align: center">
 	<div class="col-md-12 mt-5">
 		<p>© Copyright NoteVault</p>
 	</div>
