@@ -105,6 +105,8 @@
 	display: inline-block;
 	width: 60px;
 	height: 34px;
+	display: flex;
+	justify-content: center;
 }
 
 .switch input {
@@ -126,12 +128,12 @@
 }
 
 .slider-icon {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    /* top: 10px; */
     font-size: 24px;
     color: #fff;
     transition: opacity 0.3s ease;
-    padding : 5px;
+    /* padding : 5px; */
 }
 
 .sun {
@@ -142,7 +144,8 @@
 .moon {
     opacity: 0;
     color: black;
-    left:5px;
+    /* left:5px; */
+	right: 20px ;
 }
 
 .slider.round:before {
