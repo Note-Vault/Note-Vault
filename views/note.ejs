@@ -1,28 +1,37 @@
 <%- include("partials/header") -%>
 
 <div id="successMessage" class="success-message hidden">
-  <%= successMessage %>
+	<%= successMessage %>
 </div>
 
 <script>
-  // JavaScript code goes here
-  function showSuccessMessage(message) {
-    var successMessage = document.getElementById('successMessage');
-    successMessage.textContent = message;
-    successMessage.classList.remove('hidden');
-    setTimeout(function () {
-      successMessage.classList.add('hidden');
-    }, 3000); // 3000 milliseconds = 3 seconds
-  }
+	// JavaScript code goes here
+	function showSuccessMessage(message) {
+		var successMessage = document.getElementById("successMessage");
+		successMessage.textContent = message;
+		successMessage.classList.remove("hidden");
+		setTimeout(function () {
+			successMessage.classList.add("hidden");
+		}, 3000); // 3000 milliseconds = 3 seconds
+	}
+
 
   // Call the function to show the success message
   if ('<%= successMessage %>' !== 'false') {
     showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
   }
 
+
 </script>
 
+<!-- Scroll Up button -->
+
+<div class="scroll-to-top invisible">
+	<a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
+
 <div class="container-fluid">
+
   <!-- Dark mode toggle switch with custom sun and moon icons -->
   <div class="toggle-container">
     <label class="switch">
@@ -55,28 +64,32 @@
           </form>
         </div>
 
-        <div class="col-lg-4 mt-2 mb-4">
-          <a href="/user/logout" style="text-decoration: none; color: white;"><button
-              class="btn btn-danger">Logout</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-4">
-    <div class="col-lg-8 align-self-end">
-      <h1 style="color: skyblue;"> Welcome back, <%= userNAME %> </h1>
-    </div>
-    <div class="col-lg-4">
-      <Button onclick="openUpdateModal('add-note-modal')" class="btn btn-lg btn-success"
-        style="position: absolute; left: 70%;">Add
-        Note</Button>
-    </div>
-  </div>
-  <div class="row justify-content-center align-items-center g-2 text-center">
-    <div class="col">
-      <h1>Your Notes</h1>
-    </div>
-  </div>
+				<div class="col-lg-4 mt-2 mb-4">
+					<a href="/user/logout" style="text-decoration: none; color: white"
+						><button class="btn btn-danger">Logout</button></a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mt-4">
+		<div class="col-lg-8 align-self-end">
+			<h1 style="color: skyblue">Welcome back, <%= userNAME %></h1>
+		</div>
+		<div class="col-lg-4">
+			<Button
+				onclick="openUpdateModal('add-note-modal')"
+				class="btn btn-lg btn-success"
+				style="position: absolute; left: 70%"
+				>Add Note</Button
+			>
+		</div>
+	</div>
+	<div class="row justify-content-center align-items-center g-2 text-center">
+		<div class="col">
+			<h1>Your Notes</h1>
+		</div>
+	</div>
 
   <div class="row">
     <!-- add note -->
@@ -171,5 +184,6 @@
     </div>
     <% } %>
   </div>
+
 </div>
 <%- include("partials/footer") -%>
