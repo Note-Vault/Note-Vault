@@ -32,7 +32,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Serve static files from the 'public' folder
 app.use(express.static("public"));
 
-
 //Routes
 app.use('/',staticRoutes);
 app.use('/',userRoutes);
@@ -41,4 +40,9 @@ app.use('/',NotebookRoutes);
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
+});
+
+// Custom error handler for 404 Not Found
+app.use((req, res, next) => {
+  res.status(404).render('404', { title: 'Page Not Found' });
 });

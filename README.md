@@ -1,9 +1,9 @@
 # Note-Vault📝
 Welcome to our project!👋
 ## Project Description
-Note Vault" is a comprehensive note-taking website designed with the user’s productivity and organization in mind. This versatile platform enables users to create, edit, delete, search, and seamlessly organize their notes, providing an all-around solution to their note-taking needs.
+"Note Vault" is a comprehensive note-taking website designed with the users productivity and organization in mind. This versatile platform enables users to create, edit, delete, search, and seamlessly organize their notes, providing an all-around solution to their note-taking needs.
 
-- Deployment Link : [Link](https://note-vault-tkco.onrender.com/)
+- Deployment Link : [Note-Vault](https://note-vault-tkco.onrender.com/)
 
 ## Features 🪶
 - Create, Edit, Delete, Search, and Organize Notes
@@ -129,6 +129,6 @@ We value the time and effort you put into contributing, and we look forward to r
 This project is licensed under the [ISC License](LICENSE).
 
 ## Acknowledgements :)
-We extend our heartfelt gratitude to the organizers of GSSOC for offering this invaluable platform to exhibit our talents and make meaningful contributions to the open-source community. Your efforts in fostering a collaborative environment for budding developers are commendable, and we are privileged to be a part of such an esteemed event. Thank you for providing us with the opportunity to showcase our skills and contribute to the advancement of open-source technology.
+We extend our heartfelt gratitude to the organizers of GSSoC for offering this invaluable platform to exhibit our talents and make meaningful contributions to the open-source community. Your efforts in fostering a collaborative environment for budding developers are commendable, and we are privileged to be a part of such an esteemed event. Thank you for providing us with the opportunity to showcase our skills and contribute to the advancement of open-source technology.
 
 ⭐ Don't forget to give us a star! ⭐
