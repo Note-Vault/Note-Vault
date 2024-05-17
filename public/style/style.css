@@ -53,19 +53,6 @@
     z-index: 9999; 
 }
 
-.icon1{
-	position: absolute;
-	top:calc(38%);
-	left:53.7rem;
-}
-.icon2{
-	position: absolute;
-	top:calc(51.7%);
-	left:53.5rem;
-}
-.loginc input::placeholder{
-	align-items: center;
-}
 
 .why_notevault .fa-solid{
 	font-size: 4vmax;
