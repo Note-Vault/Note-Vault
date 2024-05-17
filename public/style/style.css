@@ -44,7 +44,19 @@
 [data-theme="dark"] .text-dark {
 	color: white;
 }
-
+.loginclass{
+	position: relative;
+}
+.icon1{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+.icon2{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
 .toggle-container {
 
 
