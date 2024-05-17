@@ -46,35 +46,75 @@
 }
 
 .toggle-container {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 9999;
+
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; 
 }
+
+
+.why_notevault .fa-solid{
+	font-size: 4vmax;
+}
+
+.row1{
+	border: 1px solid gray;
+	border-radius: 25p
+    }
+
 .row1:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+
+	transition: 1s;
+	scale:1.07;
 }
+.row2{
+	border: 1px solid gray;
+	border-radius: 25px;
+
+}
+
+
 .row2:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+
+	transition: 1s;
+	scale:1.07;
 }
 
+
+.row3{
+	border: 1px solid gray;
+	border-radius: 25px;
+
+
+}
 .row3:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+
+	transition: 1s;
+	scale:1.07;
 }
 .switch {
 	position: relative;
 	display: inline-block;
 	width: 60px;
 	height: 34px;
+
+	display: flex;
+	justify-content: center;
+
 }
 
 .switch input {
@@ -96,12 +136,12 @@
 }
 
 .slider-icon {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    /* top: 10px; */
     font-size: 24px;
     color: #fff;
     transition: opacity 0.3s ease;
-    padding : 5px;
+    /* padding : 5px; */
 }
 
 .sun {
@@ -112,7 +152,8 @@
 .moon {
     opacity: 0;
     color: black;
-    left:5px;
+    /* left:5px; */
+	right: 20px ;
 }
 
 .slider.round:before {
