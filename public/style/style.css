@@ -46,10 +46,11 @@
 }
 
 .toggle-container {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 9999;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; 
 }
 
 
@@ -59,10 +60,8 @@
 
 .row1{
 	border: 1px solid gray;
-	border-radius: 25px;
-
-}
-
+	border-radius: 25p
+    }
 .row1:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
@@ -97,6 +96,7 @@
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+
 	transition: 1s;
 	scale:1.07;
 }

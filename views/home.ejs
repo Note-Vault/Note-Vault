@@ -1,16 +1,20 @@
 <%- include("partials/header") -%>
+
+
 <section id="title">
 
-	<!-- container row column -->
-	<div class="container-fluid p-4">
-		<div class="row m-1">
-			<div class="col-lg-4 font-weight-bold" style="font-size: 35px">
-				<a href="/note/show" class="text-white text-decoration-none">
-					NoteVault
-				</a>
-			</div>
-			<!-- Dark mode toggle switch with custom sun and moon icons -->
-			<div class="toggle-container">
+    <!-- container row column -->
+    <div class="container-fluid p-4" style="background-image:url('image/notebook.jpg');background-size:cover;">
+        <div class="row m-1">
+            <div class="col-lg-8 font-weight-bold" style="font-size: 35px;">
+                <a href="/note/show" class="text-white text-decoration-none">
+
+                    NoteVault
+                </a>
+            </div>
+            <!-- Dark mode toggle switch with custom sun and moon icons -->
+
+           <div class="toggle-container">
 				<label class="switch">
 					<input type="checkbox" id="modeToggle" />
 					<span class="slider round">
@@ -50,18 +54,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="row mt-5 align-items-center">
-			<div class="col-lg-8">
-				<p style="font-size: 100px">
-					Keep your thoughts, ideas, and important information in one secure
-					place.
-				</p>
-			</div>
-			<div class="col-lg-4">
-				<img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
-			</div>
-		</div>
-	</div>
+        <div class="row mt-5 align-items-center">
+            <div class="col-lg-8" style="text-align:center;padding-left:23%;padding-top:3%;">
+                <p style="font-size: 60px;font-style:italic;color:brown;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:230%;">Keep your thoughts, ideas, and important information in one secure place.
+                </p>
+            </div>
+            <!--<div class="col-lg-4">
+                <img class="img-fluid" src="/image/notebook.jpg" alt="notebook">
+            </div>-->
+		
+        </div>
+    </div>
+
 </section>
 
 <section class="features p-5" id="why-us">
