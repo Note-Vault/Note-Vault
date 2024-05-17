@@ -53,25 +53,52 @@
     z-index: 9999; 
 }
 
+
+.why_notevault .fa-solid{
+	font-size: 4vmax;
+}
+
+.row1{
+	border: 1px solid gray;
+	border-radius: 25p
+    }
 .row1:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+	transition: 1s;
+	scale:1.07;
 }
+.row2{
+	border: 1px solid gray;
+	border-radius: 25px;
+
+}
+
 .row2:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+	transition: 1s;
+	scale:1.07;
 }
 
+
+.row3{
+	border: 1px solid gray;
+	border-radius: 25px;
+
+}
 .row3:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
 
+	transition: 1s;
+	scale:1.07;
 }
 .switch {
 	position: relative;
