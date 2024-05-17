@@ -1,5 +1,5 @@
 <%- include("partials/header") -%>
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 <section class="login">
 	<div class="container-log">
 		<!-- Dark mode toggle switch with custom sun and moon icons -->
@@ -19,11 +19,8 @@
 				<% if (errorMessage) { %>
 				<p style="color: red"><%= errorMessage %></p>
 				<% } %>
-
-				
 				<form method="post" action="/user/login">
-					<div class="loginc mb-3">
-						<i class='icon1 bx bx-envelope' style="font-size: 30px;color:rgb(182, 178, 178);"></i>
+					<div class="mb-3">
 						<label class="form-label" for="email">Email ID</label>
 						<input
 							type="email"
@@ -31,21 +28,17 @@
 							id="email"
 							placeholder="abc1@site.com"
 							name="email"
-							style="padding-left: 10%;"
 							required
 						/>
 					</div>
-					
-					<div class="loginc mb-3">
-						<i class='icon2 bx bx-lock-alt' style="font-size:30px;color:rgb(182, 178, 178);" ></i>
+					<div class="mb-3">
 						<label class="form-label" for="password">Password</label>
-						<input  
+						<input
 							type="password"
 							class="form-control"
 							id="password"
 							placeholder="••••••"
 							name="password"
-							style="padding-left: 10%;"
 							required
 						/>
 					</div>
