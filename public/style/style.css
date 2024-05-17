@@ -47,6 +47,7 @@
 
 .toggle-container {
 
+
     position: fixed;
     top: 20px;
     right: 20px;
@@ -62,11 +63,13 @@
 	border: 1px solid gray;
 	border-radius: 25p
     }
+
 .row1:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+
 	transition: 1s;
 	scale:1.07;
 }
@@ -76,11 +79,13 @@
 
 }
 
+
 .row2:hover {
 	border: 1px solid burlywood;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #f3ecec;
+
 	transition: 1s;
 	scale:1.07;
 }
@@ -89,6 +94,7 @@
 .row3{
 	border: 1px solid gray;
 	border-radius: 25px;
+
 
 }
 .row3:hover {
@@ -105,8 +111,10 @@
 	display: inline-block;
 	width: 60px;
 	height: 34px;
+
 	display: flex;
 	justify-content: center;
+
 }
 
 .switch input {
