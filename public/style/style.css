@@ -222,6 +222,19 @@ input:checked + .slider.round .moon {
 	height: 100vh;
 }
 
+.position-relative {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 38%;
+    right: 10px;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+
 .w-half {
 	width: 50%;
 }
