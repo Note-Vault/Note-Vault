@@ -412,3 +412,82 @@ input:checked + .slider.round .moon {
 	background-color: #ffb499;
 	border-radius: 25px;
 }
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.973);
+    overflow-y: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.overlay-content a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 30%;
+    background: #f1f1f1;
+    transition: width 0.3s ease;
+}
+
+.overlay-content a:hover::after {
+    width: 40%;
+    left: 30%;
+    background-color: #f1f1f1;
+}
+
+.overlay-content a:hover, .overlay-content a:focus {
+    color: #f1f1f1;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
