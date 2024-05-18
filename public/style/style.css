@@ -310,27 +310,29 @@ input:checked + .slider.round .moon {
 .test-abt a {
 	text-decoration: none;
 }
+
 .card-container {
-    display:flex;
-    justify-content: center;
-    gap: 20px; /* Adjust the gap value as needed */
-    padding: 6px 20px;
-    width: 460px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 33%; /* Adjust based on your card width and margins */
   }
-  
+
 .card {
+    flex: 1 0 300px;
     position: relative;
-    width: 300px;
+    width:350px;
     height: 200px;
     background-color: #3c63c526;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: 20px;
     overflow: hidden;
     perspective: 1000px;
     box-shadow: 0 0 0 5px #ffffff80;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    grid-template-columns:min-content;
   }
   
   .card svg {
@@ -378,5 +380,5 @@ input:checked + .slider.round .moon {
     font-size: 14px;
     color: #777;
     line-height: 1.4;
-  }
-  
+}
+    
