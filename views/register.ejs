@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <section class="login">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<div class="container-log">
 		<!-- Dark mode toggle switch with custom sun and moon icons -->
 		<div class="toggle-container">
@@ -22,7 +23,8 @@
 				<p style="color: red"><%= errorMessage %></p>
 				<% } %>
 				<form method="post" action="/user/register">
-					<div class="mb-3">
+					<div class="regclass mb-3">
+						<i class='logo1 bx bx-user' style="font-size:25px;"></i>
 						<label class="form-label" for="name">Name</label>
 						<input
 							type="text"
@@ -32,10 +34,12 @@
 							name="name"
 							required
 							pattern="[A-Za-z]+"
+							style="padding-left:10%;"
 							title="Must container letters only.Numbers and Special characters not allowed"
 						/>
 					</div>
-					<div class="mb-3 position-relative">
+					<div class="regclass mb-3">
+						<i class='logo2 bx bx-envelope' style="font-size:25px;"></i>
 						<label class="form-label" for="email">Email ID</label>
 						<input
 							type="email"
@@ -43,10 +47,13 @@
 							id="email"
 							placeholder="abc1@site.com"
 							name="email"
+							style="padding-left:10%;"
 							required
 						/>
 					</div>
-					<div class="mb-3 position-relative">
+					<div class="regclass mb-3">
+						<div class="regclass">
+						<i class='logo3 bx bx-lock-alt' style="font-size:27px;"></i>
 						<label class="form-label" for="password">Password</label>
 						<input
 							type="password"
@@ -54,9 +61,11 @@
 							id="password"
 							placeholder="••••••"
 							name="password"
+							style="padding-left:10%;"
 							required
 							aria-describedby="passwordHelpBlock"
 						/>
+					</div>
 						<span class="password-toggle" id="passwordToggle">
 							<i class="fas fa-eye-slash"></i>
 						  </span>

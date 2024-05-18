@@ -57,6 +57,26 @@
 	top:calc(50%);
 	left:1.8%;
 }
+
+.regclass{
+	position: relative;
+}
+.logo1{
+	position: absolute;
+	top:calc(55%);
+	left:1.0%;
+}
+.logo2{
+	position: absolute;
+	top:calc(57%);
+	left:1.0%;
+}
+.logo3{
+	position: absolute;
+	top:calc(52%);
+	left:1.0%;
+}
+
 .toggle-container {
 
 
