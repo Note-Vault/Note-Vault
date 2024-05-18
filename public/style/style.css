@@ -108,7 +108,10 @@
 .row2{
 	border: 1px solid gray;
 	border-radius: 25px;
-
+	
+}
+.container-fluid p{
+	font-size: 25px;
 }
 
 
