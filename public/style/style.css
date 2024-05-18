@@ -203,11 +203,10 @@ input:checked + .slider.round .moon {
     position: relative;
 }
 
-.show-password-btn {
+.password-toggle {
     position: absolute;
     top: 38%;
     right: 10px;
-    /* transform: translateY(-38%); */
     font-size: 14px;
     padding: 4px 8px;
 }
