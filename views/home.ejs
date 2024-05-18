@@ -1,257 +1,254 @@
 <%- include("partials/header") -%>
 
 
-<section id="title">
+	<section id="title">
 
 
-	<!-- container row column -->
-	<div class="container-fluid p-4">
-		<div class="row m-1">
-			<div class="col-lg-4 font-weight-bold" style="font-size: 35px;display:flex;">
-				<img src="image/favicon.png" width="50px" style="border-radius:25%;height:50px;">
-				<a href="/note/show" class="text-white text-decoration-none" style="padding-left:2%;">
-					NoteVault
-				</a>
-			</div>
-			<!-- Dark mode toggle switch with custom sun and moon icons -->
-			<div class="toggle-container">
-				<label class="switch">
-					<input type="checkbox" id="modeToggle" />
-					<span class="slider round">
-						<span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
-						<span class="slider-icon moon"
-							><i class="fa-solid fa-moon"></i
-						></span>
-					</span>
-				</label>
-			</div>
-			<div class="col-4">
-				<div class="row p-2 font-weight-light">
-					<div class="col-lg-6 text-center">
-						<a href="#why-us" class="text-white text-decoration-none">
-							Why Us
-						</a>
+		<!-- container row column -->
+		<div class="container-fluid p-4">
+			<div class="row m-1">
+				<div class="col-lg-4 font-weight-bold" style="font-size: 35px;display:flex;">
+					<img src="image/favicon.png" width="50px" style="border-radius:25%;height:50px;">
+					<a href="/note/show" class="text-white text-decoration-none" style="padding-left:2%;">
+						NoteVault
+					</a>
+				</div>
+				<!-- Dark mode toggle switch with custom sun and moon icons -->
+				<div class="toggle-container">
+					<label class="switch">
+						<input type="checkbox" id="modeToggle" />
+						<span class="slider round">
+							<span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
+							<span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
+						</span>
+					</label>
+				</div>
+				<div class="col-4 d-none d-lg-block">
+					<div class="row p-2 font-weight-light ">
+						<div class="col-lg-6 text-center">
+							<a href="#why-us" class="text-white text-decoration-none">
+								Why Us
+							</a>
+						</div>
+						<div class="col-lg-6 text-center">
+							<a href="#testimonials" class="text-white text-decoration-none">
+								Testimonials
+							</a>
+						</div>
 					</div>
-					<div class="col-lg-6 text-center">
-						<a href="#testimonials" class="text-white text-decoration-none">
-							Testimonials
-						</a>
+				</div>
+				<div class="col-12 d-block d-lg-none text-right">
+					<div class="hamburger" id="hamburger">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 d-none d-lg-block">
+					<div class="row p-2 font-weight-light">
+						<div class="col-lg-6 text-center">
+							<a href="/user/login" class="text-white text-decoration-none">
+								Login
+							</a>
+						</div>
+						<div class="col-lg-6 text-center">
+							<a href="/user/register" class="text-white text-decoration-none">
+								Register
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4">
-				<div class="row p-2 font-weight-light">
-					<div class="col-lg-6 text-center">
-						<a href="/user/login" class="text-white text-decoration-none">
-							Login
-						</a>
-					</div>
-					<div class="col-lg-6 text-center">
-						<a href="/user/register" class="text-white text-decoration-none">
-							Register
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row mt-5 align-items-center">
-			<div class="col-lg-8">
-				<p style="font-size: 100px">
-					Keep your thoughts, ideas, and important information in one secure
-					place.
-				</p>
-			</div>
-			<div class="col-lg-4">
-				<img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
-			</div>
-		</div>
-	</div>
-
-
-    
-
-</section>
-
-<section class="features p-5" id="why-us">
-	<div class="container-fluid">
-		<div class="row">
-			<div
-				class="col-lg-12 text-center"
-				style="font-size: 60px; font-family: cursive; text-decoration: underline;"
-
-			>
-				Why Choose NoteVault?
-			</div>
-		</div>
-		<div
-			class="row why_notevault justify-content-around"
-			style="font-size: 30px; padding-top: 70px; padding-bottom: 60px"
-		>
-			<div class="row1 col-lg-3 text-center pt-4 pb-3">
-
-				<i class="fa-solid fa-check fa"></i>
-				<h1 style="color: rgb(24, 235, 130); font-style: italic">
-					Easy Note Organization
-				</h1>
-				<p style="color: rgb(235, 24, 224); font-style: italic">
-					Create, categorize, and search your notes effortlessly.
-				</p>
-			</div>
-
-			<div class="row2 col-lg-3 text-center pt-4 pb-3">
-
-				<i class="fa-solid fa-universal-access fa"></i>
-				<h1 style="color: rgb(24, 235, 130); font-style: italic">
-					Access Anywhere
-				</h1>
-				<p style="color: rgb(235, 24, 224); font-style: italic">
-					Access your notes from any device, whether it's your computer, tablet,
-					or smartphone.
-				</p>
-			</div>
-
-			<div class="row3 col-lg-3 text-center pt-4 pb-3">
-
-				<i class="fa-solid fa-lock fa"></i>
-				<h1 style="color: rgb(24, 235, 130); font-style: italic">
-					Secure and Private
-				</h1>
-				<p style="color: rgb(235, 24, 224); font-style: italic">
-					Your notes are encrypted and protected, ensuring your data is safe.
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-<section class="About" style="margin: 0px; padding: 0px; box-sizing: border-box; min-height: 0px; overflow: hidden; background-color: lightblue;">
-	<div class="section" style="width: 100%; min-height: 100vh;">
-		<div class="container_about" style="width: 80%; display: block; margin: auto; padding-top: 55px">
-			<div class="title" style="font-size: 60px; text-align: center;">
-				<h1>About This Website</h1>
-			</div>
-			<div class="content-section" style="font-size: 30px; float: left; width: 55%;">
-				<div class="topic" style="margin-top: 55px;">
-				<h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">NoteVault: Your Ultimate Note-Taking Solution</h2>
-				<p style="margin-top: 10px; font-size: 20px; line-height: 1.5;">Welcome to NoteVault, the perfect platform for enhancing your productivity and organizing your notes efficiently. Whether you're a student or a professional, NoteVault has everything you need.</p>
-				</div>
-				<h3 style="margin-top: 15px;">Key Features:</h3>
-				<ul style="margin-top: 10px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; list-style-type: disc;">
-					<li>EASY NOTE ORGANIZATION</li>
-					<li>EDIT NOTES</li>
-					<li>DELETE NOTES</li>
-					<li>ACCESS ANYWHERE</li>
-					<li>SECURE & PRIVATE</li>
-				</ul>
-				<h3 style="margin-top: 15px;">Getting Started:</h3>
-				<ul style="margin-top: 10px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; list-style-type: disc;">
-					<li>Sign Up/Log In: Create an account or log in.</li>
-					<li>Create Your First Note: Click 'Create Note' to begin.</li>
-					<li>Organize Your Notes: Use tags and categories.</li>
-					<li>Search Efficiently: Use the search bar to find notes quickly.</li>
-				</ul>
-				<p style="margin-top: 10px; margin-bottom: 20px; font-size: 25px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Join NoteVault now and transform your note-taking!</p>
-			</div>
-		</div>
-		<div class="image-sec" style="float: right; width: 40%; padding: 10px;">
-			<img style="width: 70%; height: auto; margin-top: 55px; border-radius: 10px;" src="/image/noteimg.jpg">
-		</div>
-	</div>
-</section>
-
-
-<section class="testimonials" id="testimonials">
-	<div class="col-lg-12 text-center" style="font-size: 60px">
-
-		<p>What Our Clients Say</p>
-	</div>
-	<div class="container-fluid">
-		<div
-			id="carouselExampleAutoplaying"
-			class="carousel slide"
-			data-bs-ride="carousel"
-		>
-			<div class="carousel-indicators">
-				<button
-					type="button"
-					data-bs-target="#carouselExampleAutoplaying"
-					data-bs-slide-to="0"
-					class="active"
-					aria-current="true"
-					aria-label="Slide 1"
-				></button>
-				<button
-					type="button"
-					data-bs-target="#carouselExampleAutoplaying"
-					data-bs-slide-to="1"
-					aria-label="Slide 2"
-				></button>
-				<button
-					type="button"
-					data-bs-target="#carouselExampleAutoplaying"
-					data-bs-slide-to="2"
-					aria-label="Slide 3"
-				></button>
-			</div>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<h6 class="test-head">Sarah Johnson | University Student</h6>
-					<p class="test-desc">
-						"NoteVault is a game-changer for me. As a student, it helps me stay
-						organized and never miss important information. Thank you!"
+			<div class="row mt-5 align-items-center">
+				<div class="col-lg-8">
+					<p style="font-size: 100px">
+						Keep your thoughts, ideas, and important information in one secure
+						place.
 					</p>
-					<div class="test-abt">
-						<a href="https://linkedin.com/" target="_blank">
-							<i class="fa-brands fa-linkedin test-profile"></i>
-						</a>
-						<a href="https://github.com/" target="_blank">
-							<i class="fa-brands fa-github test-profile"></i>
-						</a>
-						<a href="https://twitter.com/" target="_blank">
-							<i class="fa-brands fa-x-twitter test-profile"></i>
-						</a>
-					</div>
 				</div>
-				<div class="carousel-item">
-					<h6 class="test-head">Mark Roberts | Digital Marketer</h6>
-					<p class="test-desc">
-						"I've been using NoteVault for my personal and professional notes,
-						and it has greatly improved my productivity. The collaboration
-						features are fantastic!"
-					</p>
-					<div class="test-abt">
-						<a href="https://linkedin.com/" target="_blank">
-							<i class="fa-brands fa-linkedin test-profile"></i>
-						</a>
-						<a href="https://github.com/" target="_blank">
-							<i class="fa-brands fa-github test-profile"></i>
-						</a>
-						<a href="https://twitter.com/" target="_blank">
-							<i class="fa-brands fa-x-twitter test-profile"></i>
-						</a>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<h6 class="test-head">Laura Thompson | Small Business Owner</h6>
-					<p class="test-desc">
-						"NoteVault has simplified my life. It's intuitive, reliable, and
-						accessible on all my devices. Highly recommended for anyone looking
-						for a note-taking solution."
-					</p>
-					<div class="test-abt">
-						<a href="https://linkedin.com/" target="_blank">
-							<i class="fa-brands fa-linkedin test-profile"></i>
-						</a>
-						<a href="https://github.com/" target="_blank">
-							<i class="fa-brands fa-github test-profile"></i>
-						</a>
-						<a href="https://twitter.com/" target="_blank">
-							<i class="fa-brands fa-x-twitter test-profile"></i>
-						</a>
-					</div>
+				<div class="col-lg-4">
+					<img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
 				</div>
 			</div>
+		</div>
+		<div class="overlay" id="overlay">
+			<div class="overlay-content">
+				<a href="#why-us" class="text-white text-decoration-none">Why Us</a>
+				<a href="#testimonials" class="text-white text-decoration-none">Testimonials</a>
+				<a href="/user/login" class="text-white text-decoration-none">Login</a>
+				<a href="/user/register" class="text-white text-decoration-none">Register</a>
+			</div>
+		</div>
+
+
+
+	</section>
+
+	<section class="features p-5" id="why-us">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 text-center"
+					style="font-size: 60px; font-family: cursive; text-decoration: underline;">
+					Why Choose NoteVault?
+				</div>
+			</div>
+			<div class="row why_notevault justify-content-around"
+				style="font-size: 30px; padding-top: 70px; padding-bottom: 60px">
+				<div class="row1 col-lg-3 text-center pt-4 pb-3">
+
+					<i class="fa-solid fa-check fa"></i>
+					<h1 style="color: rgb(24, 235, 130); font-style: italic">
+						Easy Note Organization
+					</h1>
+					<p style="color: rgb(235, 24, 224); font-style: italic">
+						Create, categorize, and search your notes effortlessly.
+					</p>
+				</div>
+
+				<div class="row2 col-lg-3 text-center pt-4 pb-3">
+
+					<i class="fa-solid fa-universal-access fa"></i>
+					<h1 style="color: rgb(24, 235, 130); font-style: italic">
+						Access Anywhere
+					</h1>
+					<p style="color: rgb(235, 24, 224); font-style: italic">
+						Access your notes from any device, whether it's your computer, tablet,
+						or smartphone.
+					</p>
+				</div>
+
+				<div class="row3 col-lg-3 text-center pt-4 pb-3">
+
+					<i class="fa-solid fa-lock fa"></i>
+					<h1 style="color: rgb(24, 235, 130); font-style: italic">
+						Secure and Private
+					</h1>
+					<p style="color: rgb(235, 24, 224); font-style: italic">
+						Your notes are encrypted and protected, ensuring your data is safe.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="About"
+		style="margin: 0px; padding: 0px; box-sizing: border-box; min-height: 0px; overflow: hidden; background-color: lightblue;">
+		<div class="section" style="width: 100%; min-height: 100vh;">
+			<div class="container_about" style="width: 80%; display: block; margin: auto; padding-top: 55px">
+				<div class="title" style="font-size: 60px; text-align: center;">
+					<h1>About This Website</h1>
+				</div>
+				<div class="content-section" style="font-size: 30px; float: left; width: 55%;">
+					<div class="topic" style="margin-top: 55px;">
+						<h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">NoteVault:
+							Your Ultimate Note-Taking Solution</h2>
+						<p style="margin-top: 10px; font-size: 20px; line-height: 1.5;">Welcome to NoteVault, the
+							perfect platform for enhancing your productivity and organizing your notes efficiently.
+							Whether you're a student or a professional, NoteVault has everything you need.</p>
+					</div>
+					<h3 style="margin-top: 15px;">Key Features:</h3>
+					<ul
+						style="margin-top: 10px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; list-style-type: disc;">
+						<li>EASY NOTE ORGANIZATION</li>
+						<li>EDIT NOTES</li>
+						<li>DELETE NOTES</li>
+						<li>ACCESS ANYWHERE</li>
+						<li>SECURE & PRIVATE</li>
+					</ul>
+					<h3 style="margin-top: 15px;">Getting Started:</h3>
+					<ul
+						style="margin-top: 10px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; list-style-type: disc;">
+						<li>Sign Up/Log In: Create an account or log in.</li>
+						<li>Create Your First Note: Click 'Create Note' to begin.</li>
+						<li>Organize Your Notes: Use tags and categories.</li>
+						<li>Search Efficiently: Use the search bar to find notes quickly.</li>
+					</ul>
+					<p
+						style="margin-top: 10px; margin-bottom: 20px; font-size: 25px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+						Join NoteVault now and transform your note-taking!</p>
+				</div>
+			</div>
+			<div class="image-sec" style="float: right; width: 40%; padding: 10px;">
+				<img style="width: 70%; height: auto; margin-top: 55px; border-radius: 10px;" src="/image/noteimg.jpg">
+			</div>
+		</div>
+	</section>
+
+
+	<section class="testimonials" id="testimonials">
+		<div class="col-lg-12 text-center" style="font-size: 60px">
+
+			<p>What Our Clients Say</p>
+		</div>
+		<div class="container-fluid">
+			<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
+						class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+						aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+						aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<h6 class="test-head">Sarah Johnson | University Student</h6>
+						<p class="test-desc">
+							"NoteVault is a game-changer for me. As a student, it helps me stay
+							organized and never miss important information. Thank you!"
+						</p>
+						<div class="test-abt">
+							<a href="https://linkedin.com/" target="_blank">
+								<i class="fa-brands fa-linkedin test-profile"></i>
+							</a>
+							<a href="https://github.com/" target="_blank">
+								<i class="fa-brands fa-github test-profile"></i>
+							</a>
+							<a href="https://twitter.com/" target="_blank">
+								<i class="fa-brands fa-x-twitter test-profile"></i>
+							</a>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<h6 class="test-head">Mark Roberts | Digital Marketer</h6>
+						<p class="test-desc">
+							"I've been using NoteVault for my personal and professional notes,
+							and it has greatly improved my productivity. The collaboration
+							features are fantastic!"
+						</p>
+						<div class="test-abt">
+							<a href="https://linkedin.com/" target="_blank">
+								<i class="fa-brands fa-linkedin test-profile"></i>
+							</a>
+							<a href="https://github.com/" target="_blank">
+								<i class="fa-brands fa-github test-profile"></i>
+							</a>
+							<a href="https://twitter.com/" target="_blank">
+								<i class="fa-brands fa-x-twitter test-profile"></i>
+							</a>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<h6 class="test-head">Laura Thompson | Small Business Owner</h6>
+						<p class="test-desc">
+							"NoteVault has simplified my life. It's intuitive, reliable, and
+							accessible on all my devices. Highly recommended for anyone looking
+							for a note-taking solution."
+						</p>
+						<div class="test-abt">
+							<a href="https://linkedin.com/" target="_blank">
+								<i class="fa-brands fa-linkedin test-profile"></i>
+							</a>
+							<a href="https://github.com/" target="_blank">
+								<i class="fa-brands fa-github test-profile"></i>
+							</a>
+							<a href="https://twitter.com/" target="_blank">
+								<i class="fa-brands fa-x-twitter test-profile"></i>
+							</a>
+						</div>
+					</div>
+				</div>
 
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
 					data-bs-slide="prev">
@@ -268,14 +265,14 @@
 	</section>
 
 
-<!-- Scroll Up button -->
-<div class="scroll-to-top invisible">
-	<a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
-</div>
-
-<footer style="text-align: center">
-	<div class="col-md-12 mt-5">
-		<p>© Copyright NoteVault</p>
+	<!-- Scroll Up button -->
+	<div class="scroll-to-top invisible">
+		<a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
 	</div>
-</footer>
-<%- include("partials/footer") -%>
+
+	<footer style="text-align: center">
+		<div class="col-md-12 mt-5">
+			<p>© Copyright NoteVault</p>
+		</div>
+	</footer>
+	<%- include("partials/footer") -%>
