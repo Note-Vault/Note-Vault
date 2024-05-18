@@ -1,9 +1,10 @@
 [data-theme="light"] {
-    background-color: #f0f0f0;
-    color: #333;
+	background-color: #f0f0f0;
+	color: #333;
 }
 
 [data-theme="dark"] {
+
     background-color: #797777;
     color: #f0f0f0;
 }
@@ -14,70 +15,122 @@
     background-color: black;
     color: white;
     font-size: 25px;
+
 }
 
 [data-theme="dark"] .note-nav {
-    background-color: black;
-    color: #f0f0f0;
+	background-color: black;
+	color: #f0f0f0;
 }
 
-[data-theme="dark"] .login{
-    background-color: #1A1A1A  ;
-    color: #f0f0f0;
+[data-theme="dark"] .login {
+	background-color: #1a1a1a;
+	color: #f0f0f0;
 }
 
-[data-theme="dark"] .modal-header{ 
+[data-theme="dark"] .modal-header {
 	background-color: #3c3c3c;
 }
 
-[data-theme="dark"] .modal-body{
+[data-theme="dark"] .modal-body {
 	background-color: #1e1e1e;
 	color: white;
 }
 
-[data-theme="dark"] .note-text{ 
+[data-theme="dark"] .note-text {
 	color: black;
 }
 
 [data-theme="dark"] .text-dark {
-    color: white;
+	color: white;
 }
-
+.loginclass{
+	position: relative;
+}
+.icon1{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+.icon2{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
 .toggle-container {
+
+
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 9999; 
 }
-.row1:hover{
-    border: 1px solid burlywood;
-    border-radius: 25px;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    background-color: #f3ecec;
-}
-.row2:hover{
-    border: 1px solid burlywood;
-    border-radius: 25px;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    background-color: #f3ecec;
+
+
+.why_notevault .fa-solid{
+	font-size: 4vmax;
 }
 
-.row3:hover{
-    border: 1px solid burlywood;
-    border-radius: 25px;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    background-color: #f3ecec;
+.row1{
+	border: 1px solid gray;
+	border-radius: 25p
+    }
 
+.row1:hover {
+	border: 1px solid burlywood;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: #f3ecec;
+
+	transition: 1s;
+	scale:1.07;
+}
+.row2{
+	border: 1px solid gray;
+	border-radius: 25px;
+
+}
+
+
+.row2:hover {
+	border: 1px solid burlywood;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: #f3ecec;
+
+	transition: 1s;
+	scale:1.07;
+}
+
+
+.row3{
+	border: 1px solid gray;
+	border-radius: 25px;
+
+
+}
+.row3:hover {
+	border: 1px solid burlywood;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: #f3ecec;
+
+	transition: 1s;
+	scale:1.07;
 }
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+
+	display: flex;
+	justify-content: center;
+
 }
 
-.switch input { 
-    display: none;
+.switch input {
+	display: none;
 }
 
 .slider {
@@ -95,12 +148,12 @@
 }
 
 .slider-icon {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    /* top: 10px; */
     font-size: 24px;
     color: #fff;
     transition: opacity 0.3s ease;
-    padding : 5px;
+    /* padding : 5px; */
 }
 
 .sun {
@@ -111,7 +164,8 @@
 .moon {
     opacity: 0;
     color: black;
-    left:5px;
+    /* left:5px; */
+	right: 20px ;
 }
 
 .slider.round:before {
@@ -127,18 +181,19 @@
     border-radius: 34px;
     background-color: black;
     transition: background-color 0.4s;
+
 }
 
 input:checked + .slider.round:before {
-    background-color: white;
+	background-color: white;
 }
 
 input:checked + .slider.round .sun {
-    opacity: 0;
+	opacity: 0;
 }
 
 input:checked + .slider.round .moon {
-    opacity: 1;
+	opacity: 1;
 }
 
 .hidden {
@@ -166,6 +221,19 @@ input:checked + .slider.round .moon {
 	align-items: center;
 	height: 100vh;
 }
+
+.position-relative {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 38%;
+    right: 10px;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
 
 .w-half {
 	width: 50%;
@@ -382,3 +450,18 @@ input:checked + .slider.round .moon {
     line-height: 1.4;
 }
     
+
+.invisible {
+	display: none;
+}
+
+.scroll-to-top {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	z-index: 9999;
+	padding: 0.2rem 0.6rem;
+	background-color: #ffb499;
+	border-radius: 25px;
+}
+
