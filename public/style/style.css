@@ -47,10 +47,28 @@
 .loginclass{
 	position: relative;
 }
+.navbar a{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
 .navbar a:hover{
-	color:indianred;
+	color:rgb(80, 80, 80);
 	
 }
+.col-lg-8{
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: medium;
+}
+#WcNv{
+    font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 60px;
+	text-decoration: underline;
+} 
 .icon1{
 	position: absolute;
 	top:calc(50%);
@@ -232,7 +250,7 @@ input:checked + .slider.round .moon {
 }
 
 #title {
-	background-color: #121481;
+	background-color: #ff5d5d;
 	color: white;
 	font-size: 25px;
 }
@@ -372,7 +390,7 @@ input:checked + .slider.round .moon {
 
 .testimonials {
 	text-align: center;
-	background-color: #121481;
+	background-color: #ff5d5d;
 	color: white;
 	font-size: 1.5rem;
 }
@@ -557,3 +575,54 @@ body::-webkit-scrollbar {
         font-size: 25px;
     }
 }
+
+
+
+
+/* navbar animations */
+
+/* Keyframes for the stroke animation */
+@keyframes strokeAnimation {
+	0% {
+	  width: 0;
+	  left: 0;
+	}
+	50% {
+	  width: 100%;
+	  left: 0;
+	}
+	100% {
+	  width: 0;
+	  left: 100%;
+	}
+  }
+  
+  /* Apply styles to the navigation links */
+  .navbar a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	overflow: hidden;
+  }
+  
+  /* Create the stroke effect using the ::after pseudo-element */
+  .navbar a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: currentColor;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+  }
+  
+  /* On hover, trigger the stroke animation */
+  .navbar a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	animation: strokeAnimation 0.5s forwards;
+  }
