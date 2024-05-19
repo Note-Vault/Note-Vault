@@ -53,10 +53,28 @@
 .loginclass{
 	position: relative;
 }
+.navbar a{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
 .navbar a:hover{
-	color:indianred;
+	color:rgb(80, 80, 80);
 	
 }
+.col-lg-8{
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: medium;
+}
+#WcNv{
+    font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 60px;
+	text-decoration: underline;
+} 
 .icon1{
 	position: absolute;
 	top:calc(50%);
@@ -238,7 +256,7 @@ input:checked + .slider.round .moon {
 }
 
 #title {
-	background-color: #121481;
+	background-color: #ff5d5d;
 	color: white;
 	font-size: 25px;
 }
@@ -378,7 +396,7 @@ input:checked + .slider.round .moon {
 
 .testimonials {
 	text-align: center;
-	background-color: #121481;
+	background-color: #ff5d5d;
 	color: white;
 	font-size: 1.5rem;
 }
