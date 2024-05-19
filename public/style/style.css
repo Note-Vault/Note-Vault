@@ -47,6 +47,10 @@
 .loginclass{
 	position: relative;
 }
+.navbar a:hover{
+	color:indianred;
+	
+}
 .icon1{
 	position: absolute;
 	top:calc(50%);
