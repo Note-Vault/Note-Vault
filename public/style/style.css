@@ -28,11 +28,6 @@
 	color: #f0f0f0;
 }
 
-[data-theme="dark"] .navbar {
-	background-color: #1a1a1a;
-	color: #f0f0f0;
-}
-
 [data-theme="dark"] .modal-header {
 	background-color: #3c3c3c;
 }
@@ -84,16 +79,6 @@
 	position: absolute;
 	top:calc(52%);
 	left:1.0%;
-}
-
-.navbar{
-	position: fixed!important;
-	top: -0.5rem;
-	left: -0.3rem;
-	background-color: #121481;
-	padding-left: 3rem;
-	width: 100%;
-	height: 85px;
 }
 
 .toggle-container {
