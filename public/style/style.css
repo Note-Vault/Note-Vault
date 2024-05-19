@@ -5,7 +5,7 @@
 
 [data-theme="dark"] {
 
-    background-color: #797777;
+    background-color: #1e1e1e;
     color: #f0f0f0;
 }
 
@@ -17,12 +17,6 @@
     font-size: 25px;
 
 }
-
-[data-theme="dark"] .About-Section{
-	background-color: #797777;
-    color: #f0f0f0;
-}
-
 
 [data-theme="dark"] .note-nav {
 	background-color: black;
@@ -522,6 +516,21 @@ body::-webkit-scrollbar {
     font-size: 22px;
     line-height: 1.5;
     color: rgb(45, 44, 44);
+}
+
+[data-theme="dark"] .About-Section{
+	background-color:  #1e1e1e;
+}
+
+[data-theme="dark"] .a_heading h1{
+	color: white;
+}
+[data-theme="dark"] .a_content h2{
+	color: white;
+}
+
+[data-theme="dark"] .a_content p{
+	color: white;
 }
 @media screen and (max-width: 990px){
     .a_heading{
