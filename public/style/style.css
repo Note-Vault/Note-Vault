@@ -548,3 +548,54 @@ body::-webkit-scrollbar {
         font-size: 25px;
     }
 }
+
+
+
+
+/* navbar animations */
+
+/* Keyframes for the stroke animation */
+@keyframes strokeAnimation {
+	0% {
+	  width: 0;
+	  left: 0;
+	}
+	50% {
+	  width: 100%;
+	  left: 0;
+	}
+	100% {
+	  width: 0;
+	  left: 100%;
+	}
+  }
+  
+  /* Apply styles to the navigation links */
+  .navbar a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	overflow: hidden;
+  }
+  
+  /* Create the stroke effect using the ::after pseudo-element */
+  .navbar a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: currentColor;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+  }
+  
+  /* On hover, trigger the stroke animation */
+  .navbar a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	animation: strokeAnimation 0.5s forwards;
+  }
