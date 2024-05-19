@@ -18,6 +18,12 @@
 
 }
 
+[data-theme="dark"] .About-Section{
+	background-color: #797777;
+    color: #f0f0f0;
+}
+
+
 [data-theme="dark"] .note-nav {
 	background-color: black;
 	color: #f0f0f0;
@@ -444,3 +450,101 @@ body::-webkit-scrollbar {
 	background: #007bff; 
 	border-radius: 6px; 
   }
+
+
+  .About-Section{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f0f0
+}
+.a_heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+.a_heading h1{
+    font-size: 60px;
+    color: #000;
+    margin-bottom: 25px;
+    position:relative;
+    font-family: cursive;
+	text-decoration: underline;
+}
+.a_heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+}
+.a_container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.a_image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.a_image img{
+    max-width: 95%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.a_image:hover img{
+    transform: scale(1.1);
+}
+.a_content{
+    flex: 1;
+}
+.a_content h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #191818; 
+	font-weight: bold; 
+}
+.a_content p{
+    font-size: 22px;
+    line-height: 1.5;
+    color: rgb(45, 44, 44);
+}
+@media screen and (max-width: 990px){
+    .a_heading{
+        padding: 0px 20px;
+    }
+    .a_heading h1{
+        font-size: 60px;
+        margin-bottom: 0px;
+    }
+    .a_container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .a_image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .a_content p{
+        padding: 0px;
+        font-size: 25px;
+    }
+}
