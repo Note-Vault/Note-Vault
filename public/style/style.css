@@ -44,6 +44,42 @@
 [data-theme="dark"] .text-dark {
 	color: white;
 }
+.loginclass{
+	position: relative;
+}
+.navbar a:hover{
+	color:indianred;
+	
+}
+.icon1{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+.icon2{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+
+.regclass{
+	position: relative;
+}
+.logo1{
+	position: absolute;
+	top:calc(55%);
+	left:1.0%;
+}
+.logo2{
+	position: absolute;
+	top:calc(57%);
+	left:1.0%;
+}
+.logo3{
+	position: absolute;
+	top:calc(52%);
+	left:1.0%;
+}
 
 .toggle-container {
 
@@ -76,7 +112,10 @@
 .row2{
 	border: 1px solid gray;
 	border-radius: 25px;
-
+	
+}
+.container-fluid p{
+	font-size: 25px;
 }
 
 
@@ -209,6 +248,19 @@ input:checked + .slider.round .moon {
 	align-items: center;
 	height: 100vh;
 }
+
+.position-relative {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 38%;
+    right: 10px;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
 
 .w-half {
 	width: 50%;
@@ -359,11 +411,36 @@ input:checked + .slider.round .moon {
 }
 
 .scroll-to-top {
-	position: fixed;
-	bottom: 3rem;
-	right: 3rem;
-	z-index: 9999;
-	padding: 0.2rem 0.6rem;
-	background-color: #ffb499;
-	border-radius: 25px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	color: white;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 9999;
+    padding: 1rem; 
+    border-radius: 50%; 
+    width: 45px; 
+    height: 45px;
+    background-color: #222ac3;
+    border-radius: 25px;
+    transition: background-color 0.3s ease; 
 }
+
+.scroll-to-top:hover {
+    background-color: #0077cc; 
+}
+
+body::-webkit-scrollbar {
+	width: 9px; 
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background: #007bff; 
+	border-radius: 6px; 
+  }
