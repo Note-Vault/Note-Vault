@@ -66,3 +66,22 @@ window.addEventListener("scroll", () => {
 		scrollUp.classList.add("invisible");
 	}
 });
+
+document.getElementById('hamburger').addEventListener('click', function () {
+	this.classList.toggle('active');
+	document.getElementById('overlay').style.height = this.classList.contains('active') ? '100%' : '0%';
+});
+
+document.querySelectorAll('.overlay-content a').forEach(link => {
+	link.addEventListener('click', function () {
+		document.getElementById('hamburger').classList.remove('active');
+		document.getElementById('overlay').style.height = '0%';
+	});
+});
+
+window.addEventListener('resize', function () {
+	if (window.innerWidth >= 992) {
+		document.getElementById('hamburger').classList.remove('active');
+		document.getElementById('overlay').style.height = '0%';
+	}
+});
