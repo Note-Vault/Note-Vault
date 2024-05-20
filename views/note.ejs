@@ -73,7 +73,7 @@
 
 <!-- Dark mode toggle switch with custom sun and moon icons -->
 <div class="bg-gray-800 text-white p-4 mb-4 flex justify-between items-center w-full mt-3">
-  <a href="/" class="text-2xl font-bold text-white no-underline">
+  <a href="/" class="text-2xl font-extrabold text-white no-underline text-4xl">
     NoteVault
   </a>
   <div class="flex items-center space-x-4">
@@ -114,7 +114,7 @@
   </div>
 </div>
 <div class="mt-8 flex justify-center items-center">
-  <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
+  <h1 class="text-2xl font-bold">Your Notes</h1>
 </div>
 
   <div class="row">
@@ -181,24 +181,20 @@
       </div>
     </div>
     <!-- update modal-->
-    <div class="col-md-3 col-sm-6">
-      <div class="flex flex-col gap-2 border border-black rounded-xl p-4 my-6 h-80 shadow-md shadow-gray-500" style="width: 18rem;">
+    <div class="col-md-3 col-sm-6 m-8 p-4">
+      <div class="card flex flex-col gap-2 border rounded-md p-4 my-6 shadow-md shadow-gray-500 w-full h-full">
         <div>
           <!-- <h5 class="text-xl font-bold font-serif">Tagg</h5> -->
           <h5 class="note-tag"><%= notes[i].tag %></h5>
-          <p class="note-date"><%= (notes[i].createdAt) %> </p>
+          <p class="note-date"><%= notes[i].createdAt.getDate()%>-<%=notes[i].createdAt.getMonth()%>-<%=notes[i].createdAt.getFullYear() %> </p>
         </div>
         <div class="note-divider"></div>
         <div class="note-description-container">
           <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
           <p class="note-description"><%= notes[i].description %></p>
+          <p class="note-date">Finish Date : <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth()%>-<%=notes[i].finishDate.getFullYear() %> </p>
         </div>
-        <!-- <div class="form-group">
-          Created:  <%= (notes[i].createdAt) %> 
-        </div> 
-        <div class="form-group">
-          Finish Date:  <%= (notes[i].finishDate) %> 
-        </div>  -->
+        
         <div class="flex gap-2">
           <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
             <input type="hidden" name="_method" value="DELETE">
