@@ -99,7 +99,21 @@ To get started, simply clone the repository and open the `terminal` in your code
 - ```bash
     npm start
    ```
+## MongoDB connection:
 
+1. Connect MongoDB Compass:
+   Open MongoDB Compass and connect to the MongoDB server at mongodb://localhost:27017.
+   ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/2c796637-752f-4a49-a7e9-ec8069eee5e4)
+2. Click on Connect.
+   ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/b75f1efe-4ada-40fd-afe5-167242ec37d0)
+3. In terminal it would be mentioned as "Connected to MongoDB".
+4. To see database collections:
+   - Click on new database
+   - Add database name (NoteVault)
+   - Add collection name (notebooks , users)
+   - ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/9910e2fb-0620-4bb8-a1cf-cd7a88e136d5)
+   - ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/dd4a3b18-af74-4a1b-8d28-f9851c9fba8e)
+   
 ## Contributing 🧑‍💻
 - Fork the repository.
 - Create your feature branch: git checkout -b feature-name
