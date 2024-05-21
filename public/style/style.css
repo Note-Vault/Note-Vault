@@ -337,9 +337,6 @@ input:checked + .slider.round .moon {
 .note-tag {
 	font-weight: 700;
 	font-size: 2rem;
-	background-color: chartreuse;
-	color: floralwhite;
-	border-radius: 3%;
 }
 
 .note-date{
@@ -749,8 +746,8 @@ body::-webkit-scrollbar {
 .card {
   flex: 1 0 300px;
   position: relative;
-  width: 350px;
-  height: 200px;
+  /* width: ;
+  height: auto; */
   background-color: #3c63c526;
   border-radius: 10px;
   display: flex;

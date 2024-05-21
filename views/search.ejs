@@ -81,10 +81,6 @@
           <label for="finishhDate">Finish At : </label>
           <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1%>-<%=notes[i].finishDate.getFullYear() %>
         </div>
-        <div>
-          <label for="finishhDate">Finish At:</label>
-          <%=notes[i].finishDate %>
-        </div>
         <div class="card-footer">
           <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
             <input type="hidden" name="_method" value="DELETE">
