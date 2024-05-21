@@ -186,13 +186,13 @@
         <div>
           <!-- <h5 class="text-xl font-bold font-serif">Tagg</h5> -->
           <h5 class="note-tag"><%= notes[i].tag %></h5>
-          <p class="note-date"><%= notes[i].createdAt.getDate()%>-<%=notes[i].createdAt.getMonth()%>-<%=notes[i].createdAt.getFullYear() %> </p>
+          <p class="note-date"><%= notes[i].createdAt.getDate()%>-<%= (notes[i].createdAt.getMonth() + 1) %>-<%=notes[i].createdAt.getFullYear() %> </p>
         </div>
         <div class="note-divider"></div>
         <div class="note-description-container">
           <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
           <p class="note-description"><%= notes[i].description %></p>
-          <p class="note-date">Finish Date : <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth()%>-<%=notes[i].finishDate.getFullYear() %> </p>
+          <p class="note-date">Finish Date : <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1 %>-<%=notes[i].finishDate.getFullYear() %> </p>
         </div>
         
         <div class="flex gap-2">

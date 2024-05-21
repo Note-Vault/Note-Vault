@@ -79,7 +79,7 @@
         <div class="card-body">
           <p class="card-text"><%= notes[i].description %></p>
           <label for="finishhDate">Finish At : </label>
-          <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth()%>-<%=notes[i].finishDate.getFullYear() %>
+          <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1%>-<%=notes[i].finishDate.getFullYear() %>
         </div>
         
         <div class="card-footer">
