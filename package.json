@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to our project!👋\r ## Project Description\r \"Note Vault\" is a comprehensive note-taking website designed with the users productivity and organization in mind. This versatile platform enables users to create, edit, delete, search, and seamlessly organize their notes, providing an all-around solution to their note-taking needs.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,17 +12,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.0",
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
     "express-ejs-layouts": "^2.5.1",
+    "js": "^0.1.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.6.11"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
-  }
+  },
+  "keywords": []
 }

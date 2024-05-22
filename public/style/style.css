@@ -5,7 +5,7 @@
 
 [data-theme="dark"] {
 
-    background-color: #797777;
+    background-color: #1e1e1e;
     color: #f0f0f0;
 }
 
@@ -44,6 +44,60 @@
 [data-theme="dark"] .text-dark {
 	color: white;
 }
+.loginclass{
+	position: relative;
+}
+.navbar a{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.navbar a:hover{
+	color:rgb(80, 80, 80);
+	
+}
+.col-lg-8{
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: medium;
+}
+#WcNv{
+    font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 60px;
+	text-decoration: underline;
+} 
+.icon1{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+.icon2{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+
+.regclass{
+	position: relative;
+}
+.logo1{
+	position: absolute;
+	top:calc(55%);
+	left:1.0%;
+}
+.logo2{
+	position: absolute;
+	top:calc(57%);
+	left:1.0%;
+}
+.logo3{
+	position: absolute;
+	top:calc(52%);
+	left:1.0%;
+}
 
 .toggle-container {
 
@@ -76,7 +130,10 @@
 .row2{
 	border: 1px solid gray;
 	border-radius: 25px;
-
+	
+}
+.container-fluid p{
+	font-size: 25px;
 }
 
 
@@ -193,7 +250,7 @@ input:checked + .slider.round .moon {
 }
 
 #title {
-	background-color: #121481;
+	background-color: #ff5d5d;
 	color: white;
 	font-size: 25px;
 }
@@ -209,6 +266,19 @@ input:checked + .slider.round .moon {
 	align-items: center;
 	height: 100vh;
 }
+
+.position-relative {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 38%;
+    right: 10px;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
 
 .w-half {
 	width: 50%;
@@ -320,7 +390,7 @@ input:checked + .slider.round .moon {
 
 .testimonials {
 	text-align: center;
-	background-color: #121481;
+	background-color: #ff5d5d;
 	color: white;
 	font-size: 1.5rem;
 }
@@ -359,11 +429,351 @@ input:checked + .slider.round .moon {
 }
 
 .scroll-to-top {
-	position: fixed;
-	bottom: 3rem;
-	right: 3rem;
-	z-index: 9999;
-	padding: 0.2rem 0.6rem;
-	background-color: #ffb499;
-	border-radius: 25px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	color: white;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 9999;
+    padding: 1rem; 
+    border-radius: 50%; 
+    width: 45px; 
+    height: 45px;
+    background-color: #222ac3;
+    border-radius: 25px;
+    transition: background-color 0.3s ease; 
+}
+
+.scroll-to-top:hover {
+    background-color: #0077cc; 
+}
+
+body::-webkit-scrollbar {
+	width: 9px; 
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background: #007bff; 
+	border-radius: 6px; 
+  }
+
+
+  .About-Section{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f0f0
+}
+.a_heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+.a_heading h1{
+    font-size: 60px;
+    color: #000;
+    margin-bottom: 25px;
+    position:relative;
+    font-family: cursive;
+	text-decoration: underline;
+}
+.a_heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+}
+.a_container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.a_image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.a_image img{
+    max-width: 95%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.a_image:hover img{
+    transform: scale(1.1);
+}
+.a_content{
+    flex: 1;
+}
+.a_content h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #191818; 
+	font-weight: bold; 
+}
+.a_content p{
+    font-size: 22px;
+    line-height: 1.5;
+    color: rgb(45, 44, 44);
+}
+
+[data-theme="dark"] .About-Section{
+	background-color:  #1e1e1e;
+}
+
+[data-theme="dark"] .a_heading h1{
+	color: white;
+}
+[data-theme="dark"] .a_content h2{
+	color: white;
+}
+
+[data-theme="dark"] .a_content p{
+	color: white;
+}
+@media screen and (max-width: 990px){
+    .a_heading{
+        padding: 0px 20px;
+    }
+    .a_heading h1{
+        font-size: 60px;
+        margin-bottom: 0px;
+    }
+    .a_container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .a_image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .a_content p{
+        padding: 0px;
+        font-size: 25px;
+    }
+}
+
+
+
+
+/* navbar animations */
+
+/* Keyframes for the stroke animation */
+@keyframes strokeAnimation {
+	0% {
+	  width: 0;
+	  left: 0;
+	}
+	50% {
+	  width: 100%;
+	  left: 0;
+	}
+	100% {
+	  width: 0;
+	  left: 100%;
+	}
+  }
+  
+  /* Apply styles to the navigation links */
+  .navbar a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	overflow: hidden;
+  }
+  
+  /* Create the stroke effect using the ::after pseudo-element */
+  .navbar a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: currentColor;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+  }
+  
+  /* On hover, trigger the stroke animation */
+  .navbar a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	animation: strokeAnimation 0.5s forwards;
+  }
+
+.fullBox {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.box {
+  border: 2px solid rgba(0, 0, 0, 0.111);
+  width: 500px;
+  height: 550px;
+  border-radius: 20px;
+}
+
+.box1 {
+  height: 275px;
+  background-color: rgb(133, 219, 63);
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+
+.box2 {
+  height: 275px;
+}
+
+.success1 {
+  height: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success2 {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #D9D9D9;
+}
+
+.content1 {
+  width: 500px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  text-align: center;
+}
+
+.content2 {
+  width: 500px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btnn {
+  background-color: rgb(133, 219, 63);
+  color: white;
+  font-size: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+}
+
+.btnn:hover {
+  background-color: rgb(102, 176, 50);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 33%; /* Adjust based on your card width and margins */
+}
+
+.card {
+  flex: 1 0 300px;
+  position: relative;
+  width: 350px;
+  height: 200px;
+  background-color: #3c63c526;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  grid-template-columns: min-content;
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
