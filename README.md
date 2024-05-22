@@ -107,12 +107,9 @@ To get started, simply clone the repository and open the `terminal` in your code
 2. Click on Connect.
    ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/b75f1efe-4ada-40fd-afe5-167242ec37d0)
 3. In terminal it would be mentioned as "Connected to MongoDB".
-4. To see database collections:
-   - Click on new database
-   - Add database name (NoteVault)
-   - Add collection name (notebooks , users)
-   - ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/9910e2fb-0620-4bb8-a1cf-cd7a88e136d5)
-   - ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/dd4a3b18-af74-4a1b-8d28-f9851c9fba8e)
+4. After database connection you can see database collections:(database name (NoteVault), collection name (notebooks , users)):
+   ![image](https://github.com/Chelseasingla1/Note-Vault/assets/129886894/6f6d14ce-ce27-4abd-b41c-026585846614)
+
    
 ## Contributing 🧑‍💻
 - Fork the repository.
