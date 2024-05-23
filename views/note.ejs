@@ -72,6 +72,19 @@
     showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
   }
 
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.char-count').forEach(function (textarea) {
+      var charCountElement = document.createElement('span');
+      charCountElement.classList.add('text-muted');
+      charCountElement.textContent = '0 characters';
+      textarea.parentNode.insertBefore(charCountElement, textarea.nextSibling);
+
+      textarea.addEventListener('input', function () {
+        charCountElement.textContent = textarea.value.length + ' characters';
+      });
+    });
+  });
+
 
 </script>
 
@@ -85,7 +98,7 @@
 
 <!-- Dark mode toggle switch with custom sun and moon icons -->
 <div class="bg-gray-800 text-white p-4 mb-4 flex justify-between items-center w-full mt-3">
-  <a href="/" class="text-2xl font-bold text-white no-underline">
+  <a href="/" class="text-2xl font-extrabold text-white no-underline text-4xl">
     NoteVault
   </a>
   <div class="flex items-center space-x-4">
@@ -126,7 +139,7 @@
   </div>
 </div>
 <div class="mt-8 flex justify-center items-center">
-  <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
+  <h1 class="text-2xl font-bold">Your Notes</h1>
 </div>
 
   <div class="row">
@@ -179,7 +192,7 @@
               </div>
               <div class="form-group">
                 <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"
+                <textarea class="form-control char-count" id="description" name="description" rows="3"
                   required><%= notes[i].description %></textarea>
               </div>
               <div>
@@ -193,30 +206,8 @@
       </div>
     </div>
     <!-- update modal-->
+
     <div class="col-md-3 col-sm-6">
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <div class="section_our_solution">
  
@@ -256,8 +247,8 @@
 
    
 
-      
-     
+
+
     </div>
 
   </div>
