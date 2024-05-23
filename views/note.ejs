@@ -1,6 +1,7 @@
 <%- include("partials/header") -%>
 
 
+
   <!-- Add your custom CSS -->
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
@@ -169,6 +170,7 @@
 
   <div class="scroll-to-top invisible">
     <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+
   </div>
 
 
@@ -184,6 +186,7 @@
       Add Note
     </button>
   </div>
+
 </div> -->
 
 
@@ -273,6 +276,7 @@
 
   </div>
 
+
   <div class="row">
     <!-- add note -->
     <div id="add-note-modal" class="modal">
@@ -306,6 +310,7 @@
       </div>
     </div>
     <!-- add note -->
+
     <% for (let i=0; i < notes.length; i++) { %>
       <!-- update modal -->
       <div id="updateModal<%= notes[i]._id %>" class="modal">

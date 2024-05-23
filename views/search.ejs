@@ -125,14 +125,12 @@
       </div>
     </div>
     <div class="col-md-4 note-text">
-      <div class="card mb-4">
-        <div class="card-header"><%= notes[i].tag %></div>
+      <div class="card m-4 p-8">
+        <div class="card-header text-3xl font-bold"><%= notes[i].tag %></div>
         <div class="card-body">
           <p class="card-text"><%= notes[i].description %></p>
-        </div>
-        <div>
-          <label for="finishhDate">Finish At:</label>
-          <%=notes[i].finishDate %>
+          <label for="finishhDate">Finish At : </label>
+          <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1%>-<%=notes[i].finishDate.getFullYear() %>
         </div>
         <div class="card-footer">
           <form

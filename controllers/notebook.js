@@ -25,13 +25,14 @@ const getAllNotes = async (req, res) => {
         });
 }
 const addNote = async (req, res) => {
-    const { tag, description } = req.body;
+    const { tag, description,finishDate } = req.body;
     const userId = req.userID; // Assuming you have set the user object in req.user during authentication
     // Create a new notebook document
     const notebook = new Notebook({
         tag,
         description,
         user: userId,
+        finishDate
     });
     // Save the notebook to the database
     notebook
@@ -106,7 +107,10 @@ const searchNote = async (req, res) => {
     const { tag } = req.query;
 
     // Find notes with the specified tag and user ID
-    Notebook.find({ tag, user: userId })
+    Notebook.find({ 
+        user: userId,
+        tag: { $regex: tag, $options: 'i'}
+     })
         .then((notes) => {
             // res.status(200).json(notes);
             res.render("search", { tag, notes });

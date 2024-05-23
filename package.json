@@ -23,5 +23,8 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.6.11"
   },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
   "keywords": []
 }
