@@ -25,13 +25,14 @@ const getAllNotes = async (req, res) => {
         });
 }
 const addNote = async (req, res) => {
-    const { tag, description } = req.body;
+    const { tag, description,finishDate } = req.body;
     const userId = req.userID; // Assuming you have set the user object in req.user during authentication
     // Create a new notebook document
     const notebook = new Notebook({
         tag,
         description,
         user: userId,
+        finishDate
     });
     // Save the notebook to the database
     notebook
