@@ -60,6 +60,19 @@
     showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
   }
 
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.char-count').forEach(function (textarea) {
+      var charCountElement = document.createElement('span');
+      charCountElement.classList.add('text-muted');
+      charCountElement.textContent = '0 characters';
+      textarea.parentNode.insertBefore(charCountElement, textarea.nextSibling);
+
+      textarea.addEventListener('input', function () {
+        charCountElement.textContent = textarea.value.length + ' characters';
+      });
+    });
+  });
+
 
 </script>
 
@@ -167,7 +180,7 @@
               </div>
               <div class="form-group">
                 <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"
+                <textarea class="form-control char-count" id="description" name="description" rows="3"
                   required><%= notes[i].description %></textarea>
               </div>
               <div>
