@@ -47,7 +47,66 @@ body{
 }
 
 [data-theme="dark"] .text-dark {
-  color: white;
+
+	color: white;
+}
+.loginclass{
+	position: relative;
+}
+.navbar a{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+  font-size: 18px;
+
+}
+.navbar a:hover{
+	color:rgb(80, 80, 80);
+	
+}
+.col-lg-8{
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: medium;
+}
+#WcNv{
+    font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 60px;
+	text-decoration: underline;
+} 
+.icon1{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+.icon2{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+
+.regclass{
+	position: relative;
+}
+.logo1{
+	position: absolute;
+	top:calc(55%);
+	left:1.0%;
+}
+.logo2{
+	position: absolute;
+	top:calc(57%);
+	left:1.0%;
+}
+.logo3{
+	position: absolute;
+	top:calc(52%);
+	left:1.0%;
+
+  
 }
 
 .loginclass {
