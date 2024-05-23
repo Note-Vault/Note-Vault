@@ -13,6 +13,9 @@ const notebookSchema = new Schema({
       ref: "User",
       required: true,
     },
-  });
+    finishDate:{
+      type: Date,
+    }
+    }, { timestamps: true });
   
 export default model("Notebook", notebookSchema);

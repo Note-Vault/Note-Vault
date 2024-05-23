@@ -1,12 +1,17 @@
+body{
+	font-family: "Montserrat", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
 [data-theme="light"] {
   background-color: #f0f0f0;
   color: #333;
 }
 
 [data-theme="dark"] {
-
-  background-color: #1e1e1e;
-  color: #f0f0f0;
+    background-color: #000;
+    color: #f0f0f0;
 }
 
 [data-theme="dark"] #title,
@@ -42,7 +47,66 @@
 }
 
 [data-theme="dark"] .text-dark {
-  color: white;
+
+	color: white;
+}
+.loginclass{
+	position: relative;
+}
+.navbar a{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+  font-size: 18px;
+
+}
+.navbar a:hover{
+	color:rgb(80, 80, 80);
+	
+}
+.col-lg-8{
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: medium;
+}
+#WcNv{
+    font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 60px;
+	text-decoration: underline;
+} 
+.icon1{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+.icon2{
+	position: absolute;
+	top:calc(50%);
+	left:1.8%;
+}
+
+.regclass{
+	position: relative;
+}
+.logo1{
+	position: absolute;
+	top:calc(55%);
+	left:1.0%;
+}
+.logo2{
+	position: absolute;
+	top:calc(57%);
+	left:1.0%;
+}
+.logo3{
+	position: absolute;
+	top:calc(52%);
+	left:1.0%;
+
+  
 }
 
 .loginclass {
@@ -343,17 +407,41 @@ input:checked+.slider.round .moon {
   background-color: #ff4c68;
 }
 
+[data-theme="light"] .card{
+	margin: 0;
+	background: linear-gradient(270deg, #ffffff, #e0f7fa, #f0f0f0, #e0f7fa, #ffffff);
+	background-size: 400% 400%; /* Adjust the background size for a more noticeable animation */
+	animation: gradient-move 10s ease infinite; /* Duration of the animation and repetition */
+	color: #000;
+}
+
+[data-theme="dark"] .card {
+	margin: 0;
+	background: linear-gradient(270deg, #222222, #000435, #333333, #333333, #222222);
+	background-size: 400% 400%; /* Adjust the background size for a more noticeable animation */
+	animation: gradient-move 10s ease infinite; /* Duration of the animation and repetition */
+	color: #f0f0f0;
+  }
+@keyframes gradient-move {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+
 .note-divider {
   border-top: 1px solid black;
   margin: 0 4px;
 }
 
-
 .note-tag {
-  font-weight: 700;
-  background-color: chartreuse;
-  color: floralwhite;
-  border-radius: 3%;
+	font-weight: 700;
+	font-size: 2rem;
 }
 
 .note-date {
@@ -861,8 +949,8 @@ body::-webkit-scrollbar-thumb {
 .card {
   flex: 1 0 300px;
   position: relative;
-  width: 350px;
-  height: 200px;
+  /* width: ;
+  height: auto; */
   background-color: #3c63c526;
   border-radius: 10px;
   display: flex;
