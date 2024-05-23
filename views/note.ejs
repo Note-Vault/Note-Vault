@@ -60,19 +60,6 @@
     showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.char-count').forEach(function (textarea) {
-      var charCountElement = document.createElement('span');
-      charCountElement.classList.add('text-muted');
-      charCountElement.textContent = '0 characters';
-      textarea.parentNode.insertBefore(charCountElement, textarea.nextSibling);
-
-      textarea.addEventListener('input', function () {
-        charCountElement.textContent = textarea.value.length + ' characters';
-      });
-    });
-  });
-
 
 </script>
 
@@ -147,6 +134,15 @@
                 <input type="text" class="form-control" id="tag" name="tag" placeholder="tag" required>
               </div>
               <div class="form-group">
+                <label for="category" class="modal-label">Category</label>
+                <select class="form-control" id="category" name="category" required>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                    <!-- Add more categories as needed -->
+                </select>
+            </div>
+              <div class="form-group">
                 <label for="description" class="modal-label">Description</label>
                 <textarea class="form-control" id="description" name="description" rows="3" placeholder="description"
                   required></textarea>
@@ -179,8 +175,17 @@
                 <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
               </div>
               <div class="form-group">
+                <label for="category" class="modal-label">Category</label>
+                <select class="form-control" id="category" name="category" required>
+                  <option value="Personal" <% if (notes[i].category === "Personal") { %> selected <% } %>>Personal</option>
+                  <option value="Work" <% if (notes[i].category === "Work") { %> selected <% } %>>Work</option>
+                  <option value="Study" <% if (notes[i].category === "Study") { %> selected <% } %>>Study</option>
+                    <!-- Add more categories as needed -->
+                </select>
+            </div>
+              <div class="form-group">
                 <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control char-count" id="description" name="description" rows="3"
+                <textarea class="form-control" id="description" name="description" rows="3"
                   required><%= notes[i].description %></textarea>
               </div>
               <div>
@@ -206,6 +211,7 @@
           <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
           <p class="note-description"><%= notes[i].description %></p>
         </div>
+          <p class="border border-black rounded-md px-2 py-1 max-h-20 overflow-y-auto text-sm bg-gray-200"><%= notes[i].category %></p>
         <!-- <div class="form-group">
           Created:  <%= (notes[i].createdAt) %> 
         </div> 
