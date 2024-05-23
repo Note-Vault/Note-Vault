@@ -25,12 +25,13 @@ const getAllNotes = async (req, res) => {
         });
 }
 const addNote = async (req, res) => {
-    const { tag, description } = req.body;
+    const { tag, description, category } = req.body;
     const userId = req.userID; // Assuming you have set the user object in req.user during authentication
     // Create a new notebook document
     const notebook = new Notebook({
         tag,
         description,
+        category,
         user: userId,
     });
     // Save the notebook to the database
@@ -75,12 +76,12 @@ const deleteNote = async (req, res) => {
 const updateNote = async (req, res) => {
     const userId = req.userID; // Assuming the authenticated user ID is available in req.userID
     const noteId = req.params.noteId; // Get the note ID from the request parameters
-    const { tag, description } = req.body; // Get the updated tag and description from the request body
+    const { tag, description, category } = req.body; // Get the updated tag and description from the request body
 
     // Find the note by ID and user ID
     Notebook.findOneAndUpdate(
         { _id: noteId, user: userId },
-        { tag, description },
+        { tag, description, category },
         { new: true }
     )
         .then((updatedNote) => {
