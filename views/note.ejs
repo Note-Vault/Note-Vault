@@ -1,119 +1,179 @@
 <%- include("partials/header") -%>
 
 
-<!-- Add your custom CSS -->
-<style>
-  .dot {
-    transition: transform 0.3s ease-in-out;
-  }
+  <!-- Add your custom CSS -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 
-  input:checked+.relative .dot {
-    transform: translateX(100%);
-  }
+    .dot {
+      transition: transform 0.3s ease-in-out;
+    }
 
-  input:checked+.relative .sun {
-    opacity: 0;
-  }
+    input:checked+.relative .dot {
+      transform: translateX(100%);
+    }
 
-  input:checked+.relative .moon {
-    opacity: 1;
-  }
+    input:checked+.relative .sun {
+      opacity: 0;
+    }
 
-  .btn-lg {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-  }
+    input:checked+.relative .moon {
+      opacity: 1;
+    }
 
-  .btn-success {
-    background-color: #38a169;
-    border-color: #38a169;
-    color: white;
-  }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .btn-success:hover {
-    background-color: #2f855a;
-    border-color: #2f855a;
-  }
+    .btn-lg {
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      border-radius: 0.3rem;
+    }
 
+    .btn-success {
+      background-color: #38a169;
+      border-color: #38a169;
+      color: white;
+    }
 
-/* .row{
-  display: flex;
-  justify-content: start;
-   width: 100vw;
-  height:auto;
-  
-
-  flex-direction: row;
-} */
-
-</style>
+    .btn-success:hover {
+      background-color: #2f855a;
+      border-color: #2f855a;
+    }
 
 
-<div id="successMessage" class="success-message hidden">
-	<%= successMessage %>
-</div>
+    .hed {
 
-<script>
-	// JavaScript code goes here
-	function showSuccessMessage(message) {
-		var successMessage = document.getElementById("successMessage");
-		successMessage.textContent = message;
-		successMessage.classList.remove("hidden");
-		setTimeout(function () {
-			successMessage.classList.add("hidden");
-		}, 3000); // 3000 milliseconds = 3 seconds
-	}
+      border-radius: 20px;
+    }
 
 
-  // Call the function to show the success message
-  if ('<%= successMessage %>' !== 'false') {
-    showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
-  }
+    header {
+      /* background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg'); */
+      /* background-image: linear-gradient(
+  140deg,
+  hsl(215deg 28% 17%) 0%,
+  hsl(218deg 37% 22%) 7%,
+  hsl(223deg 39% 28%) 15%,
+  hsl(231deg 35% 35%) 23%,
+  hsl(243deg 31% 42%) 31%,
+  hsl(257deg 33% 47%) 40%,
+  hsl(270deg 37% 51%) 47%,
+  hsl(284deg 45% 54%) 54%,
+  hsl(297deg 52% 55%) 60%,
+  hsl(309deg 73% 60%) 66%,
+  hsl(311deg 83% 61%) 71%,
+  hsl(307deg 71% 58%) 75%,
+  hsl(303deg 60% 55%) 79%,
+  hsl(298deg 54% 54%) 83%,
+  hsl(292deg 52% 53%) 86%,
+  hsl(287deg 50% 52%) 89%,
+  hsl(281deg 48% 51%) 92%,
+  hsl(276deg 46% 50%) 95%,
+  hsl(270deg 45% 49%) 98%,
+  hsl(264deg 45% 47%) 100%
+); */
+
+      text-align: center;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+      /* border-radius: 0 0 85% 85% / 30%; */
+
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    header .overlay {
+      width: 100%;
+      height: 50%;
+      padding: 50px;
 
 
-</script>
+      display: flex;
+      font-family: "Poppins", sans-serif;
 
-<!-- Scroll Up button -->
 
-<div class="scroll-to-top invisible">
-	<a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
-</div>
+    }
 
-<div class="container-fluid">
+    .overlay h2 {
+      font-weight: 500;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
 
-<!-- Dark mode toggle switch with custom sun and moon icons -->
-<div class="bg-gray-800 text-white p-4 mb-4 flex justify-between items-center w-full mt-3">
-  <a href="/" class="text-2xl font-bold text-white no-underline">
-    NoteVault
-  </a>
-  <div class="flex items-center space-x-4">
-    <form action="/note/search" class="flex">
-      <input type="search" id="tag" name="tag" class="form-input rounded-l px-4 py-2" placeholder="Search">
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-    <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">
-      Logout
-    </a>
-    <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" id="modeToggle" class="sr-only">
-      <div class="relative">
-        <div class="w-14 h-8 bg-gray-200 rounded-full shadow-inner"></div>
-        <div
-          class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
-          <img src="/image/light.png" class="sun absolute inset-0 w-full h-full object-cover" alt="light mode" />
-          <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0"
-            alt="dark mode" />
-        </div>
-      </div>
-    </label>
+    .sec2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40vh;
+      /* background-color: #000; */
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+    }
+
+
+    .image {
+      height: 20rem;
+      object-fit: cover;
+      width: 30%;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image img {
+
+      object-fit: cover;
+      height: 100%;
+    }
+  </style>
+
+
+  <div id="successMessage" class="success-message hidden">
+    <%= successMessage %>
   </div>
-</div>
-</div>
-<div class="mt-4 flex justify-between items-center px-6">
+
+  <script>
+    // JavaScript code goes here
+    function showSuccessMessage(message) {
+      var successMessage = document.getElementById("successMessage");
+      successMessage.textContent = message;
+      successMessage.classList.remove("hidden");
+      setTimeout(function () {
+        successMessage.classList.add("hidden");
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
+
+
+    // Call the function to show the success message
+    if ('<%= successMessage %>' !== 'false') {
+      showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
+    }
+
+
+  </script>
+
+  <!-- Scroll Up button -->
+
+  <div class="scroll-to-top invisible">
+    <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+
+
+
+  <!-- <div class="mt-4 flex justify-between items-center px-6">
   <div class="flex-1">
     <h1 class="text-sky-400 text-3xl font-semibold">Welcome back, <%= userNAME %>
     </h1>
@@ -124,10 +184,94 @@
       Add Note
     </button>
   </div>
-</div>
-<div class="mt-8 flex justify-center items-center">
-  <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
-</div>
+</div> -->
+
+
+
+
+
+  <header>
+
+
+    <div class="container-fluid">
+
+      <!-- Dark mode toggle switch with custom sun and moon icons -->
+      <div class="hed bg-gray-800 text-white p-4 mb-4 flex justify-between items-center flex-wrap w-full mt-3">
+        <a href="/" class="text-2xl font-bold text-white no-underline">
+          NoteVault
+        </a>
+        <div class="flex items-center flex-wrap space-x-4">
+          <form action="/note/search" class="flex">
+            <input type="search" id="tag" name="tag" class="form-input rounded-l px-4 py-2" placeholder="Search">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">
+            Logout
+          </a>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="modeToggle" class="sr-only">
+            <div class="relative">
+              <div class="w-14 h-8 bg-gray-200 rounded-full shadow-inner"></div>
+              <div
+                class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
+                <img src="/image/light.png" class="sun absolute inset-0 w-full h-full object-cover" alt="light mode" />
+                <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0"
+                  alt="dark mode" />
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="overlay">
+
+
+
+
+
+
+
+
+
+      <div class="image">
+        <img src="/image/boy-1.png" alt="nr">
+      </div>
+
+
+
+      <div class="sec2">
+        <h2>Welcome back, " <%= userNAME %> "! Ready to tackle your Task list?</h2>
+        <br>
+
+
+
+        <button
+          class="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white"
+          onclick="openUpdateModal('add-note-modal')"> Add Note</button>
+      </div>
+
+
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <div class="mt-8 flex justify-center items-center">
+    <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
+
+
+
+
+  </div>
 
   <div class="row">
     <!-- add note -->
@@ -152,7 +296,8 @@
               </div>
               <div>
                 <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date" class="note-text" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
+                <input type="date" name="finishDate" placeholder="finish date" class="note-text"
+                  value="<%= new Date().toISOString().split('T')[0] %>"><br>
               </div>
               <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Add</button>
             </form>
@@ -161,48 +306,41 @@
       </div>
     </div>
     <!-- add note -->
-    <% for (let i = 0; i < notes.length; i++) { %>
-    <!-- update modal -->
-    <div id="updateModal<%= notes[i]._id %>" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Update Note</h5>
-            <button type="button" class="close" data-dismiss="modal"
-              onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
-          </div>
-          <div class="modal-body">
-            <form action="/note/update/<%= notes[i]._id %>" method="POST">
-              <div class="form-group">
-                <label for="tag" class="modal-label">Tag</label>
-                <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
-              </div>
-              <div class="form-group">
-                <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"
-                  required><%= notes[i].description %></textarea>
-              </div>
-              <div>
-                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
-              </div>
-              <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Update</button>
-            </form>
+    <% for (let i=0; i < notes.length; i++) { %>
+      <!-- update modal -->
+      <div id="updateModal<%= notes[i]._id %>" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Update Note</h5>
+              <button type="button" class="close" data-dismiss="modal"
+                onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form action="/note/update/<%= notes[i]._id %>" method="POST">
+                <div class="form-group">
+                  <label for="tag" class="modal-label">Tag</label>
+                  <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
+                </div>
+                <div class="form-group">
+                  <label for="description" class="modal-label">Description</label>
+                  <textarea class="form-control" id="description" name="description" rows="3"
+                    required><%= notes[i].description %></textarea>
+                </div>
+                <div>
+                  <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                  <input type="date" name="finishDate" placeholder="finish date"> <span
+                    style="font-size: large; font-weight: bold;">Current:</span>
+                  <%=notes[i].finishDate %><br>
+                </div>
+                <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Update</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- update modal-->
-    <div class="col-md-3 col-sm-6">
-
-
-
-
-
-
-
-
- 
+      <!-- update modal-->
+      <div class="col-md-3 col-sm-6">
 
 
 
@@ -218,54 +356,70 @@
 
 
 
-      <div class="section_our_solution">
- 
 
 
 
-        <aside class="bg-black text-white p-6 rounded-lg w-full max-w-lg font-mono">
-          <div class="flex justify-between items-center">
-            <div class="flex space-x-2 text-red-500">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+
+
+
+
+
+
+        <div class="section_our_solution">
+
+
+
+
+          <aside class="bg-black text-white p-6 m-2 rounded-lg w-full max-w-lg font-mono">
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-2 text-red-500">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+
             </div>
-          
-          </div>
-          <div class="mt-4 h-50">
-            <p class="text-green-400">Title : <b class="text-white"><%= notes[i].tag %></b> </p>
-           <div class="bg-white h-5px"></div>
+            <div class="mt-4 h-50">
+              <p class="text-green-400">Title : <b class="text-white">
+                  <%= notes[i].tag %>
+                </b> </p>
+              <div class="bg-white h-5px"></div>
 
-           <p class="text-green-400 mt-2">Description : </p>
-           <div  class=" overflow-y-scroll max-h-20 mt-3 border border-white">  <p class="text-white"><%= notes[i].description %></p></div>
-           
-          
-          </div>
-
-          <div class="flex gap-2 mt-4">
-            <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
-              <input type="hidden" name="_method" value="DELETE">
-              <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
-            </form>
-            <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i class="fa-solid fa-pencil"></i></button>
-          </div>
-        </aside>
+              <p class="text-green-400 mt-2">Description : </p>
+              <div class=" overflow-y-scroll max-h-20 mt-3 border border-white">
+                <p class="text-white">
+                  <%= notes[i].description %>
+                </p>
+              </div>
 
 
+            </div>
+
+            <div class="flex gap-2 mt-4">
+              <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
+              </form>
+              <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i
+                  class="fa-solid fa-pencil"></i></button>
+            </div>
+          </aside>
 
 
-   
 
-      
-     
-    </div>
 
+
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <% } %>
   </div>
 
-
-
-    <% } %>
   </div>
-
-</div>
-<%- include("partials/footer") -%>
+  <%- include("partials/footer") -%>

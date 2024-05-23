@@ -34,7 +34,7 @@ const register = async (req, res) => {
                             // Generate JWT token with user ID
                             
                             const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
-
+                     
                             // Set the token as a cookie
                             res.cookie("token", token, { httpOnly: true });
                             // res.status(201).json({ message: 'User registered successfully' });
