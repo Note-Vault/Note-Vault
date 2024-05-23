@@ -13,6 +13,10 @@ const notebookSchema = new Schema({
       ref: "User",
       required: true,
     },
+     category: {
+      type: String,
+      default: "General",
+    },
   });
   
 export default model("Notebook", notebookSchema);
