@@ -106,7 +106,10 @@ const searchNote = async (req, res) => {
     const { tag } = req.query;
 
     // Find notes with the specified tag and user ID
-    Notebook.find({ tag, user: userId })
+    Notebook.find({ 
+        user: userId,
+        tag: { $regex: tag, $options: 'i'}
+     })
         .then((notes) => {
             // res.status(200).json(notes);
             res.render("search", { tag, notes });

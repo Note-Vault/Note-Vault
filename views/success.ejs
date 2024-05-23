@@ -1,29 +1,33 @@
 <%- include("partials/header") -%>
-<div class="container-fluid">
-    <!-- Dark mode toggle switch with custom sun and moon icons -->
-    <div class="toggle-container">
-        <label class="switch">
-            <input type="checkbox" id="modeToggle">
-            <span class="slider round">
-                <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
-				<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/>
-            </span>
-        </label>
-    </div>
-    <div class="row mt-4">
-        <div class="col text-center">
-            <h1>Account Created Successfully</h1>
+    <div class="container-fluid">
+        <!-- Dark mode toggle switch with custom sun and moon icons -->
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider round">
+                    <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30" />
+                    <img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30" />
+                </span>
+            </label>
+        </div>
+        <div class="fullBox">
+            <div class="box">
+                <div class="box1">
+                    <div class="success1">
+                        <img src="/image/Tick.png" alt="success" width="200px" height="200px">
+                    </div>
+                    <div class="success2">Success</div>
+                </div>
+                <div class="box2">
+                    <div class="content1">
+                        <p>Congratulations, your account has been successfully created.</p>
+                    </div>
+                    <div class="content2">
+                        <a href="/user/login" class="btnn">Login</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col text-center">
-            <p>You can now proceed to login.</p>
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col text-center">
-            <a href="/user/login" class="btn btn-primary">Login</a> 
-        </div>
-    </div>
-</div>
-<%- include("partials/footer") -%>
+    <%- include("partials/footer") -%>

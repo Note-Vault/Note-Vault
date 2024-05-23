@@ -1,5 +1,44 @@
 <%- include("partials/header") -%>
 
+
+<!-- Add your custom CSS -->
+<style>
+  .dot {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  input:checked+.relative .dot {
+    transform: translateX(100%);
+  }
+
+  input:checked+.relative .sun {
+    opacity: 0;
+  }
+
+  input:checked+.relative .moon {
+    opacity: 1;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+  }
+
+  .btn-success {
+    background-color: #38a169;
+    border-color: #38a169;
+    color: white;
+  }
+
+  .btn-success:hover {
+    background-color: #2f855a;
+    border-color: #2f855a;
+  }
+</style>
+
+
 <div id="successMessage" class="success-message hidden">
 	<%= successMessage %>
 </div>
@@ -21,6 +60,19 @@
     showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
   }
 
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.char-count').forEach(function (textarea) {
+      var charCountElement = document.createElement('span');
+      charCountElement.classList.add('text-muted');
+      charCountElement.textContent = '0 characters';
+      textarea.parentNode.insertBefore(charCountElement, textarea.nextSibling);
+
+      textarea.addEventListener('input', function () {
+        charCountElement.textContent = textarea.value.length + ' characters';
+      });
+    });
+  });
+
 
 </script>
 
@@ -32,66 +84,51 @@
 
 <div class="container-fluid">
 
-  <!-- Dark mode toggle switch with custom sun and moon icons -->
-  <div class="toggle-container">
-    <label class="switch">
-      <input type="checkbox" id="modeToggle">
-      <span class="slider round">
-        <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
-				<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/>
-      </span>
+<!-- Dark mode toggle switch with custom sun and moon icons -->
+<div class="bg-gray-800 text-white p-4 mb-4 flex justify-between items-center w-full mt-3">
+  <a href="/" class="text-2xl font-bold text-white no-underline">
+    NoteVault
+  </a>
+  <div class="flex items-center space-x-4">
+    <form action="/note/search" class="flex">
+      <input type="search" id="tag" name="tag" class="form-input rounded-l px-4 py-2" placeholder="Search">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+    <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">
+      Logout
+    </a>
+    <label class="relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="modeToggle" class="sr-only">
+      <div class="relative">
+        <div class="w-14 h-8 bg-gray-200 rounded-full shadow-inner"></div>
+        <div
+          class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
+          <img src="/image/light.png" class="sun absolute inset-0 w-full h-full object-cover" alt="light mode" />
+          <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0"
+            alt="dark mode" />
+        </div>
+      </div>
     </label>
   </div>
-  
-  <div class="row note-nav">
-    <div class="col-lg-8 mt-3">
-      <a href="/" style="text-decoration: none;">
-        <h1 class="text-white">NoteVault</h1>
-      </a>
-    </div>
-    <div class="col-lg-4">
-      <div class="row mt-3">
-        <div class="col-lg-8">
-          <form action="/note/search">
-            <div class="input-group mt-2 mb-4">
-              <div class="form-outline">
-                <input type="search" id="tag" name="tag" class="form-control" placeholder="Search" />
-              </div>
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-
-
-				<div class="col-lg-4 mt-2 mb-4">
-					<a href="/user/logout" style="text-decoration: none; color: white"
-						><button class="btn btn-danger">Logout</button></a
-					>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row mt-4">
-		<div class="col-lg-8 align-self-end">
-			<h1 style="color: skyblue">Welcome back, <%= userNAME %></h1>
-		</div>
-		<div class="col-lg-4">
-			<Button
-				onclick="openUpdateModal('add-note-modal')"
-				class="btn btn-lg btn-success"
-				style="position: absolute; left: 70%"
-				>Add Note</Button
-			>
-		</div>
-	</div>
-	<div class="row justify-content-center align-items-center g-2 text-center">
-		<div class="col">
-			<h1>Your Notes</h1>
-		</div>
-	</div>
-
+</div>
+</div>
+<div class="mt-4 flex justify-between items-center px-6">
+  <div class="flex-1">
+    <h1 class="text-sky-400 text-3xl font-semibold">Welcome back, <%= userNAME %>
+    </h1>
+  </div>
+  <div>
+    <button onclick="openUpdateModal('add-note-modal')"
+      class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300">
+      Add Note
+    </button>
+  </div>
+</div>
+<div class="mt-8 flex justify-center items-center">
+  <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
+</div>
 
   <div class="row">
     <!-- add note -->
@@ -143,7 +180,7 @@
               </div>
               <div class="form-group">
                 <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"
+                <textarea class="form-control char-count" id="description" name="description" rows="3"
                   required><%= notes[i].description %></textarea>
               </div>
               <div>
