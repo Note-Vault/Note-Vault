@@ -109,6 +109,11 @@ body{
   
 }
 
+.pswd-toggle{
+  position: absolute;
+  top:calc(57%);
+  left:90%;
+}
 .loginclass {
   position: relative;
 }

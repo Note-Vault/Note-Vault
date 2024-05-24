@@ -37,6 +37,9 @@
 					<div class="loginclass mb-3">
 						<label class="form-label" for="password">Password</label>
 						<i class='icon2 bx bx-lock-alt' style="font-size: 30px;color:grey"></i>
+						<span id="pswd-toggle1">
+						<i class="pswd-toggle fas fa-eye-slash"></i>
+						</span>
 						<input
 							type="password"
 							class="form-control"
@@ -46,6 +49,7 @@
 							style="padding-left: 15%;"
 							required
 						/>
+						
 					</div>
 
 					<button type="submit" class="btn btn-dark login-button mb-3 center">
@@ -64,3 +68,24 @@
 </section>
 
 <%- include("partials/footer") -%>
+<script>
+	const passwordInput = document.getElementById('password');
+	const Toggle = document.getElementById('pswd-toggle1');
+  
+	Toggle.addEventListener('click', function () 
+	{
+	  const passwordField = this.querySelector('i');
+	  if(passwordInput.getAttribute('type') === 'password'){
+		passwordInput.setAttribute('type','text');
+		passwordField.classList.replace('fa-eye-slash', 'fa-eye');
+		
+	  } 
+	  else{
+		passwordInput.setAttribute('type','password');
+		
+		passwordField.classList.replace('fa-eye', 'fa-eye-slash');
+	  }
+  
+	
+	});
+  </script>
