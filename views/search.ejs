@@ -3,16 +3,28 @@
   <!-- Dark mode toggle switch with custom sun and moon icons -->
   <div class="toggle-container">
     <label class="switch">
-      <input type="checkbox" id="modeToggle">
+      <input type="checkbox" id="modeToggle" />
       <span class="slider round">
-        <img src="/image/light.png" class="sun slider-icon" alt="light mode" width="30" height="30"/>
-				<img src="/image/dark.png" class="moon slider-icon" alt="light mode" width="30" height="30"/>
+        <img
+          src="/image/light.png"
+          class="sun slider-icon"
+          alt="light mode"
+          width="30"
+          height="30"
+        />
+        <img
+          src="/image/dark.png"
+          class="moon slider-icon"
+          alt="light mode"
+          width="30"
+          height="30"
+        />
       </span>
     </label>
   </div>
   <div class="row note-nav justify-content-between">
     <div class="col-lg-6 mt-3 p-3">
-      <a href="/" style="text-decoration: none;">
+      <a href="/" style="text-decoration: none">
         <h1 class="text-white display-4">NoteVault</h1>
       </a>
     </div>
@@ -20,7 +32,13 @@
       <form action="/note/search" class="d-flex">
         <div class="input-group">
           <div class="form-outline">
-            <input type="search" id="tag" name="tag" class="form-control" placeholder="Search" />
+            <input
+              type="search"
+              id="tag"
+              name="tag"
+              class="form-control"
+              placeholder="Search"
+            />
           </div>
           <button type="submit" class="btn btn-primary">
             <i class="fas fa-search"></i>
@@ -29,7 +47,7 @@
       </form>
     </div>
     <div class="col-lg-2 mt-3 p-3 text-right">
-      <a href="/user/logout" style="text-decoration: none; color: white;">
+      <a href="/user/logout" style="text-decoration: none; color: white">
         <button class="btn btn-danger">Logout</button>
       </a>
     </div>
@@ -50,22 +68,55 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Update Note</h5>
-            <button type="button" class="close" data-dismiss="modal" onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              onclick="closeUpdateModal('<%= notes[i]._id %>')"
+            >
+              &times;
+            </button>
           </div>
           <div class="modal-body">
             <!-- Update form -->
             <form action="/note/update/<%= notes[i]._id %>" method="POST">
               <div class="form-group">
                 <label for="tag">Tag</label>
-                <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="tag"
+                  name="tag"
+                  value="<%= notes[i].tag %>"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3" required><%= notes[i].description %></textarea>
+                <textarea
+                  class="form-control"
+                  id="description"
+                  name="description"
+                  rows="3"
+                  required
+                >
+<%= notes[i].description %></textarea
+                >
               </div>
               <div>
-                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date" style="color: black;"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
+                <label
+                  for="finishhDate"
+                  style="font-size: large; font-weight: bold"
+                  >Finish At:</label
+                >
+                <input
+                  type="date"
+                  name="finishDate"
+                  placeholder="finish date"
+                  style="color: black"
+                />
+                <span style="font-size: large; font-weight: bold">Current:</span
+                ><%=notes[i].finishDate %><br />
               </div>
               <button type="submit" class="btn btn-primary">Update</button>
             </form>
@@ -82,11 +133,20 @@
           <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1%>-<%=notes[i].finishDate.getFullYear() %>
         </div>
         <div class="card-footer">
-          <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
-            <input type="hidden" name="_method" value="DELETE">
+          <form
+            action="delete/<%= notes[i]._id %>"
+            method="POST"
+            style="display: inline"
+          >
+            <input type="hidden" name="_method" value="DELETE" />
             <button type="submit" class="btn btn-danger">Delete</button>
           </form>
-          <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="btn btn-primary">Update</button>
+          <button
+            onclick="openUpdateModal('<%= notes[i]._id %>')"
+            class="btn btn-primary"
+          >
+            Update
+          </button>
         </div>
       </div>
     </div>
