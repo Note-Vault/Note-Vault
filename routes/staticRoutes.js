@@ -22,8 +22,4 @@ router.get("/", isAuthenticatedlogin, (req, res) => {
     res.render("home");
 });
 
-router.get('/faqs', (req, res) => {
-    res.render('faqs');
-  });
-
 export default router;

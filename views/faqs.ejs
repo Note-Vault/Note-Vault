@@ -4,87 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQs</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-gray-100 font-sans">
     <%- include('partials/header', { title: 'FAQs' }) %>
-    <div class="max-w-3xl mx-auto mt-12 p-6 bg-white rounded-lg shadow-md">
+    <div class="max-w-3xl mx-auto mt-12 p-6 rounded-lg shadow-md">
       <h1 class="text-5xl font-bold text-center font-serif mb-8">FAQs</h1>
-      <p class="text-gray-700" class="text-gray-600 mb-10 text-center">
-        Frequently Asked Questions.<br>Here are some common questions about Note Vault.
+      <p class="" class="text-gray-600 mb-10 text-center">
+        Frequently Asked Questions.<br />Here are some common questions about
+        Note Vault.
       </p>
 
       <div class="divide-y divide-gray-300">
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
             <h5 class="text-lg font-medium">What is Note Vault?</h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">Note Vault is a secure application for storing and managing your notes safely in one place.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Note Vault is a secure application for storing and managing your
+              notes safely in one place.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
             <h5 class="text-lg font-medium">How do I create a new note?</h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">To create a new note, click on the "New Note" button in your dashboard and start typing your content. Save it once you're done.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              To create a new note, click on the "New Note" button in your
+              dashboard and start typing your content. Save it once you're done.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
             <h5 class="text-lg font-medium">Is my data secure?</h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">Yes, Note Vault uses advanced encryption methods to ensure that your data is always secure and private.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Yes, Note Vault uses advanced encryption methods to ensure that
+              your data is always secure and private.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
             <h5 class="text-lg font-medium">Can I access my notes offline?</h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">Currently, Note Vault requires an internet connection to access your notes, but offline access is a feature we are working on.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Currently, Note Vault requires an internet connection to access
+              your notes, but offline access is a feature we are working on.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
-            <h5 class="text-lg font-medium">How do I share my notes with others?</h5>
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              How do I share my notes with others?
+            </h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">You can share your notes by clicking the "Share" button and entering the email address of the person you want to share with.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              You can share your notes by clicking the "Share" button and
+              entering the email address of the person you want to share with.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
-            <h5 class="text-lg font-medium">How do I recover a deleted note?</h5>
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              How do I recover a deleted note?
+            </h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">Deleted notes are moved to the "Trash" folder. You can recover a note by going to the Trash folder and restoring it.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Deleted notes are moved to the "Trash" folder. You can recover a
+              note by going to the Trash folder and restoring it.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
-            <h5 class="text-lg font-medium">What should I do if I forget my password?</h5>
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              What should I do if I forget my password?
+            </h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">If you forget your password, click on the "Forgot Password" link on the login page and follow the instructions to reset it.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              If you forget your password, click on the "Forgot Password" link
+              on the login page and follow the instructions to reset it.
+            </p>
           </div>
         </div>
         <div class="faq-item py-4">
-          <div class="faq-question flex justify-between items-center cursor-pointer">
-            <h5 class="text-lg font-medium">Can I organize my notes into folders?</h5>
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              Can I organize my notes into folders?
+            </h5>
             <span class="text-xl font-bold">+</span>
           </div>
-          <div class="faq-answer hidden pl-6 mt-2 text-gray-700">
-            <p class="text-gray-700">Yes, you can organize your notes into folders for better management. Use the "Create Folder" option to start organizing.</p>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Yes, you can organize your notes into folders for better
+              management. Use the "Create Folder" option to start organizing.
+            </p>
           </div>
         </div>
       </div>
