@@ -36,18 +36,6 @@
     background-color: #2f855a;
     border-color: #2f855a;
   }
-
-
-/* .row{
-  display: flex;
-  justify-content: start;
-   width: 100vw;
-  height:auto;
-  
-
-  flex-direction: row;
-} */
-
 </style>
 
 
@@ -206,55 +194,34 @@
       </div>
     </div>
     <!-- update modal-->
-
-    <div class="col-md-3 col-sm-6">
-
-      <div class="section_our_solution">
- 
-
-
-
-        <aside class="bg-black text-white p-6 rounded-lg w-full max-w-lg font-mono">
-          <div class="flex justify-between items-center">
-            <div class="flex space-x-2 text-red-500">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-          
-          </div>
-          <div class="mt-4 h-50">
-            <p class="text-green-400">Title : <b class="text-white"><%= notes[i].tag %></b> </p>
-           <div class="bg-white h-5px"></div>
-
-           <p class="text-green-400 mt-2">Description : </p>
-           <div  class=" overflow-y-scroll max-h-20 mt-3 border border-white">  <p class="text-white"><%= notes[i].description %></p></div>
-           
-          
-          </div>
-
-          <div class="flex gap-2 mt-4">
-            <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
-              <input type="hidden" name="_method" value="DELETE">
-              <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
-            </form>
-            <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i class="fa-solid fa-pencil"></i></button>
-          </div>
-        </aside>
-
-
-
-
-   
-
-
-
+     <div class="col-md-3 col-sm-6 m-8 p-4">
+      <div class="card flex flex-col gap-2 border rounded-md p-4 my-6 shadow-md shadow-gray-500 w-full h-full">
+        <div>
+          <!-- <h5 class="text-xl font-bold font-serif">Tagg</h5> -->
+          <h5 class="note-tag"><%= notes[i].tag %></h5>
+          <p class="note-date"><%= notes[i].createdAt.getDate()%>-<%= (notes[i].createdAt.getMonth() + 1) %>-<%=notes[i].createdAt.getFullYear() %> </p>
+        </div>
+        <div class="note-divider"></div>
+        <div class="note-description-container">
+          <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
+          <p class="note-description"><%= notes[i].description %></p>
+          <p class="note-date">Finish Date : <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1 %>-<%=notes[i].finishDate.getFullYear() %> </p>
+        </div>
+        <!-- <div class="form-group">
+          Created:  <%= (notes[i].createdAt) %> 
+        </div> 
+        <div class="form-group">
+          Finish Date:  <%= (notes[i].finishDate) %> 
+        </div>  -->
+        <div class="flex gap-2">
+          <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
+          </form>
+          <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i class="fa-solid fa-pencil"></i></button>
+        </div>
+      </div>
     </div>
-
-  </div>
-
-
-
     <% } %>
   </div>
 
