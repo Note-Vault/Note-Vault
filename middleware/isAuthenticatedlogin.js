@@ -6,7 +6,7 @@ const isAuthenticatedlogin = (req, res, next) => {
   if (token) {
     // Verify and decode the token
     console.log(token);
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWTSECRETKEY);
     // Access the decrypted data from the token
     const { userId } = decoded;
     // Verifying the user ID with the database
