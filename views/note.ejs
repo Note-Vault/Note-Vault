@@ -1,229 +1,264 @@
 <%- include("partials/header") -%>
 
 
-<!-- Add your custom CSS -->
-<style>
-  .dot {
-    transition: transform 0.3s ease-in-out;
-  }
+  <!-- Add your custom CSS -->
+  <style>
+    .dot {
+      transition: transform 0.3s ease-in-out;
+    }
 
-  input:checked+.relative .dot {
-    transform: translateX(100%);
-  }
+    input:checked+.relative .dot {
+      transform: translateX(100%);
+    }
 
-  input:checked+.relative .sun {
-    opacity: 0;
-  }
+    input:checked+.relative .sun {
+      opacity: 0;
+    }
 
-  input:checked+.relative .moon {
-    opacity: 1;
-  }
+    input:checked+.relative .moon {
+      opacity: 1;
+    }
 
-  .btn-lg {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-  }
+    .btn-lg {
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      border-radius: 0.3rem;
+    }
 
-  .btn-success {
-    background-color: #38a169;
-    border-color: #38a169;
-    color: white;
-  }
+    .btn-success {
+      background-color: #38a169;
+      border-color: #38a169;
+      color: white;
+    }
 
-  .btn-success:hover {
-    background-color: #2f855a;
-    border-color: #2f855a;
-  }
-</style>
-
-
-<div id="successMessage" class="success-message hidden">
-	<%= successMessage %>
-</div>
-
-<script>
-	// JavaScript code goes here
-	function showSuccessMessage(message) {
-		var successMessage = document.getElementById("successMessage");
-		successMessage.textContent = message;
-		successMessage.classList.remove("hidden");
-		setTimeout(function () {
-			successMessage.classList.add("hidden");
-		}, 3000); // 3000 milliseconds = 3 seconds
-	}
+    .btn-success:hover {
+      background-color: #2f855a;
+      border-color: #2f855a;
+    }
+  </style>
 
 
-  // Call the function to show the success message
-  if ('<%= successMessage %>' !== 'false') {
-    showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
-  }
+  <div id="successMessage" class="success-message hidden">
+    <%= successMessage %>
+  </div>
 
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.char-count').forEach(function (textarea) {
-      var charCountElement = document.createElement('span');
-      charCountElement.classList.add('text-muted');
-      charCountElement.textContent = '0 characters';
-      textarea.parentNode.insertBefore(charCountElement, textarea.nextSibling);
+  <script>
+    // JavaScript code goes here
+    function showSuccessMessage(message) {
+      var successMessage = document.getElementById("successMessage");
+      successMessage.textContent = message;
+      successMessage.classList.remove("hidden");
+      setTimeout(function () {
+        successMessage.classList.add("hidden");
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
 
-      textarea.addEventListener('input', function () {
-        charCountElement.textContent = textarea.value.length + ' characters';
+
+    // Call the function to show the success message
+    if ('<%= successMessage %>' !== 'false') {
+      showSuccessMessage('<%= successMessage %>'); // Pass the server-side message to the function
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.char-count').forEach(function (textarea) {
+        var charCountElement = document.createElement('span');
+        charCountElement.classList.add('text-muted');
+        charCountElement.textContent = '0 characters';
+        textarea.parentNode.insertBefore(charCountElement, textarea.nextSibling);
+
+        textarea.addEventListener('input', function () {
+          charCountElement.textContent = textarea.value.length + ' characters';
+        });
       });
     });
-  });
 
 
-</script>
+  </script>
 
-<!-- Scroll Up button -->
+  <!-- Scroll Up button -->
 
-<div class="scroll-to-top invisible">
-	<a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
-</div>
+  <div class="scroll-to-top invisible">
+    <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
 
-<div class="container-fluid">
+  <!-- <div class="container-fluid"> -->
 
-<!-- Dark mode toggle switch with custom sun and moon icons -->
-<div class="bg-gray-800 text-white p-4 mb-4 flex justify-between items-center w-full mt-3">
-  <a href="/" class="text-2xl font-extrabold text-white no-underline text-4xl">
-    NoteVault
-  </a>
-  <div class="flex items-center space-x-4">
-    <form action="/note/search" class="flex">
-      <input type="search" id="tag" name="tag" class="form-input rounded-l px-4 py-2" placeholder="Search">
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-    <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">
-      Logout
+  <!-- Dark mode toggle switch with custom sun and moon icons -->
+  <div class="bg-gray-800 text-white p-4 mb-4 flex justify-between items-center w-full mt-3">
+    <a href="/" class="text-2xl font-extrabold text-white no-underline text-4xl">
+      NoteVault
     </a>
-    <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" id="modeToggle" class="sr-only">
-      <div class="relative">
-        <div class="w-14 h-8 bg-gray-200 rounded-full shadow-inner"></div>
-        <div
-          class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
-          <img src="/image/light.png" class="sun absolute inset-0 w-full h-full object-cover" alt="light mode" />
-          <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0"
-            alt="dark mode" />
+    <div class="flex items-center space-x-4">
+      <form action="/note/search" class="flex">
+        <input type="search" id="tag" name="tag" class="form-input rounded-l px-4 py-2" placeholder="Search">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">
+        Logout
+      </a>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="modeToggle" class="sr-only">
+        <div class="relative">
+          <div class="w-14 h-8 bg-gray-200 rounded-full shadow-inner"></div>
+          <div
+            class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
+            <img src="/image/light.png" class="sun absolute inset-0 w-full h-full object-cover" alt="light mode" />
+            <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0"
+              alt="dark mode" />
+          </div>
         </div>
-      </div>
-    </label>
+      </label>
+    </div>
   </div>
-</div>
-</div>
-<div class="mt-4 flex justify-between items-center px-6">
-  <div class="flex-1">
-    <h1 class="text-sky-400 text-3xl font-semibold">Welcome back, <%= userNAME %>
-    </h1>
+  <!-- </div> -->
+  <div class="mt-4 flex justify-between items-center px-6">
+    <div class="flex-1">
+      <h1 class="text-sky-400 text-3xl font-semibold">Welcome back, <%= userNAME %>
+      </h1>
+    </div>
+    <div>
+      <button onclick="openUpdateModal('add-note-modal')"
+        class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300">
+        Add Note
+      </button>
+    </div>
   </div>
-  <div>
-    <button onclick="openUpdateModal('add-note-modal')"
-      class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300">
-      Add Note
-    </button>
+  <div class="mt-8 flex justify-center items-center">
+    <h1 class="text-2xl font-bold">Your Notes</h1>
   </div>
-</div>
-<div class="mt-8 flex justify-center items-center">
-  <h1 class="text-2xl font-bold">Your Notes</h1>
-</div>
 
   <div class="row">
-    <!-- add note -->
-    <div id="add-note-modal" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Add Note</h5>
-            <button type="button" class="close" data-dismiss="modal"
-              onclick="closeUpdateModal('add-note-modal')">&times;</button>
-          </div>
-          <div class="modal-body">
-            <form action="/note/add" method="POST">
-              <div class="form-group">
-                <label for="tag" class="modal-label">Tag</label>
-                <input type="text" class="form-control" id="tag" name="tag" placeholder="tag" required>
-              </div>
-              <div class="form-group">
-                <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3" placeholder="description"
-                  required></textarea>
-              </div>
-              <div>
-                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date" class="note-text" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
-              </div>
-              <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Add</button>
-            </form>
+    <!-- delete note -->
+    <% for (let i=0; i < notes.length; i++) { %>
+      <div id="deleteModal<%= notes[i]._id %>" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Delete Note</h5>
+              <button type="button" class="close" data-dismiss="modal"
+                onclick="closeUpdateModal('deleteModal<%= notes[i]._id %>')">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form action="delete/<%= notes[i]._id %>" method="POST">
+                <h1 class="font-bold text-lg mb-2">Are you sure?</h1>
+                <p class="mb-4">Do you want to delete note <q><%= notes[i].tag %></q>? This process cannot be undone.</p>
+                <button type="reset" class="btn btn-primary" onclick="closeUpdateModal('deleteModal<%= notes[i]._id %>')"
+                  style="background-color: rgb(172, 172, 172);">Cancel</button>
+                <button type="submit" class="btn btn-primary" 
+                  style="background-color: red;">Delete</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- add note -->
-    <% for (let i = 0; i < notes.length; i++) { %>
-    <!-- update modal -->
-    <div id="updateModal<%= notes[i]._id %>" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Update Note</h5>
-            <button type="button" class="close" data-dismiss="modal"
-              onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
+    <% } %>
+        <!-- add note -->
+        <div id="add-note-modal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add Note</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                  onclick="closeUpdateModal('add-note-modal')">&times;</button>
+              </div>
+              <div class="modal-body">
+                <form action="/note/add" method="POST">
+                  <div class="form-group">
+                    <label for="tag" class="modal-label">Tag</label>
+                    <input type="text" class="form-control" id="tag" name="tag" placeholder="tag" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="description" class="modal-label">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="3"
+                      placeholder="description" required></textarea>
+                  </div>
+                  <div>
+                    <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                    <input type="date" name="finishDate" placeholder="finish date" class="note-text"
+                      value="<%= new Date().toISOString().split('T')[0] %>"><br>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Add</button>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <form action="/note/update/<%= notes[i]._id %>" method="POST">
-              <div class="form-group">
-                <label for="tag" class="modal-label">Tag</label>
-                <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
+        </div>
+        <!-- add note -->
+        <% for (let i=0; i < notes.length; i++) { %>
+          <!-- update modal -->
+          <div id="updateModal<%= notes[i]._id %>" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Update Note</h5>
+                  <button type="button" class="close" data-dismiss="modal"
+                    onclick="closeUpdateModal('updateModal<%= notes[i]._id %>')">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <form action="/note/update/<%= notes[i]._id %>" method="POST">
+                    <div class="form-group">
+                      <label for="tag" class="modal-label">Tag</label>
+                      <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="description" class="modal-label">Description</label>
+                      <textarea class="form-control char-count" id="description" name="description" rows="3"
+                        required><%= notes[i].description %></textarea>
+                    </div>
+                    <div>
+                      <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                      <input type="date" name="finishDate" placeholder="finish date"> <span
+                        style="font-size: large; font-weight: bold;">Current:</span>
+                      <%=notes[i].finishDate %><br>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                      style="background-color: darkgoldenrod;">Update</button>
+                  </form>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control char-count" id="description" name="description" rows="3"
-                  required><%= notes[i].description %></textarea>
-              </div>
+            </div>
+          </div>
+          <!-- update modal-->
+          <div class="col-md-3 col-sm-6 m-8 p-4">
+            <div class="card flex flex-col gap-2 border rounded-md p-4 my-6 shadow-md shadow-gray-500 w-full h-full">
               <div>
-                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
+                <!-- <h5 class="text-xl font-bold font-serif">Tagg</h5> -->
+                <h5 class="note-tag">
+                  <%= notes[i].tag %>
+                </h5>
+                <p class="note-date">
+                  <%= notes[i].createdAt.getDate()%>-<%= (notes[i].createdAt.getMonth() + 1) %>-
+                      <%=notes[i].createdAt.getFullYear() %>
+                </p>
               </div>
-              <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Update</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- update modal-->
-     <div class="col-md-3 col-sm-6 m-8 p-4">
-      <div class="card flex flex-col gap-2 border rounded-md p-4 my-6 shadow-md shadow-gray-500 w-full h-full">
-        <div>
-          <!-- <h5 class="text-xl font-bold font-serif">Tagg</h5> -->
-          <h5 class="note-tag"><%= notes[i].tag %></h5>
-          <p class="note-date"><%= notes[i].createdAt.getDate()%>-<%= (notes[i].createdAt.getMonth() + 1) %>-<%=notes[i].createdAt.getFullYear() %> </p>
-        </div>
-        <div class="note-divider"></div>
-        <div class="note-description-container">
-          <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
-          <p class="note-description"><%= notes[i].description %></p>
-          <p class="note-date">Finish Date : <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth() + 1 %>-<%=notes[i].finishDate.getFullYear() %> </p>
-        </div>
-        <!-- <div class="form-group">
+              <div class="note-divider"></div>
+              <div class="note-description-container">
+                <!-- <h5 class="text-lg font-bold font-serif">Description</h5> -->
+                <p class="note-description">
+                  <%= notes[i].description %>
+                </p>
+                <p class="note-date">Finish Date : <%= notes[i].finishDate.getDate()%>-<%=notes[i].finishDate.getMonth()
+                      + 1 %>-<%=notes[i].finishDate.getFullYear() %>
+                </p>
+              </div>
+              <!-- <div class="form-group">
           Created:  <%= (notes[i].createdAt) %> 
         </div> 
         <div class="form-group">
           Finish Date:  <%= (notes[i].finishDate) %> 
         </div>  -->
-        <div class="flex gap-2">
-          <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
-            <input type="hidden" name="_method" value="DELETE">
-            <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
-          </form>
-          <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i class="fa-solid fa-pencil"></i></button>
-        </div>
-      </div>
-    </div>
-    <% } %>
+              <div class="flex gap-2">
+                <button onclick="openUpdateModal('deleteModal<%= notes[i]._id %>')" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
+                <button onclick="openUpdateModal('updateModal<%= notes[i]._id %>')" class="note-button-update"><i
+                    class="fa-solid fa-pencil"></i></button>
+              </div>
+            </div>
+          </div>
+          <% } %>
   </div>
 
-</div>
-<%- include("partials/footer") -%>
+  </div>
+  <%- include("partials/footer") -%>
