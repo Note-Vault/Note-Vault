@@ -1,11 +1,18 @@
 console.log("Public script file");
 function openUpdateModal(noteId) {
+	console.log(noteId)
 	// Find the modal element by its ID
 	if (noteId === "add-note-modal") {
 		const modal = document.getElementById(noteId);
 		modal.style.display = "block";
-	} else {
-		const modal = document.getElementById(`updateModal${noteId}`);
+	} else if (noteId.includes("update")) {
+		console.log("update")
+		const modal = document.getElementById(noteId);
+		// Open the modal
+		modal.style.display = "block";
+	}else if (noteId.includes("delete")) {
+		console.log("delete")
+		const modal = document.getElementById(noteId);
 		// Open the modal
 		modal.style.display = "block";
 	}
@@ -13,12 +20,17 @@ function openUpdateModal(noteId) {
 
 function closeUpdateModal(noteId) {
 	// Find the modal element by its ID
+	
 	if (noteId === "add-note-modal") {
 		const modal = document.getElementById(noteId);
 		// Close the modal
 		modal.style.display = "none";
-	} else {
-		const modal = document.getElementById(`updateModal${noteId}`);
+	} else if (noteId.includes("update")) {
+		const modal = document.getElementById(noteId);
+		// Close the modal
+		modal.style.display = "none";
+	}else if (noteId.includes("delete")) {
+		const modal = document.getElementById(noteId);
 		// Close the modal
 		modal.style.display = "none";
 	}
