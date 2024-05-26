@@ -132,12 +132,12 @@
 
   <div class="row">
     <!-- add note -->
-    <div id="add-note-modal" class="modal">
+    <div id="add-note-modal" class="modal-container" style="display: none;">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Add Note</h5>
-            <button type="button" class="close" data-dismiss="modal"
+            <h4 class="modal-title">Add Note</h4>
+            <button type="button" class="close" data-dismiss="modal" style="font-size: 55px;"
               onclick="closeUpdateModal('add-note-modal')">&times;</button>
           </div>
           <div class="modal-body">
@@ -151,7 +151,7 @@
                 <textarea class="form-control" id="description" name="description" rows="3" placeholder="description"
                   required></textarea>
               </div>
-              <div>
+              <div class="modal-end">
                 <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
                 <input type="date" name="finishDate" placeholder="finish date" class="note-text" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
               </div>
@@ -164,13 +164,13 @@
     <!-- add note -->
     <% for (let i = 0; i < notes.length; i++) { %>
     <!-- update modal -->
-    <div id="updateModal<%= notes[i]._id %>" class="modal">
+    <div id="updateModal<%= notes[i]._id %>" class="modal-container" style="display: none;">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Update Note</h5>
+            <h4 class="modal-title">Update Note</h4>
             <button type="button" class="close" data-dismiss="modal"
-              onclick="closeUpdateModal('<%= notes[i]._id %>')">&times;</button>
+              onclick="closeUpdateModal('<%= notes[i]._id %>')" style="font-size: 55px;">&times;</button>
           </div>
           <div class="modal-body">
             <form action="/note/update/<%= notes[i]._id %>" method="POST">
@@ -180,12 +180,12 @@
               </div>
               <div class="form-group">
                 <label for="description" class="modal-label">Description</label>
-                <textarea class="form-control char-count" id="description" name="description" rows="3"
-                  required><%= notes[i].description %></textarea>
+                <textarea class="form-control char-count" id="description" name="description" rows="3" required><%= notes[i].description %></textarea>
               </div>
-              <div>
-                <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
-                <input type="date" name="finishDate" placeholder="finish date"> <span style="font-size: large; font-weight: bold;">Current:</span><%=notes[i].finishDate %><br> 
+              <div class="modal-end">
+                <label for="finishDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                <input type="date" name="finishDate" value="<%= notes[i].finishDate.toISOString().split('T')[0] %>" placeholder="finish date">
+                <span style="font-size: large; font-weight: bold;padding-inline-start:5px;">Current: </span><%= notes[i].finishDate.toDateString() %><br>
               </div>
               <button type="submit" class="btn btn-primary" style="background-color: darkgoldenrod;">Update</button>
             </form>
@@ -226,4 +226,9 @@
   </div>
 
 </div>
+
+<div id="overlay" class="overlay hidden"></div>
+
 <%- include("partials/footer") -%>
+
+

@@ -489,6 +489,18 @@ input:checked+.slider.round .moon {
 
 .modal-content {
   top: 100px;
+  width: 600px;
+  margin: auto;
+}
+.modal-container {
+  position: fixed;
+  z-index: 9999; /* Higher than the overlay */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
 }
 
 .modal-label {
@@ -499,10 +511,18 @@ input:checked+.slider.round .moon {
 .modal-body {
   background-color: bisque;
   color: darkslategray;
+  padding: 20px;
 }
 
 .modal-header {
   background-color: burlywood;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+padding-inline: 15px;
+}
+.modal-end{
+  margin-block: 10px;
 }
 
 @media (max-width: 768px) {
@@ -936,4 +956,27 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
   color: #777;
   line-height: 1.4;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 9998; /* Make sure the overlay is behind the modal */
+}
+.overlay {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.close{
+  font-size: 18px;
+}
+
+
+.hidden {
+  display: none;
 }
