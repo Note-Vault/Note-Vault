@@ -17,6 +17,7 @@ const isAuthenticatedlogin = (req, res, next) => {
           // setting the userID so that any authrized connection can use it
           req.userID = userId;
           req.userNAME = curr_user.name;
+          req.userEMAIL=curr_user.email;
           console.log(req.userNAME);
           res.status(200).redirect("/note/show");
         } else {
