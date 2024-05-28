@@ -8,6 +8,7 @@ import staticRoutes from './routes/staticRoutes.js';
 import NotebookRoutes from './routes/notebook.js';
 
 configDotenv();
+configDotenv({ path: ".env" });
 
 mongoose
   .connect(process.env.MONGODB)

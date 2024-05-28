@@ -1,5 +1,5 @@
-import jwt from 'jsonwebtoken';
-import User from '../model/User.js';
+import jwt from "jsonwebtoken";
+import User from "../model/User.js";
 
 const isAuthenticatedlogin = (req, res, next) => {
   const token = req.cookies.token;

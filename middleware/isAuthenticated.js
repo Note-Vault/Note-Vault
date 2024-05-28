@@ -2,11 +2,12 @@ import jwt from 'jsonwebtoken';
 import User from '../model/User.js';
 
 const isAuthenticated = (req, res, next) => {
+ 
   const token = req.cookies.token;
   if (token) {
     // Verify and decode the token
     console.log(token);
-    const decoded = jwt.verify(token, process.env.JWTSECRETKEY);
+    const decoded = jwt.verify(token,process.env.JWTSECRETKEY);
     // Access the decrypted data from the token
     const { userId } = decoded;
     // Verifying the user ID with the database
