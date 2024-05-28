@@ -9,6 +9,30 @@
     @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 
 
+    .add-note-heading {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+      margin-left: 23%;
+    }
+
+    .X-button {
+      width: 15%;
+      color: rgb(255, 0, 0);
+      font-weight: bold;
+      border: 1px white solid;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 2rem;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .X-button:hover {
+      color: rgb(255, 255, 255);
+      background-color: rgb(255, 0, 0);
+    }
+
     .dot {
       transition: transform 0.3s ease-in-out;
     }
@@ -275,25 +299,27 @@
             <div class="modal-body">
               <form action="delete/<%= notes[i]._id %>" method="POST">
                 <h1 class="font-bold text-lg mb-2">Are you sure?</h1>
-                <p class="mb-4">Do you want to delete note <q><%= notes[i].tag %></q>? This process cannot be undone.</p>
-                <button type="reset" class="btn btn-primary" onclick="closeUpdateModal('deleteModal<%= notes[i]._id %>')"
+                <p class="mb-4">Do you want to delete note <q>
+                    <%= notes[i].tag %>
+                  </q>? This process cannot be undone.</p>
+                <button type="reset" class="btn btn-primary"
+                  onclick="closeUpdateModal('deleteModal<%= notes[i]._id %>')"
                   style="background-color: rgb(172, 172, 172);">Cancel</button>
-                <button type="submit" class="btn btn-primary" 
-                  style="background-color: red;">Delete</button>
+                <button type="submit" class="btn btn-primary" style="background-color: red;">Delete</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    <% } %>
+      <% } %>
         <!-- add note -->
         <div id="add-note-modal" class="modal">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Add Note</h5>
-                <button type="button" class="close" data-dismiss="modal"
-                  onclick="closeUpdateModal('add-note-modal')">&times;</button>
+                <button type="button" class="close X-button" data-dismiss="modal"
+                  onclick="closeUpdateModal('add-note-modal')">X</button>
+                <h5 class="modal-title add-note-heading ">Add Note</h5>
               </div>
 
               <div>
@@ -402,7 +428,8 @@
             <div class="flex gap-2 mt-4">
               <form action="delete/<%= notes[i]._id %>" method="POST" style="display: inline;">
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="note-button-delete"><i class="fa-solid fa-trash"></i></button>
+                <button type="submit" class="note-button-delete"><i
+                    class="fa-solid fa-trash"></i></button>
               </form>
               <button onclick="openUpdateModal('<%= notes[i]._id %>')" class="note-button-update"><i
                   class="fa-solid fa-pencil"></i></button>
