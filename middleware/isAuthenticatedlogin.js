@@ -1,5 +1,5 @@
-import jwt from 'jsonwebtoken';
-import User from '../model/User.js';
+import jwt from "jsonwebtoken";
+import User from "../model/User.js";
 
 const isAuthenticatedlogin = (req, res, next) => {
   const token = req.cookies.token;
@@ -17,6 +17,7 @@ const isAuthenticatedlogin = (req, res, next) => {
           // setting the userID so that any authrized connection can use it
           req.userID = userId;
           req.userNAME = curr_user.name;
+          req.userEMAIL=curr_user.email;
           console.log(req.userNAME);
           res.status(200).redirect("/note/show");
         } else {

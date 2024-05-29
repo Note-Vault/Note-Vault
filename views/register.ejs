@@ -74,7 +74,7 @@
 						</div>
 					</div>
 
-					<button type="submit" class="btn btn-dark login-button mb-3 center">
+					<button type="submit" class="btn btn-dark login-button mb-3 center" onclick="validateEmail()">
 						Create Account
 					</button>
 				</form>
@@ -93,6 +93,17 @@
 <script>
 	const passwordInput = document.getElementById('password');
 	const passwordToggle = document.getElementById('passwordToggle');
+
+	const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    function validateEmail() {
+        const emailInput = document.getElementById('email').value;
+        if (!emailPattern.test(emailInput)) {
+            alert('Please enter a valid email address (e.g., user@example.com)');
+            return false;
+        }
+        return true;
+    }
+  
   
 	passwordToggle.addEventListener('click', function () {
 	  const passwordField = this.querySelector('i');
@@ -105,5 +116,10 @@
 	  } else {
 		passwordField.classList.replace('fa-eye-slash', 'fa-eye');
 	  }
+	  document.querySelector('form').addEventListener('submit', function (e) {
+        if (!validateEmail()) {
+            e.preventDefault();  // Prevent form submission if email is invalid
+        }
+    });
 	});
   </script>

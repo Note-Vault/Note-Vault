@@ -1,5 +1,6 @@
 console.log("Public script file");
 function openUpdateModal(noteId) {
+
   // Find the modal container element by its ID
   let modalContainer;
   if (noteId === "add-note-modal") {
@@ -14,6 +15,26 @@ function openUpdateModal(noteId) {
   // Show the overlay
   const overlay = document.getElementById("overlay");
   overlay.classList.remove("hidden");
+
+}
+
+function closeUpdateModal(noteId) {
+	// Find the modal element by its ID
+	
+	if (noteId === "add-note-modal") {
+		const modal = document.getElementById(noteId);
+		// Close the modal
+		modal.style.display = "none";
+	} else if (noteId.includes("update")) {
+		const modal = document.getElementById(noteId);
+		// Close the modal
+		modal.style.display = "none";
+	}else if (noteId.includes("delete")) {
+		const modal = document.getElementById(noteId);
+		// Close the modal
+		modal.style.display = "none";
+	}
+
 }
 function closeUpdateModal(noteId) {
   // Find the modal container element by its ID
