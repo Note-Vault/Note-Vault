@@ -181,35 +181,11 @@
 
   </div>
 
-
-
-  <!-- <div class="mt-4 flex justify-between items-center px-6">
-  <div class="flex-1">
-    <h1 class="text-sky-400 text-3xl font-semibold">Welcome back, <%= userNAME %>
-    </h1>
-
-  </div>
-  <div class="mt-8 flex justify-center items-center">
-    <h1 class="text-2xl font-bold">Your Notes</h1>
-  </div>
-
-
-</div> -->
-
-
-
-
-
-  <header>
-
-
+ <header>
     <div class="container-fluid">
-
       <!-- Dark mode toggle switch with custom sun and moon icons -->
       <div class="hed bg-gray-800 text-white p-4 mb-4 flex justify-between items-center flex-wrap w-full mt-3">
-        <a href="/" class="text-2xl font-bold text-white no-underline">
-          NoteVault
-        </a>
+        <a href="/" class="text-2xl font-bold text-white no-underline">NoteVault</a>
         <div class="flex items-center flex-wrap space-x-4">
           <form action="/note/search" class="flex">
             <input type="search" id="tag" name="tag" class="form-input rounded-l px-4 py-2" placeholder="Search">
@@ -217,74 +193,99 @@
               <i class="fas fa-search"></i>
             </button>
           </form>
-          <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">
-            Logout
-          </a>
+          <a href="/user/logout" class="bg-red-500 text-white px-4 py-2 rounded">Logout</a>
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" id="modeToggle" class="sr-only">
             <div class="relative">
               <div class="w-14 h-8 bg-gray-200 rounded-full shadow-inner"></div>
-              <div
-                class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
+              <div class="dot absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out">
                 <img src="/image/light.png" class="sun absolute inset-0 w-full h-full object-cover" alt="light mode" />
-                <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0"
-                  alt="dark mode" />
+                <img src="/image/dark.png" class="moon absolute inset-0 w-full h-full object-cover opacity-0" alt="dark mode" />
               </div>
             </div>
           </label>
         </div>
       </div>
     </div>
-
-
-
+    
     <div class="overlay">
-
-
-
-
-
-
-
-
-
       <div class="image">
         <img src="/image/boy-1.png" alt="nr">
       </div>
-
-
-
       <div class="sec2">
-        <h2>Welcome back, " <%= userNAME %> "! Ready to tackle your Task list?</h2>
+        <h2>Welcome back, "<%= userNAME %> "! Ready to tackle your Task list?</h2>
         <br>
-
-
-
-        <button
-          class="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white"
-          onclick="openUpdateModal('add-note-modal')"> Add Note</button>
+        <button class="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white" onclick="openUpdateModal('add-note-modal')"> Add Note</button>
       </div>
-
-
-
     </div>
-
   </header>
-
-
-
-
 
   <div class="mt-8 flex justify-center items-center">
     <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
-
-
-
-
+  </div>
+<div class="row">
+  <!-- add note -->
+  <div id="add-note-modal" class="modal-container" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add Note</h4>
+          <button type="button" class="close" data-dismiss="modal" style="font-size: 55px;" onclick="closeUpdateModal('add-note-modal')">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form action="/note/add" method="POST">
+            <div class="form-group">
+              <label for="tag" class="modal-label">Tag</label>
+              <input type="text" class="form-control" id="tag" name="tag" placeholder="tag" required>
+            </div>
+            <div class="form-group">
+              <label for="description" class="modal-label">Description</label>
+              <textarea class="form-control" id="description" name="description" rows="3" placeholder="description" required></textarea>
+            </div>
+            <div class="modal-end">
+              <label for="finishhDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+              <input type="date" name="finishDate" placeholder="finish date" class="note-text" value="<%= new Date().toISOString().split('T')[0] %>"><br> 
+            </div>
+            <button type="submit" class="btn btn-primary">Add Note</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
-
-
+  <!-- update modal -->
+  <% for (let i = 0; i < notes.length; i++) { %>
+    <div id="updateModal<%= notes[i]._id %>" class="modal-container" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Update Note</h4>
+            <button type="button" class="close" data-dismiss="modal" onclick="closeUpdateModal('<%= notes[i]._id %>')" style="font-size: 55px;">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/note/update/<%= notes[i]._id %>" method="POST">
+              <div class="form-group">
+                <label for="tag" class="modal-label">Tag</label>
+                <input type="text" class="form-control" id="tag" name="tag" value="<%= notes[i].tag %>" required>
+              </div>
+              <div class="form-group">
+                <label for="description" class="modal-label">Description</label>
+                <textarea class="form-control char-count" id="description" name="description" rows="3" required><%= notes[i].description %></textarea>
+              </div>
+              <div class="modal-end">
+                <label for="finishDate" style="font-size: large; font-weight: bold;">Finish At:</label>
+                <input type="date" name="finishDate" value="<%= notes[i].finishDate.toISOString().split('T')[0] %>" placeholder="finish date">
+                <span style="font-size: large; font-weight: bold;padding-inline-start:5px;">Current: </span><%= notes[i].finishDate.toDateString() %><br>
+              </div>
+              <button type="submit" class="btn btn-primary">Update Note</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+  
+  
   <div class="row">
     <!-- delete note -->
     <% for (let i=0; i < notes.length; i++) { %>
@@ -454,4 +455,11 @@
 
   </div>
   <%- include("partials/footer") -%>
+
+
+</div>
+
+<div id="overlay" class="overlay hidden"></div>
+
+<%- include("partials/footer") -%>
 
