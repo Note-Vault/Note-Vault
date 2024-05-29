@@ -14,6 +14,7 @@ body{
     color: #f0f0f0;
 }
 
+
 [data-theme="dark"] #title,
 [data-theme="dark"] .container-fluid-1,
 [data-theme="dark"] .testimonials {
@@ -114,6 +115,36 @@ body{
   top:calc(57%);
   left:90%;
 }
+.toggle-container {
+  position: fixed;
+  margin-top: 23px;
+  left: 1400px;
+  
+}
+@media (max-width: 1400px) {
+  .toggle-container {
+    left: auto;
+    right: 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-container {
+    left: auto;
+    right: 10px; 
+    top: 10px;   
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-container {
+    left: auto;
+    right: 5px;  
+    top: 5px;    
+  }
+}
+
+
 .loginclass {
   position: relative;
 }
