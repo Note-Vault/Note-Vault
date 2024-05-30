@@ -14,6 +14,7 @@ body{
     color: #f0f0f0;
 }
 
+
 [data-theme="dark"] #title,
 [data-theme="dark"] .container-fluid-1,
 [data-theme="dark"] .testimonials {
@@ -114,6 +115,36 @@ body{
   top:calc(57%);
   left:90%;
 }
+.toggle-container {
+  position: fixed;
+  margin-top: 23px;
+  left: 1400px;
+  
+}
+@media (max-width: 1400px) {
+  .toggle-container {
+    left: auto;
+    right: 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-container {
+    left: auto;
+    right: 10px; 
+    top: 10px;   
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-container {
+    left: auto;
+    right: 5px;  
+    top: 5px;    
+  }
+}
+
+
 .loginclass {
   position: relative;
 }
@@ -494,6 +525,18 @@ input:checked+.slider.round .moon {
 
 .modal-content {
   top: 100px;
+  width: 600px;
+  margin: auto;
+}
+.modal-container {
+  position: fixed;
+  z-index: 9999; /* Higher than the overlay */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
 }
 
 .modal-label {
@@ -504,10 +547,18 @@ input:checked+.slider.round .moon {
 .modal-body {
   background-color: bisque;
   color: darkslategray;
+  padding: 20px;
 }
 
 .modal-header {
   background-color: burlywood;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+padding-inline: 15px;
+}
+.modal-end{
+  margin-block: 10px;
 }
 
 @media (max-width: 768px) {
@@ -696,10 +747,13 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   text-align: center;
   margin: 20px auto;
+   padding-top: 50px;
+   padding-bottom: 30px; /* Added padding from the bottom */
+
 }
 
 .a_heading h1 {
-  font-size: 60px;
+  font-size: 3rem; /* Adjusted for responsiveness */
   color: #000;
   margin-bottom: 25px;
   position: relative;
@@ -717,9 +771,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 10px 20px;
+  margin-top: 1rem;
+  padding: 30px 20px;
 }
 
 .about {
@@ -736,7 +791,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_image img {
-  max-width: 95%;
+  max-width: 100%; /* Adjusted for better fit */
   height: auto;
   display: block;
   transition: 0.5s ease;
@@ -751,16 +806,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_content h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  color: #191818;
+  font-size: 2rem; /* Adjusted for responsiveness */
+  margin-bottom: 20px;
+  color: #FD2F78;
   font-weight: bold;
 }
 
 .a_content p {
-  font-size: 22px;
+    font-size: 1.2rem; /* Adjusted for responsiveness */
   line-height: 1.5;
   color: rgb(45, 44, 44);
+  text-align: left;
 }
 
 [data-theme="dark"] .About-Section {
@@ -772,11 +828,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 [data-theme="dark"] .a_content h2 {
-  color: white;
+  color: #FD2F78;
 }
 
 [data-theme="dark"] .a_content p {
   color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+  .a_heading h1 {
+    font-size: 2.5rem; 
+  }
+  .a_content h2 {
+    font-size: 1.75rem; 
+  }
+  .a_content p {
+    font-size: 0.9rem; 
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -785,7 +854,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .a_heading h1 {
-    font-size: 60px;
+    font-size: 2rem; 
     margin-bottom: 0px;
   }
 
@@ -804,12 +873,19 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
   }
 
+  .a_image img {
+    max-width: 100%; 
+  }
+
+  .a_content h2 {
+    font-size: 1.5rem;
+  }
+
   .a_content p {
     padding: 0px;
-    font-size: 25px;
+    font-size: 0.9rem; 
   }
 }
-
 
 
 
@@ -1013,5 +1089,26 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
   color: #777;
   line-height: 1.4;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Apply blur effect for Safari */
+  z-index: 9998; /* Make sure the overlay is behind the modal */
+}
+
+.close{
+  font-size: 18px;
+}
+
+
+.hidden {
+  display: none;
 }
 

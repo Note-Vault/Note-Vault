@@ -9,6 +9,7 @@ import NotebookRoutes from './routes/notebook.js';
 import passwordRoutes from './routes/password.js';
 
 configDotenv();
+configDotenv({ path: ".env" });
 
 mongoose
   .connect(process.env.MONGODB)
