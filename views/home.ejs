@@ -1,5 +1,83 @@
 <%- include("partials/header") -%>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<style>
+  .testimonials-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 40px;
+   padding-top: 100px;
+    color: rgb(255, 255, 255); /* Change font color to black */
+  }
+
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .testimonial-box {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: rgb(247, 247, 247); /* Change font color to black */
+  }
+
+  .test-head {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black; /* Change font color to black */
+  }
+
+  .test-desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black; /* Change font color to black */
+  }
+
+  .test-abt {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .test-profile {
+    font-size: 24px;
+    color: #000;
+    transition: color 0.3s;
+  }
+
+  .test-profile:hover {
+    color: #ee7195;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color:#ee7195;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:#ee7195;
+    border: none;
+    transition: background-color 0.3s;
+  }
+
+  .carousel-indicators .active {
+    background-color: #ee7195;
+  }
+</style>
 
 <section id="title">
   <!-- container row column -->
@@ -351,118 +429,80 @@
 </section>
 
 <section class="testimonials" id="testimonials">
-  <div class="col-lg-12 text-center" style="font-size: 60px">
-    <p>What Our Clients Say</p>
+  <div class="col-lg-12 text-center">
+    <p class="section-title">What Our Clients Say</p>
   </div>
-  <div class="container-fluid">
-    <div
-      id="carouselExampleAutoplaying"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
+  <div class="container testimonials-container">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <h6 class="test-head">Sarah Johnson | University Student</h6>
-          <p class="test-desc">
-            "NoteVault is a game-changer for me. As a student, it helps me stay
-            organized and never miss important information. Thank you!"
-          </p>
-          <div class="test-abt">
-            <a href="https://linkedin.com/" target="_blank">
-              <i class="fa-brands fa-linkedin test-profile"></i>
-            </a>
-            <a href="https://github.com/" target="_blank">
-              <i class="fa-brands fa-github test-profile"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <i class="fa-brands fa-x-twitter test-profile"></i>
-            </a>
+          <div class="testimonial-box">
+            <h6 class="test-head">Sarah Johnson | University Student</h6>
+            <p class="test-desc">"NoteVault is a game-changer for me. As a student, it helps me stay organized and never miss important information. Thank you!"</p>
+            <div class="test-abt">
+              <a href="https://linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin test-profile"></i>
+              </a>
+              <a href="https://github.com/" target="_blank">
+                <i class="fa-brands fa-github test-profile"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-x-twitter test-profile"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <h6 class="test-head">Mark Roberts | Digital Marketer</h6>
-          <p class="test-desc">
-            "I've been using NoteVault for my personal and professional notes,
-            and it has greatly improved my productivity. The collaboration
-            features are fantastic!"
-          </p>
-          <div class="test-abt">
-            <a href="https://linkedin.com/" target="_blank">
-              <i class="fa-brands fa-linkedin test-profile"></i>
-            </a>
-            <a href="https://github.com/" target="_blank">
-              <i class="fa-brands fa-github test-profile"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <i class="fa-brands fa-x-twitter test-profile"></i>
-            </a>
+          <div class="testimonial-box">
+            <h6 class="test-head">Mark Roberts | Digital Marketer</h6>
+            <p class="test-desc">"I've been using NoteVault for my personal and professional notes, and it has greatly improved my productivity. The collaboration features are fantastic!"</p>
+            <div class="test-abt">
+              <a href="https://linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin test-profile"></i>
+              </a>
+              <a href="https://github.com/" target="_blank">
+                <i class="fa-brands fa-github test-profile"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-x-twitter test-profile"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <h6 class="test-head">Laura Thompson | Small Business Owner</h6>
-          <p class="test-desc">
-            "NoteVault has simplified my life. It's intuitive, reliable, and
-            accessible on all my devices. Highly recommended for anyone looking
-            for a note-taking solution."
-          </p>
-          <div class="test-abt">
-            <a href="https://linkedin.com/" target="_blank">
-              <i class="fa-brands fa-linkedin test-profile"></i>
-            </a>
-            <a href="https://github.com/" target="_blank">
-              <i class="fa-brands fa-github test-profile"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <i class="fa-brands fa-x-twitter test-profile"></i>
-            </a>
+          <div class="testimonial-box">
+            <h6 class="test-head">Laura Thompson | Small Business Owner</h6>
+            <p class="test-desc">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my devices. Highly recommended for anyone looking for a note-taking solution."</p>
+            <div class="test-abt">
+              <a href="https://linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin test-profile"></i>
+              </a>
+              <a href="https://github.com/" target="_blank">
+                <i class="fa-brands fa-github test-profile"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-x-twitter test-profile"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
-      >
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
-      >
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
   </div>
 </section>
-
 <%- include('faqs') %>
 <!-- Scroll Up button -->
 <div class="scroll-to-top invisible">
