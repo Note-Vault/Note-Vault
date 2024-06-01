@@ -4,100 +4,74 @@
 <section id="title">
   <!-- container row column -->
   <div class="container-fluid p-4">
-    <div class="row m-1">
-      <div
-        class="col-lg-4 font-weight-bold"
-        style="font-size: 35px; display: flex"
-      >
-        <img
-          src="image/favicon.png"
-          width="50px"
-          style="border-radius: 25%; height: 50px"
-        />
-        <a
-          href="/note/show"
-          class="text-white text-decoration-none"
-          style="padding-left: 2%"
-        >
-          NoteVault
-        </a>
+    <div class="row m-1 align-items-center">
+      <!-- NoteVault logo and title -->
+      <div class="col-lg-3 font-weight-bold" style="font-size: 35px; display: flex">
+        <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px"/>
+        <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
       </div>
-      <!-- Dark mode toggle switch with custom sun and moon icons -->
-      <div class="toggle-container">
+      <!-- Dark mode toggle switch -->
+      <div class="toggle-container col-lg-1">
         <label class="switch">
           <input type="checkbox" id="modeToggle" />
           <span class="slider round">
             <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
-            <span class="slider-icon moon"
-              ><i class="fa-solid fa-moon"></i
-            ></span>
+            <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
           </span>
         </label>
       </div>
-      <div class="col-4">
-        <div class="row p-2 font-weight-light">
-          <div class="navbar col-lg-4 text-center">
-            <a href="#why-us" class="text-decoration-none">
-              <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
-              Why Us
-            </a>
-          </div>
-          <div class="navbar col-lg-4 text-center">
-            <a href="#aboutus" class="text-decoration-none">
-              <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
 
-              About Us
-            </a>
-          </div>
-          <div class="navbar col-lg-4 text-center">
-            <a href="#testimonials" class="text-decoration-none">
-              <i class="fa-solid fa-users" style="color: #ffffff"></i>
-              Testimonials
-            </a>
-          </div>
+      <!-- Links -->
+      <div class="col-lg-2 px-1">
+        <div class="navbar text-center">
+          <a href="#why-us" class="text-decoration-none">
+            <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+            Why Us
+          </a>
         </div>
       </div>
-      <div class="col-lg-4" style="padding-left: 4%">
-        <div class="row p-2 font-weight-light">
-          <div class="navbar col-lg-4 text-center">
-            <a href="/user/login" class="text-decoration-none"
-              ><i
-                class="fa-solid fa-right-to-bracket"
-                style="color: #ffffff"
-              ></i>
-              Login
-            </a>
-          </div>
-          <div class="navbar col-lg-4 text-center">
-            <a href="/user/register" class="text-decoration-none"
-              ><i class="fa-solid fa-registered" style="color: #ffffff"></i>
-              Register
-            </a>
-          </div>
+      <div class="col-lg-2 px-1">
+        <div class="navbar text-center">
+          <a href="#aboutus" class="text-decoration-none">
+            <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
+            About Us
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-2 px-1">
+        <div class="navbar text-center">
+          <a href="#testimonials" class="text-decoration-none">
+            <i class="fa-solid fa-users" style="color: #ffffff"></i>
+            Testimonials
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-1 px-1">
+        <div class="navbar text-center">
+          <a href="/user/login" class="text-decoration-none">
+            <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
+            Login
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-1 px-1">
+        <div class="navbar text-center">
+          <a href="/user/register" class="text-decoration-none">
+            <i class="fa-solid fa-registered" style="color: #ffffff"></i>
+            Register
+          </a>
         </div>
       </div>
     </div>
+
     <div class="row mt-5 align-items-center">
       <div class="col-lg-8">
         <p style="font-size: 70px">
-          Keep your thoughts, ideas, and important information in one secure
-          place.
+          Keep your thoughts, ideas, and important information in one secure place.
 
-          <lord-icon
-            src="https://cdn.lordicon.com/svsiboke.json"
-            trigger="hover"
-            stroke="light"
-            colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347"
-            style="width: 65px; height: 65px"
-          >
-          </lord-icon>
+          <lord-icon src="https://cdn.lordicon.com/svsiboke.json" trigger="hover" stroke="light" colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347" style="width: 65px; height: 65px"></lord-icon>
 
-          <lord-icon
-            src="https://cdn.lordicon.com/zfzufhzk.json"
-            trigger="hover"
-            style="width: 65px; height: 65px"
-          >
-          </lord-icon>
+          <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" trigger="hover" style="width: 65px; height: 65px"></lord-icon>
         </p>
       </div>
       <div class="col-lg-4">
@@ -350,6 +324,7 @@
   </div>
 </section>
 
+
 <section class="testimonials" id="testimonials">
   <div class="col-lg-12 text-center" style="font-size: 60px">
     <p>What Our Clients Say</p>
@@ -360,6 +335,10 @@
       class="carousel slide"
       data-bs-ride="carousel"
     >
+
+
+
+
       <div class="carousel-indicators">
         <button
           type="button"
@@ -462,6 +441,7 @@
     </div>
   </div>
 </section>
+
 
 <%- include('faqs') %>
 <!-- Scroll Up button -->
