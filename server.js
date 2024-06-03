@@ -11,14 +11,14 @@ import passwordRoutes from './routes/password.js';
 configDotenv();
 configDotenv({ path: ".env" });
 
-mongoose
-  .connect(process.env.MONGODB)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((error) => {
-    console.error("Error connecting to MongoDB:", error);
-  });
+// mongoose
+//   .connect(process.env.MONGODB)
+//   .then(() => {
+//     console.log("Connected to MongoDB");
+//   })
+//   .catch((error) => {
+//     console.error("Error connecting to MongoDB:", error);
+//   });
 
 const app = express();
 const port = 3000; // Change this to the desired port number

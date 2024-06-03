@@ -296,7 +296,7 @@
       Why choose NoteValut?
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="p-4 flex flex-col items-center">
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
         <div class="bg-teal-500 text-white rounded-full p-4 mb-4">
           <svg width="100" height="100" viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Lock body -->
@@ -306,7 +306,7 @@
             <!-- Keyhole -->
             <circle cx="12" cy="16" r="1" fill="white"/>
         </svg>
-        </div>
+        </div class="border border-2">
         <h2 class="text-xl font-semibold">
           Safe
         </h2>
@@ -315,7 +315,7 @@
           market trends.
         </p>
       </div>
-      <div class="p-4 flex flex-col items-center">
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
         <div class="bg-green-500 text-white rounded-full p-4 mb-4">
           <svg
             class="w-8 h-8"
@@ -340,7 +340,7 @@
           optimizing budgets.
         </p>
       </div>
-      <div class="p-4 flex flex-col items-center">
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
         <div class="bg-yellow-500 text-white rounded-full p-4 mb-4">
           <svg
             class="w-8 h-8"
@@ -371,7 +371,7 @@
           according to Kotler, competitive.
         </p>
       </div>
-      <div class="p-4 flex flex-col items-center">
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white  ">
         <div class="bg-orange-500 text-white rounded-full p-4 mb-4">
           <svg
             class="w-8 h-8"
@@ -432,47 +432,44 @@
 
 
 <section class="testimonials" id="testimonials">
-  <div class="col-lg-12 text-center">
-    <p class="section-title">What Our Clients Say</p>
+  <div class="container text-center">
+    <h2 class="section-title">What Our Clients Say</h2>
   </div>
   <div class="container testimonials-container">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="testimonial-box">
             <h6 class="test-head">Sarah Johnson | University Student</h6>
             <p class="test-desc" style="padding: 0%;">"NoteVault is a game-changer for me. As a student, it helps me stay organized and never miss important information. Thank you!"</p>
+
             <div class="test-abt">
               <a href="https://linkedin.com/" target="_blank">
-                <i class="fa-brands fa-linkedin test-profile"></i>
+                <i class="fab fa-linkedin test-profile"></i>
               </a>
               <a href="https://github.com/" target="_blank">
-                <i class="fa-brands fa-github test-profile"></i>
+                <i class="fab fa-github test-profile"></i>
               </a>
               <a href="https://twitter.com/" target="_blank">
-                <i class="fa-brands fa-x-twitter test-profile"></i>
+                <i class="fab fa-twitter test-profile"></i>
               </a>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <div class="testimonial-box">
+        <div class="testimonial-box">
             <h6 class="test-head">Mark Roberts | Digital Marketer</h6>
             <p class="test-desc" style="padding: 0%;">"I've been using NoteVault for my personal and professional notes, and it has greatly improved my productivity. The collaboration features are fantastic!"</p>
+
             <div class="test-abt">
               <a href="https://linkedin.com/" target="_blank">
-                <i class="fa-brands fa-linkedin test-profile"></i>
+                <i class="fab fa-linkedin test-profile"></i>
               </a>
               <a href="https://github.com/" target="_blank">
-                <i class="fa-brands fa-github test-profile"></i>
+                <i class="fab fa-github test-profile"></i>
               </a>
               <a href="https://twitter.com/" target="_blank">
-                <i class="fa-brands fa-x-twitter test-profile"></i>
+                <i class="fab fa-twitter test-profile"></i>
               </a>
             </div>
           </div>
@@ -481,31 +478,116 @@
           <div class="testimonial-box">
             <h6 class="test-head">Laura Thompson | Small Business Owner</h6>
             <p class="test-desc" style="padding: 0%;">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my devices. Highly recommended for anyone looking for a note-taking solution."</p>
+
             <div class="test-abt">
               <a href="https://linkedin.com/" target="_blank">
-                <i class="fa-brands fa-linkedin test-profile"></i>
+                <i class="fab fa-linkedin test-profile"></i>
               </a>
               <a href="https://github.com/" target="_blank">
-                <i class="fa-brands fa-github test-profile"></i>
+                <i class="fab fa-github test-profile"></i>
               </a>
               <a href="https://twitter.com/" target="_blank">
-                <i class="fa-brands fa-x-twitter test-profile"></i>
+                <i class="fab fa-twitter test-profile"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
   </div>
 </section>
+
+<style>
+.testimonials {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #5f5f5f;
+}
+
+.testimonials-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.test-head {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.test-role {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.test-desc {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.test-abt {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.test-profile {
+  font-size: 1.5em;
+  color: #0077b5;
+  transition: color 0.3s;
+}
+
+.test-profile:hover {
+  color: #005582;
+}
+
+.test-profile.github {
+  color: #333;
+}
+
+.test-profile.github:hover {
+  color: #24292e;
+}
+
+.test-profile.twitter {
+  color: #1da1f2;
+}
+
+.test-profile.twitter:hover {
+  color: #0c7abf;
+}
+</style>
+
+
 
 <%- include('faqs') %>
 <!-- Scroll Up button -->
