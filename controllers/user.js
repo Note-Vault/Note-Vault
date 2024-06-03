@@ -15,6 +15,13 @@ const register = async (req, res) => {
                     errorMessage: "Email already registered.Login Directly",
                 });
             }
+            //Password Length Validation
+
+            if (password.length < 8 || password.length > 20) {
+                return res.render("register", {
+                    errorMessage: "Password Length should be greater than 8 and less than 20",
+                });
+            }
 
             // Hash the password
 
@@ -32,8 +39,9 @@ const register = async (req, res) => {
                         .save()
                         .then(() => {
                             // Generate JWT token with user ID
+                            
                             const token = jwt.sign({ userId: user._id }, process.env.JWTSECRETKEY);
-
+                     
                             // Set the token as a cookie
                             res.cookie("token", token, { httpOnly: true });
                             // res.status(201).json({ message: 'User registered successfully' });
@@ -115,4 +123,4 @@ const logout = async (req, res) => {
     res.redirect("/");
 }
 
-export { register,login, logout };
+export { register, login, logout };

@@ -6,17 +6,19 @@ import { config as configDotenv } from "dotenv"; // Use config method from doten
 import userRoutes from './routes/user.js';
 import staticRoutes from './routes/staticRoutes.js';
 import NotebookRoutes from './routes/notebook.js';
+import passwordRoutes from './routes/password.js';
 
 configDotenv();
+configDotenv({ path: ".env" });
 
-mongoose
-  .connect(process.env.MONGODB)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((error) => {
-    console.error("Error connecting to MongoDB:", error);
-  });
+// mongoose
+//   .connect(process.env.MONGODB)
+//   .then(() => {
+//     console.log("Connected to MongoDB");
+//   })
+//   .catch((error) => {
+//     console.error("Error connecting to MongoDB:", error);
+//   });
 
 const app = express();
 const port = 3000; // Change this to the desired port number
@@ -36,6 +38,7 @@ app.use(express.static("public"));
 app.use('/',staticRoutes);
 app.use('/',userRoutes);
 app.use('/',NotebookRoutes);
+app.use('/', passwordRoutes);
 
 // Start the server
 app.listen(port, () => {

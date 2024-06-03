@@ -3,6 +3,7 @@
 <section class="login">
 	<div class="container-log">
 		<!-- Dark mode toggle switch with custom sun and moon icons -->
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 		<div class="toggle-container">
 			<label class="switch">
 				<input type="checkbox" id="modeToggle">
@@ -20,30 +21,38 @@
 				<p style="color: red"><%= errorMessage %></p>
 				<% } %>
 				<form method="post" action="/user/login">
-					<div class="mb-3">
+					<div class="loginclass mb-3">
 						<label class="form-label" for="email">Email ID</label>
+						<i class='icon1 bx bxs-envelope' style="font-size: 30px;color:grey"></i>
 						<input
 							type="email"
 							class="form-control"
 							id="email"
 							placeholder="abc1@site.com"
 							name="email"
+							style="padding-left: 15%;"
 							required
 						/>
 					</div>
-					<div class="mb-3">
+					<div class="loginclass mb-3">
 						<label class="form-label" for="password">Password</label>
+						<i class='icon2 bx bx-lock-alt' style="font-size: 30px;color:grey"></i>
+						<span id="pswd-toggle1">
+						<i class="pswd-toggle fas fa-eye-slash"></i>
+						</span>
 						<input
 							type="password"
 							class="form-control"
 							id="password"
 							placeholder="••••••"
 							name="password"
+							style="padding-left: 15%;"
 							required
 						/>
+						
 					</div>
 
-					<button type="submit" class="btn btn-dark login-button mb-3 center">
+					<button type="submit" class="btn btn-dark login-button mb-3 center" onclick="validateEmail()">
 						Login
 					</button>
 				</form>
@@ -52,6 +61,13 @@
 						<b>Register</b></a
 					>
 				</div>
+				<br>
+                <div class="mx-auto p-2">
+                    <a href="/forgot-password">
+                        <b>Forgot Password</b>
+                    </a>
+                </div>
+
 				<span class=" pt-4 pl-[120px]">Go to </span><a style="color: blue" href="/">Home</a>
 			</div>
 		</div>
@@ -59,3 +75,38 @@
 </section>
 
 <%- include("partials/footer") -%>
+<script>
+	const passwordInput = document.getElementById('password');
+	const Toggle = document.getElementById('pswd-toggle1');
+
+	const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    function validateEmail() {
+        const emailInput = document.getElementById('email').value;
+        if (!emailPattern.test(emailInput)) {
+            alert('Please enter a valid email address (e.g., user@example.com)');
+            return false;
+        }
+        return true;
+    }
+  
+	Toggle.addEventListener('click', function () 
+	{
+	  const passwordField = this.querySelector('i');
+	  if(passwordInput.getAttribute('type') === 'password'){
+		passwordInput.setAttribute('type','text');
+		passwordField.classList.replace('fa-eye-slash', 'fa-eye');
+		
+	  } 
+	  else{
+		passwordInput.setAttribute('type','password');
+		
+		passwordField.classList.replace('fa-eye', 'fa-eye-slash');
+	  }
+	document.querySelector('form').addEventListener('submit', function (e) {
+        if (!validateEmail()) {
+            e.preventDefault();  // Prevent form submission if email is invalid
+        }
+    });
+	
+	});
+  </script>
