@@ -559,6 +559,119 @@
 }
 </style>
 
+<section class="Contact-Section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="c_heading text-center">
+          <h1 style="font-style: normal; font-family: Poppins">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="c_content" style="font-style: normal; font-family: Poppins">
+          <h2>Get in Touch</h2>
+          <p>
+            Have a question or need assistance? Reach out to us using the
+            contact form below. We'll get back to you as soon as possible.
+          </p>
+          <form id="contactForm" action="/submit-contact-form" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <div id="successMessage" style="color: green; display: none; margin-top:5px">Message sent successfully!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      setTimeout(function() {
+        successMessage.style.display = "block";
+        form.reset();
+      }, 1000); 
+    });
+  });
+</script>
+<style>
+  .Contact-Section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .c_heading {
+    margin-bottom: 30px;
+  }
+  
+  .c_heading h1 {
+    font-style: normal;
+    font-family: Poppins;
+    font-size: 36px;
+  }
+  
+  .c_content h2 {
+    font-style: normal;
+    font-family: Poppins;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .c_content p {
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+    
+</style>
+
 
 
 <%- include('faqs') %>
