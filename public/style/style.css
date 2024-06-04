@@ -78,6 +78,7 @@ body {
   top: calc(50%);
   left: 1.8%;
 }
+
 .icon2 {
   position: absolute;
   top: calc(50%);
@@ -252,16 +253,18 @@ body {
   border-radius: 25px;
 }
 
-.container-fluid p {
+/* .container-fluid p {
   font-size: 77px;
   color: #eeb1e6;
-}
+} */
 
-.container-fluid p:hover {
+/* .container-fluid p:hover {
   cursor: pointer;
   color: #ed80de;
   padding: 2px 2px 2px 2px;
-}
+
+} */
+
 
 .row2:hover {
   border: 1px solid burlywood;
@@ -569,6 +572,10 @@ input:checked + .slider.round .moon {
   .offset-5 {
     margin-left: 8rem !important;
   }
+
+  .container-fluid {
+    height: auto;
+  }
 }
 
 .testimonials {
@@ -701,6 +708,7 @@ footer {
   .carousel-item {
     padding: 0.5rem 1rem;
   }
+
 }
 
 .scroll-to-top:hover {

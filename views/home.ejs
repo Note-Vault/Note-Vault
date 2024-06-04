@@ -104,13 +104,59 @@
   }
 
 
+  .fixed-nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1em;
+    z-index: 100;
+  }
+  
+
+  .text-green {
+    color: green !important;
+  }
+
+  .text-yellow{
+    color: rgb(255, 200, 0);
+  }
+
+  [data-theme="dark"].hero-text{
+    color: white;
+  }
+   [data-theme="light"].hero-text{
+    color: black;
+  }
+  .font-hero{
+    font-size: 3em;
+  }
+  .hero-margin{
+    margin-top: 5em;
+    padding-top: 5em;
+  }
+  @media (max-width: 576px) {
+    .fixed-nav{
+      position: static; /* Change to static for smaller screens */
+    }
+    .font-hero{
+      font-size: 1.2em;
+      margin-top: 1rem;
+    }
+    .hero-margin{
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
 </style>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 <section id="title">
   <!-- container row column -->
-  <div class="container-fluid p-4">
-    <div class="row m-1 align-items-center">
+  <div class="container-fluid  pt-5">
+    <div class="row m-1 align-items-center fixed-nav ">
       <!-- NoteVault logo and title -->
       <div class="col-lg-3 font-weight-bold" style="font-size: 35px; display: flex">
         <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px"/>
@@ -170,10 +216,10 @@
       </div>
     </div>
 
-    <div class="row mt-5 align-items-center">
-      <div class="col-lg-8">
-        <p style="font-size: 70px">
-          Keep your thoughts, ideas, and important information in one secure place.
+    <div class="row hero-margin align-items-center ">
+      <div class="col-lg-8 hero-margin ">
+        <p class="font-hero hero-text">
+          Keep your <span class="text-green">thoughts</span>,<br> <span class="text-yellow"> ideas</span>, and important information in one secure place.
 
           <lord-icon src="https://cdn.lordicon.com/svsiboke.json" trigger="hover" stroke="light" colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347" style="width: 65px; height: 65px"></lord-icon>
 
