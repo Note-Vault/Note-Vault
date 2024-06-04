@@ -78,6 +78,7 @@ body {
   top: calc(50%);
   left: 1.8%;
 }
+
 .icon2 {
   position: absolute;
   top: calc(50%);
@@ -261,7 +262,9 @@ body {
   cursor: pointer;
   color: #ed80de;
   padding: 2px 2px 2px 2px;
+
 } */
+
 
 .row2:hover {
   border: 1px solid burlywood;
@@ -702,6 +705,10 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+  .carousel-item {
+    padding: 0.5rem 1rem;
+  }
+
 }
 
 .scroll-to-top:hover {
