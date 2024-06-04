@@ -49,23 +49,28 @@ body {
   color: white;
   color: white;
 }
+
 .loginclass {
   position: relative;
 }
+
 .navbar a {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
+
 .navbar a:hover {
   color: rgb(80, 80, 80);
 }
+
 .col-lg-8 {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: medium;
 }
+
 #WcNv {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -73,16 +78,19 @@ body {
   font-size: 60px;
   text-decoration: underline;
 }
+
 .icon1 {
   position: absolute;
   top: calc(50%);
   left: 1.8%;
 }
+
 .icon1 {
   position: absolute;
   top: calc(50%);
   left: 1.8%;
 }
+
 .icon2 {
   position: absolute;
   top: calc(50%);
@@ -92,11 +100,13 @@ body {
 .regclass {
   position: relative;
 }
+
 .logo1 {
   position: absolute;
   top: calc(55%);
   left: 1%;
 }
+
 .logo2 {
   position: absolute;
   top: calc(57%);
@@ -116,11 +126,13 @@ body {
   top: calc(57%);
   left: 90%;
 }
+
 .toggle-container {
   position: fixed;
   margin-top: 14px;
   left: 1400px;
 }
+
 @media (max-width: 1400px) {
   .toggle-container {
     left: auto;
@@ -372,15 +384,15 @@ body {
   transition: background-color 0.4s;
 }
 
-input:checked + .slider.round:before {
+input:checked+.slider.round:before {
   background-color: white;
 }
 
-input:checked + .slider.round .sun {
+input:checked+.slider.round .sun {
   opacity: 0;
 }
 
-input:checked + .slider.round .moon {
+input:checked+.slider.round .moon {
   opacity: 1;
 }
 
@@ -441,31 +453,31 @@ input:checked + .slider.round .moon {
 
 [data-theme="light"] .card {
   margin: 0;
-  background: linear-gradient(
-    270deg,
-    #ffffff,
-    #e0f7fa,
-    #f0f0f0,
-    #e0f7fa,
-    #ffffff
-  );
-  background-size: 400% 400%; /* Adjust the background size for a more noticeable animation */
-  animation: gradient-move 10s ease infinite; /* Duration of the animation and repetition */
+  background: linear-gradient(270deg,
+      #ffffff,
+      #e0f7fa,
+      #f0f0f0,
+      #e0f7fa,
+      #ffffff);
+  background-size: 400% 400%;
+  /* Adjust the background size for a more noticeable animation */
+  animation: gradient-move 10s ease infinite;
+  /* Duration of the animation and repetition */
   color: #000;
 }
 
 [data-theme="dark"] .card {
   margin: 0;
-  background: linear-gradient(
-    270deg,
-    #222222,
-    #000435,
-    #333333,
-    #333333,
-    #222222
-  );
-  background-size: 400% 400%; /* Adjust the background size for a more noticeable animation */
-  animation: gradient-move 10s ease infinite; /* Duration of the animation and repetition */
+  background: linear-gradient(270deg,
+      #222222,
+      #000435,
+      #333333,
+      #333333,
+      #222222);
+  background-size: 400% 400%;
+  /* Adjust the background size for a more noticeable animation */
+  animation: gradient-move 10s ease infinite;
+  /* Duration of the animation and repetition */
   color: #f0f0f0;
 }
 
@@ -473,9 +485,11 @@ input:checked + .slider.round .moon {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -539,15 +553,18 @@ input:checked + .slider.round .moon {
   width: 600px;
   margin: auto;
 }
+
 .modal-container {
   position: fixed;
-  z-index: 9999; /* Higher than the overlay */
+  z-index: 9999;
+  /* Higher than the overlay */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent background */
 }
 
 .modal-label {
@@ -569,6 +586,7 @@ input:checked + .slider.round .moon {
   padding-inline: 15px;
   padding-inline: 15px;
 }
+
 .modal-end {
   margin-block: 10px;
 }
@@ -689,16 +707,13 @@ footer {
   flex: 1;
   min-width: 250px;
   margin: 10px 20px;
-  flex: 1;
-  min-width: 250px;
-  margin: 10px 20px;
+
 }
 
 .footer-section h3 {
   margin-bottom: 15px;
   font-size: 18px;
-  margin-bottom: 15px;
-  font-size: 18px;
+
 }
 
 .footer-section p,
@@ -717,13 +732,13 @@ footer {
 .footer-section ul {
   list-style-type: none;
   padding: 0;
-  list-style-type: none;
-  padding: 0;
+
 }
 
 .footer-section ul li {
   margin-bottom: 10px;
-  margin-bottom: 10px;
+  gap: 2px;
+
 }
 
 .footer-section .social-icons a {
@@ -796,13 +811,16 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   margin: 20px auto;
   padding-top: 50px;
-  padding-bottom: 30px; /* Added padding from the bottom */
+  padding-bottom: 30px;
+  /* Added padding from the bottom */
   padding-top: 50px;
-  padding-bottom: 30px; /* Added padding from the bottom */
+  padding-bottom: 30px;
+  /* Added padding from the bottom */
 }
 
 .a_heading h1 {
-  font-size: 3rem; /* Adjusted for responsiveness */
+  font-size: 3rem;
+  /* Adjusted for responsiveness */
   color: #000;
   margin-bottom: 25px;
   position: relative;
@@ -840,7 +858,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_image img {
-  max-width: 100%; /* Adjusted for better fit */
+  max-width: 100%;
+  /* Adjusted for better fit */
   height: auto;
   display: block;
   transition: 0.5s ease;
@@ -855,7 +874,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_content h2 {
-  font-size: 2rem; /* Adjusted for responsiveness */
+  font-size: 2rem;
+  /* Adjusted for responsiveness */
   margin-bottom: 20px;
   color: #fd2f78;
   color: #fd2f78;
@@ -863,8 +883,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_content p {
-  font-size: 1.2rem; /* Adjusted for responsiveness */
-  font-size: 1.2rem; /* Adjusted for responsiveness */
+  font-size: 1.2rem;
+  /* Adjusted for responsiveness */
+  font-size: 1.2rem;
+  /* Adjusted for responsiveness */
   line-height: 1.5;
   color: rgb(45, 44, 44);
   text-align: left;
@@ -893,10 +915,12 @@ body::-webkit-scrollbar-thumb {
     font-size: 2.5rem;
     font-size: 2.5rem;
   }
+
   .a_content h2 {
     font-size: 1.75rem;
     font-size: 1.75rem;
   }
+
   .a_content p {
     font-size: 0.9rem;
     font-size: 0.9rem;
@@ -1154,10 +1178,14 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  backdrop-filter: blur(5px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(5px); /* Apply blur effect for Safari */
-  z-index: 9998; /* Make sure the overlay is behind the modal */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+  backdrop-filter: blur(5px);
+  /* Apply blur effect */
+  -webkit-backdrop-filter: blur(5px);
+  /* Apply blur effect for Safari */
+  z-index: 9998;
+  /* Make sure the overlay is behind the modal */
 }
 
 .close {
@@ -1167,6 +1195,7 @@ body::-webkit-scrollbar-thumb {
 .hidden {
   display: none;
 }
+
 .x,
 .menu {
   display: none !important;
@@ -1178,6 +1207,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
 }
+
 /* Responsive  */
 @media (max-width: 1108px) {
   #links-nav {
@@ -1196,9 +1226,11 @@ body::-webkit-scrollbar-thumb {
     font-size: 200px;
     transition: all 0.3s ease;
   }
+
   #links-nav.show {
     top: 0;
   }
+
   #links-nav .x {
     position: absolute;
     top: 20px;
