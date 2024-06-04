@@ -181,7 +181,7 @@
 
   </div>
 
- <header>
+
     <div class="container-fluid">
       <!-- Dark mode toggle switch with custom sun and moon icons -->
       <div class="hed bg-gray-800 text-white p-4 mb-4 flex justify-between items-center flex-wrap w-full mt-3">
@@ -207,18 +207,18 @@
         </div>
       </div>
     </div>
-    
-    <div class="overlay">
-      <div class="image">
-        <img src="/image/boy-1.png" alt="nr">
-      </div>
-      <div class="sec2">
-        <h2>Welcome back, "<%= userNAME %> "! Ready to tackle your Task list?</h2>
-        <br>
-        <button class="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white" onclick="openUpdateModal('add-note-modal')"> Add Note</button>
-      </div>
+
+  </div>
+  <div class="row mt-4">
+    <div class="col-lg-8 align-self-end">
+      <h1 style="color: skyblue;"> Welcome back, <%= userNAME %> </h1>
     </div>
-  </header>
+    <div class="col-lg-4">
+      <Button onclick="openUpdateModal('add-note-modal')" class="btn btn-lg btn-success"
+        style="position: absolute; right:2rem;">Add Note</Button>
+    </div>
+  </div>
+
 
   <div class="mt-8 flex justify-center items-center">
     <h1 class="text-gray-800 text-2xl font-bold">Your Notes</h1>
