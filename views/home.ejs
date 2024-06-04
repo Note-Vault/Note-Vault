@@ -150,6 +150,50 @@
     }
   }
 
+  .side-drawer {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: -250px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+  }
+
+  .side-drawer a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .side-drawer a:hover {
+    color: #f1f1f1;
+  }
+
+  .side-drawer .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .open-drawer {
+    width: 250px;
+  }
+
+  @media (min-width: 992px) {
+    .side-drawer {
+      display: none;
+    }
+  }
+
 </style>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
@@ -174,7 +218,7 @@
       </div>
 
       <!-- Links -->
-      <div class="col-lg-2 px-1">
+      <div class="col-lg-2 px-1 d-none d-lg-block">
         <div class="navbar text-center">
           <a href="#why-us" class="text-decoration-none">
             <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
@@ -182,7 +226,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-2 px-1">
+      <div class="col-lg-2 px-1 d-none d-lg-block">
         <div class="navbar text-center">
           <a href="#aboutus" class="text-decoration-none">
             <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
@@ -190,7 +234,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-2 px-1">
+      <div class="col-lg-2 px-1 d-none d-lg-block">
         <div class="navbar text-center">
           <a href="#testimonials" class="text-decoration-none">
             <i class="fa-solid fa-users" style="color: #ffffff"></i>
@@ -198,7 +242,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-1 px-1">
+      <div class="col-lg-1 px-1 d-none d-lg-block">
         <div class="navbar text-center">
           <a href="/user/login" class="text-decoration-none">
             <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
@@ -206,7 +250,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-1 px-1">
+      <div class="col-lg-1 px-1 d-none d-lg-block">
         <div class="navbar text-center">
           <a href="/user/register" class="text-decoration-none">
             <i class="fa-solid fa-registered" style="color: #ffffff"></i>
@@ -214,7 +258,26 @@
           </a>
         </div>
       </div>
+      <div class="col-lg-4 text-right d-lg-none">
+        <button class="btn btn-primary" onclick="openDrawer()">Menu</button>
+      </div>
     </div>
+  </div>
+      
+
+    </div>
+    
+
+    <div id="myDrawer" class="side-drawer">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">X</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#aboutus">About Us</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="/user/login">Login</a>
+      <a href="/user/register">Register</a>
+    </div>
+
+    
 
     <div class="row hero-margin align-items-center ">
       <div class="col-lg-8 hero-margin ">
@@ -672,6 +735,16 @@
   </div>
 </section>
 <script>
+
+  function openDrawer() {
+    console.log("click423")
+    document.getElementById("myDrawer").style.left = "0";
+  }
+
+  function closeDrawer() {
+    console.log("click")
+    document.getElementById("myDrawer").style.left = "-250px";
+  }
   document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
     const successMessage = document.getElementById("successMessage");
