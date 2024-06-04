@@ -77,6 +77,33 @@
     background-color: #ee7195;
   }
 
+  @media (max-width:786px){
+    .carousel-inner {
+    /* Adjust carousel styling for mobile screens */
+    width: 100%; /* Make the carousel width 100% to fit the screen */
+    height: auto; /* Allow the height to adjust automatically */
+    }
+    .testimonial-box {
+      padding: 5px;
+      margin: 0px;
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: rgb(247, 247, 247); /* Change font color to black */
+    }
+    .testimonials-container{
+      padding: 0px;
+    }
+    .container{
+      padding:0px;
+    }
+    .test-desc{
+      padding: 0px 0px;
+    }
+  }
+
+
   .fixed-nav{
     position:fixed;
     top: 0;
@@ -458,10 +485,10 @@
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="testimonial-box text-center">
-            <h5 class="test-head">Sarah Johnson</h5>
-            <p class="test-role">University Student</p>
-            <p class="test-desc">"NoteVault is a game-changer for me. As a student, it helps me stay organized and never miss important information. Thank you!"</p>
+          <div class="testimonial-box">
+            <h6 class="test-head">Sarah Johnson | University Student</h6>
+            <p class="test-desc" style="padding: 0%;">"NoteVault is a game-changer for me. As a student, it helps me stay organized and never miss important information. Thank you!"</p>
+
             <div class="test-abt">
               <a href="https://linkedin.com/" target="_blank">
                 <i class="fab fa-linkedin test-profile"></i>
@@ -476,10 +503,10 @@
           </div>
         </div>
         <div class="carousel-item">
-          <div class="testimonial-box text-center">
-            <h5 class="test-head">Mark Roberts</h5>
-            <p class="test-role">Digital Marketer</p>
-            <p class="test-desc">"I've been using NoteVault for my personal and professional notes, and it has greatly improved my productivity. The collaboration features are fantastic!"</p>
+        <div class="testimonial-box">
+            <h6 class="test-head">Mark Roberts | Digital Marketer</h6>
+            <p class="test-desc" style="padding: 0%;">"I've been using NoteVault for my personal and professional notes, and it has greatly improved my productivity. The collaboration features are fantastic!"</p>
+
             <div class="test-abt">
               <a href="https://linkedin.com/" target="_blank">
                 <i class="fab fa-linkedin test-profile"></i>
@@ -494,10 +521,10 @@
           </div>
         </div>
         <div class="carousel-item">
-          <div class="testimonial-box text-center">
-            <h5 class="test-head">Laura Thompson</h5>
-            <p class="test-role">Small Business Owner</p>
-            <p class="test-desc">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my devices. Highly recommended for anyone looking for a note-taking solution."</p>
+          <div class="testimonial-box">
+            <h6 class="test-head">Laura Thompson | Small Business Owner</h6>
+            <p class="test-desc" style="padding: 0%;">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my devices. Highly recommended for anyone looking for a note-taking solution."</p>
+
             <div class="test-abt">
               <a href="https://linkedin.com/" target="_blank">
                 <i class="fab fa-linkedin test-profile"></i>
@@ -604,6 +631,119 @@
 .test-profile.twitter:hover {
   color: #0c7abf;
 }
+</style>
+
+<section class="Contact-Section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="c_heading text-center">
+          <h1 style="font-style: normal; font-family: Poppins">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="c_content" style="font-style: normal; font-family: Poppins">
+          <h2>Get in Touch</h2>
+          <p>
+           Our team is happy to assist you. 
+           Fill out the form and we'll be in touch as soon as possible.
+          </p>
+          <form id="contactForm" action="/submit-contact-form" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <div id="successMessage" style="color: green; display: none; margin-top:5px">Message sent successfully!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      setTimeout(function() {
+        successMessage.style.display = "block";
+        form.reset();
+      }, 1000); 
+    });
+  });
+</script>
+<style>
+  .Contact-Section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .c_heading {
+    margin-bottom: 30px;
+  }
+  
+  .c_heading h1 {
+    font-style: normal;
+    font-family: Poppins;
+    font-size: 36px;
+  }
+  
+  .c_content h2 {
+    font-style: normal;
+    font-family: Poppins;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .c_content p {
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+    
 </style>
 
 
