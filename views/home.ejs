@@ -1,213 +1,181 @@
 <%- include("partials/header") -%>
-<style>
-  .testimonials-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .section-title {
-    font-size: 40px;
-   padding-top: 100px;
-    color: rgb(255, 255, 255); /* Change font color to black */
-  }
-
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .testimonial-box {
-    padding: 20px;
-    margin: 20px;
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: rgb(247, 247, 247); /* Change font color to black */
-  }
-
-  .test-head {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: black; /* Change font color to black */
-  }
-
-  .test-desc {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: black; /* Change font color to black */
-  }
-
-  .test-abt {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .test-profile {
-    font-size: 24px;
-    color: #000;
-    transition: color 0.3s;
-  }
-
-  .test-profile:hover {
-    color: #ee7195;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color:#ee7195;
-    border-radius: 50%;
-    padding: 10px;
-  }
-
-  .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color:#ee7195;
-    border: none;
-    transition: background-color 0.3s;
-  }
-
-  .carousel-indicators .active {
-    background-color: #ee7195;
-  }
-
-  .fixed-nav{
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1em;
-    z-index: 100;
-  }
-  
-
-  .text-green {
-    color: green !important;
-  }
-
-  .text-yellow{
-    color: rgb(255, 200, 0);
-  }
-
-  [data-theme="dark"].hero-text{
-    color: white;
-  }
-   [data-theme="light"].hero-text{
-    color: black;
-  }
-  .font-hero{
-    font-size: 3em;
-  }
-  .hero-margin{
-    margin-top: 5em;
-    padding-top: 5em;
-  }
-  @media (max-width: 576px) {
-    .fixed-nav{
-      position: static; /* Change to static for smaller screens */
+  <style>
+    .testimonials-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    .font-hero{
-      font-size: 1.2em;
-      margin-top: 1rem;
+
+    .section-title {
+      font-size: 40px;
+      padding-top: 100px;
+      color: rgb(255, 255, 255);
+      /* Change font color to black */
     }
-    .hero-margin{
-      margin-top: 0;
-      padding-top: 0;
+
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
     }
-  }
 
-</style>
-<script src="https://cdn.lordicon.com/lordicon.js"></script>
+    .testimonial-box {
+      padding: 20px;
+      margin: 20px;
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: rgb(247, 247, 247);
+      /* Change font color to black */
+    }
 
-<section id="title">
-  <!-- container row column -->
-  <div class="container-fluid  pt-5">
-    <div class="row m-1 align-items-center fixed-nav ">
-      <!-- NoteVault logo and title -->
-      <div class="col-lg-3 font-weight-bold" style="font-size: 35px; display: flex">
-        <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px"/>
-        <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
-      </div>
-      <!-- Dark mode toggle switch -->
-      <div class="toggle-container col-lg-1">
-        <label class="switch">
-          <input type="checkbox" id="modeToggle" />
-          <span class="slider round">
-            <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
-            <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
-          </span>
-        </label>
+    .test-head {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: black;
+      /* Change font color to black */
+    }
+
+    .test-desc {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: black;
+      /* Change font color to black */
+    }
+
+    .test-abt {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .test-profile {
+      font-size: 24px;
+      color: #000;
+      transition: color 0.3s;
+    }
+
+    .test-profile:hover {
+      color: #ee7195;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #ee7195;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ee7195;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .carousel-indicators .active {
+      background-color: #ee7195;
+    }
+  </style>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+  <section id="title">
+    <!-- container row column -->
+    <div class="container-fluid p-4">
+      <div class="row m-1 align-items-center">
+        <!-- NoteVault logo and title -->
+        <div class="col-lg-1 col-sm-4 font-weight-bold" style="font-size: 30px; display: flex; align-items:center; justify-content: space-between
+        ; ">
+          <img src="image/favicon.png" class="logo" width="50px" style="border-radius: 25%; height: 50px" />
+          <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
+          <i class="fa-solid fa-bars menu col-sm-2" style="color: #ffffff"></i>
+        </div>
+
+        <!-- Dark mode toggle switch -->
+        <div class="toggle-container col-lg-1">
+          <label class="switch">
+            <input type="checkbox" id="modeToggle" />
+            <span class="slider round">
+              <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
+              <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Links -->
+        <div id="links-nav">
+          <i class="fa-solid fa-x x" style="color: #ffffff"></i>
+          <div class="col-lg-2  col-sm-4 bg-red px-1">
+            <div class="navbar text-center">
+              <a href="#why-us" class="text-decoration-none" style="font-size: 19px;">
+                <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+                Why Us
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2  col-sm-4 bg-red px-1">
+            <div class="navbar text-center">
+              <a href="#aboutus" class="text-decoration-none" style="font-size: 19px;">
+                <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
+                About Us
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2  col-sm-4 bg-red px-1">
+            <div class="navbar text-center">
+              <a href="#testimonials" class="text-decoration-none" style="font-size: 19px;">
+                <i class="fa-solid fa-users" style="color: #ffffff"></i>
+                Testimonials
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4 px-1">
+            <div class="navbar text-center">
+              <a href="/user/login" class="text-decoration-none" style="font-size: 19px;">
+                <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
+                Login
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2  col-sm-4 px-1">
+            <div class="navbar text-center">
+              <a href="/user/register" class="text-decoration-none" style="font-size: 19px;">
+                <i class="fa-solid fa-registered" style="color: #ffffff"></i>
+                Register
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Links -->
-      <div class="col-lg-2 px-1">
-        <div class="navbar text-center">
-          <a href="#why-us" class="text-decoration-none">
-            <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
-            Why Us
-          </a>
+      <div class="row mt-5 align-items-center">
+        <div class="col-sm-8 col-lg-8">
+          <p style="font-size: 5vw " class="t">
+            Keep your thoughts, ideas, and important information in one secure place.
+
+            <lord-icon src="https://cdn.lordicon.com/svsiboke.json" class="t" trigger="hover" stroke="light"
+              colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347"
+              style="width: 5vw; height: 5vw"></lord-icon>
+
+            <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" class="t" trigger="hover"
+              style="width: 5vw; height: 5vw"></lord-icon>
+          </p>
         </div>
-      </div>
-      <div class="col-lg-2 px-1">
-        <div class="navbar text-center">
-          <a href="#aboutus" class="text-decoration-none">
-            <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
-            About Us
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 px-1">
-        <div class="navbar text-center">
-          <a href="#testimonials" class="text-decoration-none">
-            <i class="fa-solid fa-users" style="color: #ffffff"></i>
-            Testimonials
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-1 px-1">
-        <div class="navbar text-center">
-          <a href="/user/login" class="text-decoration-none">
-            <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
-            Login
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-1 px-1">
-        <div class="navbar text-center">
-          <a href="/user/register" class="text-decoration-none">
-            <i class="fa-solid fa-registered" style="color: #ffffff"></i>
-            Register
-          </a>
+        <div class="col-lg-4 col-sm-6">
+          <img class="img-fluid "  src="/image/notebook.jpg" alt="notebook" />
         </div>
       </div>
     </div>
 
-    <div class="row hero-margin align-items-center ">
-      <div class="col-lg-8 hero-margin ">
-        <p class="font-hero hero-text">
-          Keep your <span class="text-green">thoughts</span>,<br> <span class="text-yellow"> ideas</span>, and important information in one secure place.
-
-          <lord-icon src="https://cdn.lordicon.com/svsiboke.json" trigger="hover" stroke="light" colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347" style="width: 65px; height: 65px"></lord-icon>
-
-          <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" trigger="hover" style="width: 65px; height: 65px"></lord-icon>
-        </p>
-      </div>
-      <div class="col-lg-4">
-        <img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
-      </div>
-    </div>
-  </div>
-</section>
+    
+  </section>
 
 
-<!-- <section class="features p-5">
+  <!-- <section class="features p-5">
   <div class="container-fluid">
     <div class="row">
       <div
@@ -305,353 +273,298 @@
     </div>
   </div>
 </section> -->
-<section class="font-sans" id="why-us">
-  <div
-    class="max-w-3xl mx-auto mt-12 p-6 rounded-lg"
-  >
-    <h1
-      class="text-4xl font-bold text-center mb-8"
-    >
-      Why choose NoteVault?
-    </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
-        <div class="bg-teal-500 text-white rounded-full p-4 mb-4">
-          <svg width="100" height="100" viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Lock body -->
-            <path d="M17 11H7C5.895 11 5 11.895 5 13V19C5 20.105 5.895 21 7 21H17C18.105 21 19 20.105 19 19V13C19 11.895 18.105 11 17 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Lock shackle -->
-            <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Keyhole -->
-            <circle cx="12" cy="16" r="1" fill="white"/>
-        </svg>
-        </div class="border border-2">
-        <h2 class="text-xl font-semibold">
-          Safe
-        </h2>
-        <p class="text-center">
-          The concept of marketing support product range, regardless of the cost
-          market trends.
-        </p>
-      </div>
-      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
-        <div class="bg-green-500 text-white rounded-full p-4 mb-4">
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9.75 17L15 12l-5.25-5"
-            ></path>
-          </svg>
-        </div>
-        <h2 class="text-xl font-semibold">
-          Fast
-        </h2>
-        <p class="text-center">
-          Business plan elegantly transforms sublimated pool of loyal editions,
-          optimizing budgets.
-        </p>
-      </div>
-      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
-        <div class="bg-yellow-500 text-white rounded-full p-4 mb-4">
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 9V5a3 3 0 00-3-3H6a3 3 0 00-3 3v14a3 3 0 003 3h8a3 3 0 003-3v-4"
-            ></path>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 17h6M9 11h6"
-            ></path>
-          </svg>
-        </div>
-        <h2 class="text-xl font-semibold">
-          Low Fee
-        </h2>
-        <p class="text-center">
-          Sponsorship, summing these examples, it is doable. SWOT-analysis,
-          according to Kotler, competitive.
-        </p>
-      </div>
-      <div class="p-4 flex flex-col items-center" style="border: 5px solid white  ">
-        <div class="bg-orange-500 text-white rounded-full p-4 mb-4">
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M8 14s1.5-2 4-2 4 2 4 2M9 8h.01M15 8h.01M19 4h-1.586a2 2 0 00-1.414.586L15 6H9L7.414 4.586A2 2 0 006 4H4a2 2 0 00-2 2v12a2 2 0 002 2h15a2 2 0 002-2V6a2 2 0 00-2-2z"
-            ></path>
-          </svg>
-        </div>
-        <h2 class="text-xl font-semibold">
-          Quick Support
-        </h2>
-        <p class="text-center">
-          The fact that the advertising platform changes the method of studying
-          the market.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
-
-<section class="About-Section" id="aboutus">
-  <div class="a_heading">
-    <h1 style="font-style: normal; font-family: Poppins">About this Website</h1>
-    <div class="a_container">
-      <section class="about">
-        <div class="a_image">
-          <img src="/image/about-sec.png" alt="" />
         </div>
-        <div class="a_content" style="font-style: normal; font-family: Poppins">
-          <h2>NoteVault: Your Ultimate Note-Taking Solution</h2>
-          <p>
-            Welcome to NoteVault, the perfect platform for enhancing your
-            productivity and organizing your notes efficiently. Whether you're a
-            student or a professional, NoteVault has everything you need.
+        <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
+          <div class="bg-green-500 text-white rounded-full p-4 mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L15 12l-5.25-5"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-semibold">
+            Fast
+          </h2>
+          <p class="text-center">
+            Business plan elegantly transforms sublimated pool of loyal editions,
+            optimizing budgets.
           </p>
-          <p>
-            Note Vault lets you easily create, categorize, and search your
-            notes. Edit anytime to keep them current, delete unneeded notes for
-            a clutter-free workspace, and enjoy secure, encrypted protection.
-            Access your notes from any device—computer, tablet, or smartphone.
-            Choose Note Vault for the ultimate note-taking solution.
+        </div>
+        <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
+          <div class="bg-yellow-500 text-white rounded-full p-4 mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V5a3 3 0 00-3-3H6a3 3 0 00-3 3v14a3 3 0 003 3h8a3 3 0 003-3v-4"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6M9 11h6"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-semibold">
+            Low Fee
+          </h2>
+          <p class="text-center">
+            Sponsorship, summing these examples, it is doable. SWOT-analysis,
+            according to Kotler, competitive.
           </p>
-          <p>Join NoteVault now and transform your note-taking!</p>
         </div>
-      </section>
+        <div class="p-4 flex flex-col items-center" style="border: 5px solid white  ">
+          <div class="bg-orange-500 text-white rounded-full p-4 mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 14s1.5-2 4-2 4 2 4 2M9 8h.01M15 8h.01M19 4h-1.586a2 2 0 00-1.414.586L15 6H9L7.414 4.586A2 2 0 006 4H4a2 2 0 00-2 2v12a2 2 0 002 2h15a2 2 0 002-2V6a2 2 0 00-2-2z">
+              </path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-semibold">
+            Quick Support
+          </h2>
+          <p class="text-center">
+            The fact that the advertising platform changes the method of studying
+            the market.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="testimonials" id="testimonials">
-  <div class="container text-center">
-    <h2 class="section-title">What Our Clients Say</h2>
-  </div>
-  <div class="container testimonials-container">
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="testimonial-box text-center">
-            <h5 class="test-head">Sarah Johnson</h5>
-            <p class="test-role">University Student</p>
-            <p class="test-desc">"NoteVault is a game-changer for me. As a student, it helps me stay organized and never miss important information. Thank you!"</p>
-            <div class="test-abt">
-              <a href="https://linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin test-profile"></i>
-              </a>
-              <a href="https://github.com/" target="_blank">
-                <i class="fab fa-github test-profile"></i>
-              </a>
-              <a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter test-profile"></i>
-              </a>
+  <section class="About-Section" id="aboutus">
+    <div class="a_heading">
+      <h1 style="font-style: normal; font-family: Poppins">About this Website</h1>
+      <div class="a_container">
+        <section class="about">
+          <div class="a_image">
+            <img src="/image/about-sec.png" alt="" />
+          </div>
+          <div class="a_content" style="font-style: normal; font-family: Poppins; text-align: center;">
+            <h2>NoteVault: Your Ultimate Note-Taking Solution</h2>
+            <p>
+              Welcome to NoteVault, the perfect platform for enhancing your
+              productivity and organizing your notes efficiently. Whether you're a
+              student or a professional, NoteVault has everything you need.
+            </p>
+            <p>
+              Note Vault lets you easily create, categorize, and search your
+              notes. Edit anytime to keep them current, delete unneeded notes for
+              a clutter-free workspace, and enjoy secure, encrypted protection.
+              Access your notes from any device—computer, tablet, or smartphone.
+              Choose Note Vault for the ultimate note-taking solution.
+            </p>
+            <p>Join NoteVault now and transform your note-taking!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="testimonials" id="testimonials">
+    <div class="container text-center">
+      <h2 class="section-title " style="color: pink;">What Our Clients Say</h2>
+    </div>
+    <div class="container testimonials-container">
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial-box text-center">
+              <h5 class="test-head">Sarah Johnson</h5>
+              <p class="test-role">University Student</p>
+              <p class="test-desc">"NoteVault is a game-changer for me. As a student, it helps me stay organized and
+                never miss important information. Thank you!"</p>
+              <div class="test-abt">
+                <a href="https://linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin test-profile"></i>
+                </a>
+                <a href="https://github.com/" target="_blank">
+                  <i class="fab fa-github test-profile"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter test-profile"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-box text-center">
+              <h5 class="test-head">Mark Roberts</h5>
+              <p class="test-role">Digital Marketer</p>
+              <p class="test-desc">"I've been using NoteVault for my personal and professional notes, and it has greatly
+                improved my productivity. The collaboration features are fantastic!"</p>
+              <div class="test-abt">
+                <a href="https://linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin test-profile"></i>
+                </a>
+                <a href="https://github.com/" target="_blank">
+                  <i class="fab fa-github test-profile"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter test-profile"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-box text-center">
+              <h5 class="test-head">Laura Thompson</h5>
+              <p class="test-role">Small Business Owner</p>
+              <p class="test-desc">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my
+                devices. Highly recommended for anyone looking for a note-taking solution."</p>
+              <div class="test-abt">
+                <a href="https://linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin test-profile"></i>
+                </a>
+                <a href="https://github.com/" target="_blank">
+                  <i class="fab fa-github test-profile"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter test-profile"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-box text-center">
-            <h5 class="test-head">Mark Roberts</h5>
-            <p class="test-role">Digital Marketer</p>
-            <p class="test-desc">"I've been using NoteVault for my personal and professional notes, and it has greatly improved my productivity. The collaboration features are fantastic!"</p>
-            <div class="test-abt">
-              <a href="https://linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin test-profile"></i>
-              </a>
-              <a href="https://github.com/" target="_blank">
-                <i class="fab fa-github test-profile"></i>
-              </a>
-              <a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter test-profile"></i>
-              </a>
-            </div>
-          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .testimonials {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #5f5f5f;
+    }
+
+    .testimonials-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .testimonial-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .testimonial-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .test-head {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .test-role {
+      font-size: 1em;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .test-desc {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .test-abt {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .test-profile {
+      font-size: 1.5em;
+      color: #0077b5;
+      transition: color 0.3s;
+    }
+
+    .test-profile:hover {
+      color: #005582;
+    }
+
+    .test-profile.github {
+      color: #333;
+    }
+
+    .test-profile.github:hover {
+      color: #24292e;
+    }
+
+    .test-profile.twitter {
+      color: #1da1f2;
+    }
+
+    .test-profile.twitter:hover {
+      color: #0c7abf;
+    }
+  </style>
+
+
+
+  <%- include('faqs') %>
+    <!-- Scroll Up button -->
+    <div class="scroll-to-top invisible">
+      <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h3>Company</h3>
+          <p>We are committed to delivering the best services to our customers. Your satisfaction is our priority.</p>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-box text-center">
-            <h5 class="test-head">Laura Thompson</h5>
-            <p class="test-role">Small Business Owner</p>
-            <p class="test-desc">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my devices. Highly recommended for anyone looking for a note-taking solution."</p>
-            <div class="test-abt">
-              <a href="https://linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin test-profile"></i>
-              </a>
-              <a href="https://github.com/" target="_blank">
-                <i class="fab fa-github test-profile"></i>
-              </a>
-              <a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter test-profile"></i>
-              </a>
-            </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#title">Home</a></li>
+            <li><a href="#why-us">Why-us?</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#our-clients">Clients View</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p>Email: companyname@gamail.com</p>
+          <p>Phone: +91 **********</p>
+        </div>
+        <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <div class="test-abt">
+            <a href="https://linkedin.com/" target="_blank">
+              <i class="fa-brands fa-linkedin test-profile"></i>
+            </a>
+            <a href="https://github.com/" target="_blank">
+              <i class="fa-brands fa-github test-profile"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fa-brands fa-x-twitter test-profile"></i>
+            </a>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<style>
-.testimonials {
-  padding: 50px 0;
-  background-color: #f9f9f9;
-}
-
-.section-title {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: #5f5f5f;
-}
-
-.testimonials-container {
-  max-width: 800px;
-  margin: auto;
-}
-
-.testimonial-box {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.testimonial-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.test-head {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.test-role {
-  font-size: 1em;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.test-desc {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.test-abt {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.test-profile {
-  font-size: 1.5em;
-  color: #0077b5;
-  transition: color 0.3s;
-}
-
-.test-profile:hover {
-  color: #005582;
-}
-
-.test-profile.github {
-  color: #333;
-}
-
-.test-profile.github:hover {
-  color: #24292e;
-}
-
-.test-profile.twitter {
-  color: #1da1f2;
-}
-
-.test-profile.twitter:hover {
-  color: #0c7abf;
-}
-</style>
-
-
-
-<%- include('faqs') %>
-<!-- Scroll Up button -->
-<div class="scroll-to-top invisible">
-  <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
-</div>
-
-
-<footer>
-	<div class="footer-container">
-		<div class="footer-section about">
-			<h3>Company</h3>
-			<p>We are committed to delivering the best services to our customers. Your satisfaction is our priority.</p>
-		</div>
-		<div class="footer-section links">
-			<h3>Quick Links</h3>
-			<ul>
-				<li><a href="#title">Home</a></li>
-				<li><a href="#why-us">Why-us?</a></li>
-				<li><a href="#aboutus">About</a></li>
-				<li><a href="#testimonials">Clients View</a></li>
-			</ul>
-		</div>
-		<div class="footer-section contact">
-			<h3>Contact Us</h3>
-			<p>Email: companyname@gamail.com</p>
-			<p>Phone: +91 **********</p>
-		</div>
-		<div class="footer-section social">
-			<h3>Follow Us</h3>
-			<div class="test-abt">
-				<a href="https://linkedin.com/" target="_blank">
-					<i class="fa-brands fa-linkedin test-profile"></i>
-				</a>
-				<a href="https://github.com/" target="_blank">
-					<i class="fa-brands fa-github test-profile"></i>
-				</a>
-				<a href="https://twitter.com/" target="_blank">
-					<i class="fa-brands fa-x-twitter test-profile"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="footer-bottom">
-		<p>&copy; 2024 NoteVault. All rights reserved.</p>
-	</div>
-</footer>
-<%- include("partials/footer") -%>
+      <div class="footer-bottom">
+        <p>&copy; 2024 NoteVault. All rights reserved.</p>
+      </div>
+    </footer>
+  
+    <%- include("partials/footer") -%>
