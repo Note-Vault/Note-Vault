@@ -6,6 +6,7 @@ import { config as configDotenv } from "dotenv"; // Use config method from doten
 import userRoutes from './routes/user.js';
 import staticRoutes from './routes/staticRoutes.js';
 import NotebookRoutes from './routes/notebook.js';
+import passwordRoutes from './routes/password.js';
 
 configDotenv();
 configDotenv({ path: ".env" });
@@ -37,6 +38,7 @@ app.use(express.static("public"));
 app.use('/',staticRoutes);
 app.use('/',userRoutes);
 app.use('/',NotebookRoutes);
+app.use('/', passwordRoutes);
 
 // Start the server
 app.listen(port, () => {

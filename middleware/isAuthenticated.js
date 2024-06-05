@@ -19,6 +19,8 @@ const isAuthenticated = (req, res, next) => {
           req.userID = userId;
           req.userNAME = curr_user.name;
           console.log(req.userNAME);
+          req.userEMAIL = curr_user.email;
+          console.log(req.userEMAIL);
           next();
         } else {
           // res.send("Internal server error")
