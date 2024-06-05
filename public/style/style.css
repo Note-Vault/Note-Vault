@@ -355,8 +355,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
   right: 0;
   bottom: 0;
   background-color: transparent;
-  transition: 0.4s;
-  transition: 0.4s;
+  transition: 0.5s;
+  transition: 0.5s;
   border-radius: 34px;
   display: flex;
   justify-content: center;
@@ -365,15 +365,15 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 .slider-icon {
   position: relative;
   /* top: 10px; */
-  font-size: 24px;
+  font-size: 25px;
   color: #fff;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   /* padding : 5px; */
 }
 
 .sun {
   /* left: 5px; */
-  opacity: 1;
+  opacity: 2;
 }
 
 .moon {
