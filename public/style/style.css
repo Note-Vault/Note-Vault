@@ -1311,3 +1311,33 @@ body::-webkit-scrollbar-thumb {
     /* Change font color to black */
   }
 }
+
+.fixed-nav {
+  background-color: rgba(255, 93, 93, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+}
+
+.text-white {
+  color: black !important;
+}
+
+.navbar a {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-shadow: 0 0 10px #bbb;
+  background-color: black;
+}
