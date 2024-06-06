@@ -21,5 +21,8 @@ router.get("/", isAuthenticatedlogin, (req, res) => {
     // res.send('Welcome to the NoteVault');
     res.render("home");
 });
+router.get("/pro",(req,res)=>{
+    res.render("pricing");
+})
 
 export default router;
