@@ -1,5 +1,21 @@
 <%- include("partials/header") -%>
-
+<style>
+	/* .btn{
+		background-color: #ff4c68;
+		color: white;
+	}
+	.btn:hover{
+		background-color: #f83b57;
+        color: white;
+	} */
+	.color{
+		color: #176fa5;
+	}
+	.form-control:focus {
+    border: none;
+    box-shadow: none;
+}
+</style>
 <section class="login">
 	<div class="container-log">
 		<!-- Dark mode toggle switch with custom sun and moon icons -->
@@ -13,7 +29,7 @@
 				</span>
 			</label>
 		</div>
-		<img class="auth-bg w-half img-fluid" src="/image/signin.jpg" alt="login" />
+		<img class="auth-bg w-half img-fluid " src="/image/login.jpg" alt="login" />
 		<div class="row mt-3 w-half">
 			<h1 class="offset-5 mb-3 text-3xl font-bold pl-4">Login</h1>
 			<div class="col-7 offset-3">
@@ -23,7 +39,7 @@
 				<form method="post" action="/user/login">
 					<div class="loginclass mb-3">
 						<label class="form-label" for="email">Email ID</label>
-						<i class='icon1 bx bxs-envelope' style="font-size: 30px;color:grey"></i>
+						<i class='icon1 bx bxs-envelope color' style="font-size: 30px;"></i>
 						<input
 							type="email"
 							class="form-control"
@@ -36,9 +52,9 @@
 					</div>
 					<div class="loginclass mb-3">
 						<label class="form-label" for="password">Password</label>
-						<i class='icon2 bx bx-lock-alt' style="font-size: 30px;color:grey"></i>
+						<i class='icon2 bx bx-lock-alt color' style="font-size: 30px;"></i>
 						<span id="pswd-toggle1">
-						<i class="pswd-toggle fas fa-eye-slash"></i>
+						<i class="pswd-toggle fas fa-eye-slash mt-1"></i>
 						</span>
 						<input
 							type="password"
@@ -52,23 +68,22 @@
 						
 					</div>
 
-					<button type="submit" class="btn btn-dark login-button mb-3 center" onclick="validateEmail()">
+					<button type="submit" class="btn btn-dark  login-button mb-3 center" onclick="validateEmail()">
 						Login
 					</button>
 				</form>
-				<hr />
-				<div class="mx-auto p-2">Don't have an account?<a href="/user/register">
-						<b>Register</b></a
-					>
+				<!-- <hr /> -->
+				<div class="d-flex justify-content-around">
+						
+				<span>New User? <a href="/user/register" class="fw-bold color">Register</a></span>
+				<span class=""><a href="/forgot-password">Forgot Password</a></span>
+					
 				</div>
-				<br>
-                <div class="mx-auto p-2">
-                    <a href="/forgot-password">
-                        <b>Forgot Password</b>
-                    </a>
-                </div>
-
+				<!-- <br>
+                <div class=" p-2">
 				<span class=" pt-4 pl-[120px]">Go to </span><a style="color: blue" href="/">Home</a>
+                </div> -->
+
 			</div>
 		</div>
 	</div>
