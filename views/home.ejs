@@ -599,9 +599,7 @@
 
   <%- include('faqs') %>
     <!-- Scroll Up button -->
-    <div class="scroll-to-top invisible">
-      <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
+    <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
 
 
     <footer>
@@ -645,7 +643,27 @@
     </div>
   </div>
 </section>
+
 <script>
+//Scroll to top js
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+function handleScroll() {
+  if (window.pageYOffset > 100) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+}
+// Add scroll event listener
+window.addEventListener("scroll", handleScroll);
+// Add click event listener
+scrollToTopBtn.addEventListener("click", scrollToTop);
 
   function openDrawer() {
     console.log("click423")
@@ -670,6 +688,30 @@
   });
 </script>
 <style>
+/*Scroll to top*/
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #00ccff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+.scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
   .Contact-Section {
     background-color: #f8f9fa;
     padding: 50px 0;
