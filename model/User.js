@@ -14,6 +14,14 @@ const userSchema = new Schema({
       type: String,
       required: true,
     },
+    otp:{
+      type:String,
+      default:"000000"
+    },
+    isVerified:{
+      type:Boolean,
+      default:false
+    }
   });
   
 const User =  model("User", userSchema);
