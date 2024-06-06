@@ -111,6 +111,36 @@ To get started, simply clone the repository and open the `terminal` in your code
 - ```bash
     npm start
    ```
+
+
+2. Create new `.env` file and copy contents from `sample.env`
+3. Give any string of your choice in `JWTSECRETKEY` 
+
+## Google Configuration for nodemailer
+To generate App Password in your Google account settings
+1. Go to your Google Account:
+```
+ Visit myaccount.google.com.
+```
+2. Navigate to Security:
+
+-   On the left-hand side, click on "Security".
+
+3. Find "Signing in to Google" Section:
+
+- Under "Signing in to Google", ensure 2-Step Verification is turned on.
+
+4. Generate App Password:
+
+- `Once 2-Step Verification is enabled`, you will see an option for "App passwords".
+If not available search it on top menu.
+- Click on "App passwords".
+You may need to re-enter your Google account password.
+Select the app (e.g., "Mail") and device (e.g., "Windows Computer") for which you need the App Password.
+- Click "Generate".
+A 16-character password will be displayed. Copy this password.
+- paste it in `.env` file as value of `PASS`
+
 ## MongoDB connection:
 
 1. Connect MongoDB Compass:
