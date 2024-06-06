@@ -122,6 +122,39 @@
     }
   }
 
+  footer {
+  position: relative;
+  padding: 50px 0;
+}
+
+#back-to-top-container {
+  position: fixed;
+  background-color: black;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 30px; 
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.circle1 {
+  background-color: #0c7abf; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#back-to-top {
+  width: 40px; 
+  height: 40px; 
+  fill: #0c7abf;
+  transition: fill 0.3s;
+}
+#back-to-top:hover {
+  fill: hsl(203, 98%, 50%); 
+}
 </style>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
@@ -599,8 +632,13 @@
 
   <%- include('faqs') %>
     <!-- Scroll Up button -->
-    <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
-
+    <div id="back-to-top-container">
+    <div class="circle">
+    <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+      <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
+    </svg>
+    </div>
+    </div>
 
     <footer>
       <div class="footer-container">
@@ -646,13 +684,29 @@
 
 <script>
 //Scroll to top js
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById('back-to-top-container');
+
+    function checkButtonVisibility() {
+        if (window.innerWidth > 100 && window.scrollY > 100) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    }
+
+    window.addEventListener('scroll', checkButtonVisibility);
+    window.addEventListener('resize', checkButtonVisibility);
+
+    backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    });
+    checkButtonVisibility();
+});
+
 function handleScroll() {
   if (window.pageYOffset > 100) {
     scrollToTopBtn.classList.add("show");
