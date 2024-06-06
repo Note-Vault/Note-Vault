@@ -1,6 +1,7 @@
 import User from '../model/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { sendVerificationOtp } from './verifyEmail.js';
 
 const register = async (req, res) => {
     console.log(req.body);
@@ -23,7 +24,7 @@ const register = async (req, res) => {
                 });
             }
 
-            // Hash the password
+            const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
             bcrypt.hash(password, 10)
                 .then((hashedPassword) => {
@@ -32,6 +33,7 @@ const register = async (req, res) => {
                         name,
                         email,
                         password: hashedPassword,
+                        otp:otp
                     });
 
                     // Save the user to the database
@@ -40,12 +42,16 @@ const register = async (req, res) => {
                         .then(() => {
                             // Generate JWT token with user ID
                             
-                            const token = jwt.sign({ userId: user._id }, process.env.JWTSECRETKEY);
+                            // const token = jwt.sign({ userId: user._id }, process.env.JWTSECRETKEY);
                      
                             // Set the token as a cookie
-                            res.cookie("token", token, { httpOnly: true });
+                            // res.cookie("token", token, { httpOnly: true });
                             // res.status(201).json({ message: 'User registered successfully' });
-                            res.render("success");
+                            console.log("EMAIL")
+                            console.log(email)
+                            console.log(otp)
+                            sendVerificationOtp(email,otp)
+                            res.render("success", { email,errorMessage:"" });
                         })
                         .catch((error) => {
                             console.error("Error registering user:", error);
@@ -71,6 +77,44 @@ const register = async (req, res) => {
             });
         });
 }
+const verify = async (req, res) => {
+    const {email,otp } = req.body;
+
+    try {
+        // Find the user by ID
+        const user = await User.findOne({email});
+
+        if (!user) {
+            return res.status(404).render("success", {
+                email:email,errorMessage: "User not found",
+            });
+        }
+
+        // Check if the provided OTP matches the stored OTP
+        console.log("OTPS")
+        console.log(user);
+        console.log(otp)
+        if (user.otp == otp) {
+            user.isVerified = true; 
+            user.otp = undefined; 
+            await user.save();
+
+            return res.render("login", {
+                errorMessage: "",
+            });
+        } else {
+            // OTP is incorrect
+            return res.status(400).render("success", {email:email,
+                errorMessage: "Invalid OTP",
+            });
+        }
+    } catch (error) {
+        console.error("Error verifying OTP:", error);
+        return res.status(500).render("success", {email:email,
+            errorMessage: "An error occurred while verifying OTP",
+        });
+    }
+};
 const login = async (req, res) => {
     const { email, password } = req.body;
 
@@ -82,6 +126,9 @@ const login = async (req, res) => {
                 return res.render("login", {
                     errorMessage: "User Not Exist.Register first",
                 });
+            }
+            if(!user.isVerified){
+                res.render("success",{email,errorMessage:""})
             }
 
             // Compare the provided password with the hashed password in the database
@@ -123,4 +170,4 @@ const logout = async (req, res) => {
     res.redirect("/");
 }
 
-export { register, login, logout };
+export { register, login, logout,verify };

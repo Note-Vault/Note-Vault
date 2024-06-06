@@ -1,0 +1,301 @@
+<%- include("partials/header") -%>
+<style>
+    .header {
+        margin-top: 50px;
+        margin-bottom: 75px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .start,
+    .desc {
+        display: flex;
+        justify-content: center;
+    }
+
+    .start {
+        font-size: 60px;
+        font-weight: 600;
+        color: rgb(38, 36, 36);
+        cursor: pointer;
+    }
+
+    .start:hover {
+        text-decoration: underline;
+        animation: pulse 0.5s;
+    }
+
+    .desc {
+        font-size: 20px;
+    }
+
+    .plans {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        justify-content: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .plan1,
+    .plan2,
+    .plan3,
+    .plan4 {
+        padding: 20px;
+        outline: 2px solid rgb(0, 169, 46);
+        color: #000000;
+        box-sizing: border-box;
+        border-radius: 30px;
+        position: relative;
+        animation: slideIn 0.7s ease-in-out;
+        height: 750px;
+    }
+
+    .plan1:hover,
+    .plan2:hover,
+    .plan3:hover,
+    .plan4:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 8px 3px rgb(151, 244, 176);
+        transition: 0.3s ease-in-out;
+    }
+
+    .planHead {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .price {
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    .pricePlan {
+        display: flex;
+        margin-bottom: 7px;
+    }
+
+    .month {
+        margin-left: 5px;
+        position: relative;
+        bottom: -17px;
+    }
+
+    .annual {
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .line {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(233, 231, 229);
+        margin-bottom: 25px;
+    }
+
+    .descrptionPrice {
+        margin-bottom: 25px;
+    }
+
+    .features {
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .empty {
+        width: 100vw;
+        height: 100px;
+    }
+
+    .submit {
+        position: absolute;
+        bottom: 35px;
+        width: calc(100% - 40px);
+        height: 60px;
+        background-color: rgb(0, 169, 46);
+        color: white;
+        font-weight: bold;
+        border-radius: 40px;
+        animation: bounce 1s infinite;
+    }
+
+    .submit:hover {
+        background-color: rgb(17, 143, 61);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .start {
+            font-size: 40px;
+        }
+
+        .desc {
+            font-size: 16px;
+        }
+
+        .price {
+            font-size: 28px;
+        }
+
+        .planHead, .features, .descrptionPrice, .annual {
+            font-size: 18px;
+        }
+
+        .submit {
+            height: 50px;
+            font-size: 14px;
+        }
+        .plan1,.plan2,.plan3,.plan4{
+            height: 900px;
+        }
+    }
+
+</style>
+<div>
+    <div class="header">
+        <div class="start">Start your 7 day free trial today</div>
+        <div class="desc">Elevate your productivity and organization by upgrading to NotesVault Pro.</div>
+    </div>
+    <div class="plans">
+        <div class="plan1">
+            <div class="planHead">FREE</div>
+            <div class="pricePlan">
+                <div class="price"> ₹0</div>
+                <span class="month">/month</span>
+            </div>
+            <div class="annual">&nbsp;</div>
+            <div class="line"></div>
+            <div class="descrptionPrice">Capture ideas and find them quickly</div>
+            <div class="features">Core Features :</div>
+            <div class="points">
+                <ul>
+                    <li>✅ Create up to 50 notes</li>
+                    <li>✅ Create up to 1 notebook</li>
+                    <li>✅ Connect up to 2 devices</li>
+                    <li>✅ 60 MB monthly uploads</li>
+                    <li>✅ 25 MB max. note size</li>
+                    <li>✅ Access to all of NoteVault's top features</li>
+                </ul>
+            </div>
+            <button class="submit">GET STARTED</button>
+        </div>
+        <div class="plan2">
+            <div class="planHead">PERSONAL</div>
+            <div class="pricePlan">
+                <div class="price">₹449</div>
+                <span class="month">/month</span>
+            </div>
+            <div class="annual">Pay ₹3999.00/year</div>
+            <div class="line"></div>
+            <div class="descrptionPrice">Keep home and family on track</div>
+            <div class="features">Everything in Free, plus :</div>
+            <div class="points">
+                <ul>
+                    <li>✅ Create up to 100,000 notes</li>
+                    <li>✅ Create up to 1,000 notebooks</li>
+                    <li>✅ Unlimited connected devices</li>
+                    <li>✅ 10 GB monthly uploads</li>
+                    <li>✅ 200 MB max. note size</li>
+                    <li>✅ Access to advanced tools like image and document search, offline mode, PDF annotation, and
+                        more</li>
+                </ul>
+            </div>
+            <button class="submit"> CHOOSE PERSONAL</button>
+        </div>
+        <div class="plan3">
+            <div class="planHead">PROFESSIONAL</div>
+            <div class="pricePlan">
+                <div class="price"> ₹519</div>
+                <span class="month">/month</span>
+            </div>
+            <div class="annual">Pay ₹5200.00/year</div>
+            <div class="line"></div>
+            <div class="descrptionPrice">Tackle any project, at work or at home</div>
+            <div class="features">Everything in Personal, plus :</div>
+            <div class="points">
+                <ul>
+                    <li>✅ 20 GB monthly uploads</li>
+                    <li>✅ AI Edit & AI-Powered Search</li>
+                </ul>
+            </div>
+            <button class="submit">CHOOSE PROFESSIONAL</button>
+        </div>
+        <div class="plan4">
+            <div class="planHead">TEAMS</div>
+            <div class="pricePlan">
+                <div class="price"> ₹699</div>
+                <span class="month">/month</span>
+            </div>
+            <div class="annual">Pay ₹6990.00/year</div>
+            <div class="line"></div>
+            <div class="descrptionPrice">Collaborate and share among your team</div>
+            <div class="features">Everything in Professional, plus :</div>
+            <div class="points">
+                <ul>
+                    <li>✅ Create up to 500,000 notes</li>
+                    <li>✅ Create up to 10,000 notebooks</li>
+                    <li>✅ 20 GB monthly uploads + 2 GB per user</li>
+                    <li>✅ Shared team spaces</li>
+                    <li>✅ Centralized account administration and user management</li>
+                    <li>✅ Company ownership of all business data</li>
+                </ul>
+            </div>
+            <button class="submit">CHOOSE TEAMS</button>
+        </div>
+    </div>
+    <div class="empty"></div>
+</div>
+<%- include("partials/footer") -%>

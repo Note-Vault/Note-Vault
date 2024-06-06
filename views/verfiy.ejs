@@ -6,7 +6,7 @@
         <% if (errorMessage) { %>
         <p style="color: red; text-align: center;"><%= errorMessage %></p>
         <% } %>
-        <form method="post" action="/user/verify-otp" style="margin-top: 20px;">
+        <form method="post" action="/verify-otp" style="margin-top: 20px;">
             <input type="hidden" name="email" value="<%= email %>">
             <div class="form-group">
                 <label for="otp" style="font-weight: bold;">Enter OTP</label>

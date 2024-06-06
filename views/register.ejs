@@ -22,9 +22,9 @@
 				<% if (errorMessage) { %>
 				<p style="color: red"><%= errorMessage %></p>
 				<% } %>
-				<form method="post" action="/user/register">
+				<form method="post" action="/user/register" id="signupForm">
 					<div class="regclass mb-3">
-						<i class='logo1 bx bx-user' style="font-size:25px;"></i>
+						<i class='logo1 bx bx-user' style="font-size:25px;color: gray;"></i>
 						<label class="form-label" for="name">Name</label>
 						<input
 							type="text"
@@ -39,7 +39,7 @@
 						/>
 					</div>
 					<div class="regclass mb-3">
-						<i class='logo2 bx bx-envelope' style="font-size:25px;"></i>
+						<i class='logo2 bx bx-envelope' style="font-size:25px;color: gray;"></i>
 						<label class="form-label" for="email">Email ID</label>
 						<input
 							type="email"
@@ -53,7 +53,7 @@
 					</div>
 					<div class="regclass mb-3">
 						<div class="regclass">
-						<i class='logo3 bx bx-lock-alt' style="font-size:27px;"></i>
+						<i class='logo3 bx bx-lock-alt' style="font-size:27px;color: gray;"></i>
 						<label class="form-label" for="password">Password</label>
 						<input
 							type="password"
@@ -74,7 +74,7 @@
 						</div>
 					</div>
 
-					<button type="submit" class="btn btn-dark login-button mb-3 center" onclick="validateEmail()">
+					<button type="submit" class="btn btn-dark login-button mb-3 center">
 						Create Account
 					</button>
 				</form>
@@ -93,33 +93,54 @@
 <script>
 	const passwordInput = document.getElementById('password');
 	const passwordToggle = document.getElementById('passwordToggle');
-
 	const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    function validateEmail() {
-        const emailInput = document.getElementById('email').value;
-        if (!emailPattern.test(emailInput)) {
-            alert('Please enter a valid email address (e.g., user@example.com)');
-            return false;
-        }
-        return true;
-    }
-  
-  
-	passwordToggle.addEventListener('click', function () {
-	  const passwordField = this.querySelector('i');
-	  const fieldType =
-		passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-	  passwordInput.setAttribute('type', fieldType);
-  
-	  if (fieldType === 'password') {
-		passwordField.classList.replace('fa-eye', 'fa-eye-slash');
-	  } else {
-		passwordField.classList.replace('fa-eye-slash', 'fa-eye');
-	  }
-	  document.querySelector('form').addEventListener('submit', function (e) {
-        if (!validateEmail()) {
-            e.preventDefault();  // Prevent form submission if email is invalid
-        }
-    });
+	const signupForm = document.getElementById('signupForm');
+
+	function validateEmail() {
+		const emailInput = document.getElementById('email').value;
+		return emailPattern.test(emailInput);
+	}
+
+	function checkEmail() {
+		const email = document.getElementById('email').value;
+		return fetch(`https://disposable.debounce.io/?email=${email}`)
+			.then(response => response.json())
+			.then(data => {
+				if (data.disposable === "true") {
+					alert("Disposable email");
+					return false;
+				} else {
+					return true;
+				}
+			})
+			.catch(error => {
+				console.error('Error:', error);
+				alert("An error occurred while checking the email.");
+				return false;
+			});
+	}
+
+	signupForm.addEventListener('submit', async function (e) {
+		e.preventDefault();
+		if (!validateEmail()) {
+			alert('Please enter a valid email address (e.g., user@example.com)');
+			return;
+		}
+		const isGenuine = await checkEmail();
+		if (isGenuine) {
+			signupForm.submit();
+		}
 	});
-  </script>
+
+	passwordToggle.addEventListener('click', function () {
+		const passwordField = this.querySelector('i');
+		const fieldType = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+		passwordInput.setAttribute('type', fieldType);
+
+		if (fieldType === 'password') {
+			passwordField.classList.replace('fa-eye', 'fa-eye-slash');
+		} else {
+			passwordField.classList.replace('fa-eye-slash', 'fa-eye');
+		}
+	});
+</script>
