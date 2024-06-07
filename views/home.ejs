@@ -809,15 +809,21 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
     </footer>
 
 <script>
+      window.onload = function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' 
+        });
       function hideLoader() {
         const loader = document.querySelector('.loader');
         loader.classList.add('hidden'); 
-        setTimeout(() => {
+        loader.addEventListener('transitionend', function() {
           loader.style.display = 'none'; 
           document.body.style.overflow = 'auto';
-        }, 1000); 
+        }); 
       }
       setTimeout(hideLoader, 3000);
+    }
     </script>
 
   
