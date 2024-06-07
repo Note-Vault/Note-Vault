@@ -26,7 +26,10 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "nodemon": "^3.1.2"
+    "autoprefixer": "^10.4.19",
+    "nodemon": "^3.1.2",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
   },
   "keywords": []
 }
