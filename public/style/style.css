@@ -372,7 +372,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
 
 .sun {
-  /* left: 5px; */
+  right: 30px;
   opacity: 2;
 }
 
