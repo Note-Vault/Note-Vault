@@ -207,6 +207,7 @@
       <div class="col-lg-3 font-weight-bold" style="font-size: 35px; display: flex">
         <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px"/>
         <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
+        <div id = "google_translate_element" class = "ml-3"></div>
       </div>
       <!-- Dark mode toggle switch -->
       <div class="toggle-container col-lg-1">
@@ -273,8 +274,12 @@
       </div>
     </div>
   </div>
-      
-
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
     
 
