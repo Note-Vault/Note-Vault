@@ -1,6 +1,17 @@
 <%- include("partials/header") -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<style>
+	.color{
+		color: #176fa5;
+	}
+	.form-control:focus {
+    border: none;
+    box-shadow: none;
+}
+</style>
 <section class="login">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<div class="container-log">
@@ -14,17 +25,17 @@
 				</span>
 			</label>
 		</div>
-		<img class="auth-bg w-half img-fluid" src="/image/signin.jpg" alt="login" />
+		<img class="auth-bg w-half img-fluid" src="/image/login.jpg" alt="login" />
 
 		<div class="row mt-3 w-half">
-			<h1 class="offset-5 mb-3 text-3xl font-bold pl-4">Signup</h1>
+			<h1 class="offset-5 mb-3 text-3xl playfair-display-heading pl-4">Signup</h1>
 			<div class="col-7 offset-3">
 				<% if (errorMessage) { %>
 				<p style="color: red"><%= errorMessage %></p>
 				<% } %>
 				<form method="post" action="/user/register" id="signupForm">
 					<div class="regclass mb-3">
-						<i class='logo1 bx bx-user' style="font-size:25px;color: gray;"></i>
+						<i class='logo1 bx bx-user color' style="font-size:25px"></i>
 						<label class="form-label" for="name">Name</label>
 						<input
 							type="text"
@@ -39,7 +50,7 @@
 						/>
 					</div>
 					<div class="regclass mb-3">
-						<i class='logo2 bx bx-envelope' style="font-size:25px;color: gray;"></i>
+						<i class='logo2 bx bx-envelope color' style="font-size:25px;"></i>
 						<label class="form-label" for="email">Email ID</label>
 						<input
 							type="email"
@@ -53,7 +64,7 @@
 					</div>
 					<div class="regclass mb-3">
 						<div class="regclass">
-						<i class='logo3 bx bx-lock-alt' style="font-size:27px;color: gray;"></i>
+						<i class='logo3 bx bx-lock-alt color' style="font-size:27px;"></i>
 						<label class="form-label" for="password">Password</label>
 						<input
 							type="password"
@@ -78,11 +89,9 @@
 						Create Account
 					</button>
 				</form>
-				<hr />
-				<div class="mx-auto p-2">Already have an account?
-					<a href="/user/login"><b>Login</b></a>
+				<div class="mx-auto">Already have an account?
+					<a href="/user/login" class="fw-bold color">Login</a>
 				</div>
-				<span class=" pt-4 pl-[120px]">Go to </span><a style="color: blue" href="/">Home</a>
 			</div>
 		</div>
 	</div>
