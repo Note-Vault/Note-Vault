@@ -80,6 +80,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
+  padding: 10px;
 }
 
 .navbar a:hover {
@@ -267,16 +268,6 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
   left: 1%;
 }
 
-.toggle-container {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.container-fluid {
-  height: 98vh;
-}
 
 .why_notevault .fa-solid {
   font-size: 4vmax;
@@ -712,17 +703,15 @@ footer {
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 1200px;
-  margin: auto;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  width: 100vw;
   justify-content: space-around;
   max-width: 1200px;
-  margin: auto;
   padding: 20px;
+  gap: 20px;
+  margin: auto;
 }
 
 .footer-section {
@@ -818,10 +807,9 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #f0f0f0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #f0f0f0;
+  
 }
 
 .a_heading {
@@ -868,7 +856,7 @@ body::-webkit-scrollbar-thumb {
 
 .about {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -1327,7 +1315,10 @@ body::-webkit-scrollbar-thumb {
   z-index: 1000;
   color: black;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 5px 0;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .text-white {
@@ -1335,7 +1326,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar a {
-  color: black;
+  color: white;
   font-size: 16px;
   font-weight: 600;
 }
@@ -1343,10 +1334,9 @@ body::-webkit-scrollbar-thumb {
 .navbar a:hover {
   text-decoration: underline;
   color: white;
-  border: 2px solid black;
   border-radius: 10px;
   text-shadow: 0 0 10px #bbb;
-  background-color: black;
+  background-color:  #db2f2f;
 }
 
 .loader {
@@ -1536,4 +1526,9 @@ body::-webkit-scrollbar-thumb {
   95%, 100% {
     transform: rotateY(0deg);
   }
+}
+.links{
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
 }
