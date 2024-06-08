@@ -77,201 +77,218 @@
       transition: background-color 0.3s;
     }
 
-  
-  .side-drawer {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: -250px;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-  }
 
-  .side-drawer a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .side-drawer a:hover {
-    color: #f1f1f1;
-  }
-
-  .side-drawer .close-btn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-
-  .open-drawer {
-    width: 250px;
-  }
-
-  @media (min-width: 992px) {
     .side-drawer {
-      display: none;
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: -250px;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
     }
-  }
 
-  footer {
-  position: relative;
-  padding: 50px 0;
-}
+    .side-drawer a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
 
-#back-to-top-container {
-  position: fixed;
-  background-color: black;
-  border-radius: 50%;
-  bottom: 20px;
-  right: 30px; 
-  cursor: pointer;
-  z-index: 1000;
-}
+    .side-drawer a:hover {
+      color: #f1f1f1;
+    }
 
-.circle1 {
-  background-color: #0c7abf; 
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s;
-}
+    .side-drawer .close-btn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-#back-to-top {
-  width: 40px; 
-  height: 40px; 
-  fill: #0c7abf;
-  transition: fill 0.3s;
-}
-#back-to-top:hover {
-  fill: hsl(203, 98%, 50%); 
-}
-</style>
-<script src="https://cdn.lordicon.com/lordicon.js"></script>
+    .open-drawer {
+      width: 250px;
+    }
 
-<div class="loader">
-  <div>
-    <ul>
-      <li>
-        <svg fill="currentColor" viewBox="0 0 90 120">
-          <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-        </svg>
-      </li>
-      <li>
-        <svg fill="currentColor" viewBox="0 0 90 120">
-          <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-        </svg>
-      </li>
-      <li>
-        <svg fill="currentColor" viewBox="0 0 90 120">
-          <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-        </svg>
-      </li>
-      <li>
-        <svg fill="currentColor" viewBox="0 0 90 120">
-          <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-        </svg>
-      </li>
-      <li>
-        <svg fill="currentColor" viewBox="0 0 90 120">
-          <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-        </svg>
-      </li>
-      <li>
-        <svg fill="currentColor" viewBox="0 0 90 120">
-          <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-        </svg>
-      </li>
-    </ul>
-  </div><span>Loading...</span></div>
+    @media (min-width: 992px) {
+      .side-drawer {
+        display: none;
+      }
+    }
 
-<section id="title">
-  <!-- container row column -->
-  <div class="container-fluid  pt-5">
-    <div class="row align-items-center fixed-nav ">
-      <!-- NoteVault logo and title -->
-      <div class="col-lg-3 font-weight-bold" style="font-size: 35px; display: flex">
-        <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px"/>
-        <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
-      </div>
-      <!-- Dark mode toggle switch -->
-      <div class="toggle-container col-lg-1">
-        <label class="switch">
-          <input type="checkbox" id="modeToggle" />
-          <span class="slider round">
-            <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
-            <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
-          </span>
-        </label>
-      </div>
+    footer {
+      position: relative;
+      padding: 50px 0;
+    }
 
-      <!-- Links -->
-      <div class="col-lg-2 px-1 d-none d-lg-block">
-        <div class="navbar text-center">
-          <a href="#why-us" class="text-decoration-none">
-            <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
-            Why Us
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 px-1 d-none d-lg-block">
-        <div class="navbar text-center">
-          <a href="#aboutus" class="text-decoration-none">
-            <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
-            About Us
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 px-1 d-none d-lg-block">
-        <div class="navbar text-center">
-          <a href="#testimonials" class="text-decoration-none">
-            <i class="fa-solid fa-users" style="color: #ffffff"></i>
-            Testimonials
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-1 px-1 d-none d-lg-block">
-        <div class="navbar text-center">
-          <a href="/pro" class="text-decoration-none">
-            <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
-            Go Pro!
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-1 px-1 d-none d-lg-block">
-        <div class="navbar text-center">
-          <a href="/user/login" class="text-decoration-none">
-            <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
-            Login
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-1 px-1 d-none d-lg-block">
-        <div class="navbar text-center">
-          <a href="/user/register" class="text-decoration-none">
-            <i class="fa-solid fa-registered" style="color: #ffffff"></i>
-            Register
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4 text-right d-lg-none">
-        <button class="btn btn-primary" onclick="openDrawer()">Menu</button>
-      </div>
-    </div>
+    #back-to-top-container {
+      position: fixed;
+      background-color: black;
+      border-radius: 50%;
+      bottom: 20px;
+      right: 30px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .circle1 {
+      background-color: #0c7abf;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+
+    #back-to-top {
+      width: 40px;
+      height: 40px;
+      fill: #0c7abf;
+      transition: fill 0.3s;
+    }
+
+    #back-to-top:hover {
+      fill: hsl(203, 98%, 50%);
+    }
+  </style>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+  <div class="loader">
+    <div>
+      <ul>
+        <li>
+          <svg fill="currentColor" viewBox="0 0 90 120">
+            <path
+              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+            </path>
+          </svg>
+        </li>
+        <li>
+          <svg fill="currentColor" viewBox="0 0 90 120">
+            <path
+              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+            </path>
+          </svg>
+        </li>
+        <li>
+          <svg fill="currentColor" viewBox="0 0 90 120">
+            <path
+              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+            </path>
+          </svg>
+        </li>
+        <li>
+          <svg fill="currentColor" viewBox="0 0 90 120">
+            <path
+              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+            </path>
+          </svg>
+        </li>
+        <li>
+          <svg fill="currentColor" viewBox="0 0 90 120">
+            <path
+              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+            </path>
+          </svg>
+        </li>
+        <li>
+          <svg fill="currentColor" viewBox="0 0 90 120">
+            <path
+              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+            </path>
+          </svg>
+        </li>
+      </ul>
+    </div><span>Loading...</span>
   </div>
-      
+
+  <section id="title">
+    <!-- container row column -->
+    <div class="container-fluid  pt-5">
+      <div class="row align-items-center fixed-nav">
+        <!-- NoteVault logo and title -->
+        <div class="col-lg-3 font-weight-bold ms-3" style="font-size: 35px; display: flex">
+          <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px" />
+          <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
+        </div>
+
+
+        <!-- Links -->
+        <div class="links">
+          <div class="px-1 d-none d-lg-block w-fit">
+            <div class="navbar text-center">
+              <a href="#why-us" class="text-decoration-none">
+                <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+                Why Us
+              </a>
+            </div>
+          </div>
+          <div class="px-1 d-none d-lg-block">
+            <div class="navbar text-center">
+              <a href="#aboutus" class="text-decoration-none">
+                <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
+                About Us
+              </a>
+            </div>
+          </div>
+          <div class="px-1 d-none d-lg-block">
+            <div class="navbar text-center">
+              <a href="#testimonials" class="text-decoration-none">
+                <i class="fa-solid fa-users" style="color: #ffffff"></i>
+                Testimonials
+              </a>
+            </div>
+          </div>
+          <div class="px-1 d-none d-lg-block">
+            <div class="navbar text-center">
+              <a href="/pro" class="text-decoration-none">
+                <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
+                Go Pro!
+              </a>
+            </div>
+          </div>
+          <div class="px-1 d-none d-lg-block">
+            <div class="navbar text-center">
+              <a href="/user/login" class="text-decoration-none">
+                <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
+                Login
+              </a>
+            </div>
+          </div>
+          <div class="px-1 d-none d-lg-block">
+            <div class="navbar text-center">
+              <a href="/user/register" class="text-decoration-none">
+                <i class="fa-solid fa-registered" style="color: #ffffff"></i>
+                Register
+              </a>
+            </div>
+          </div>
+          <div class="text-right d-lg-none">
+            <button class="btn btn-primary" onclick="openDrawer()">Menu</button>
+          </div>
+          <!-- Dark mode toggle switch -->
+          <div class="toggle-container col-lg-1">
+            <label class="switch">
+              <input type="checkbox" id="modeToggle" />
+              <span class="slider round">
+                <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
+                <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     </div>
-    
+
 
     <div id="myDrawer" class="side-drawer">
       <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">X</a>
@@ -282,28 +299,30 @@
       <a href="/user/register">Register</a>
     </div>
 
-    
 
-    <div class="row hero-margin align-items-center" id="why-us">
+
+    <div class="row hero-margin items-center h-screen box-border" id="why-us">
       <div class="col-lg-8 hero-margin ">
-        <p class="font-hero hero-text">
-          Keep your <span class="text-green">thoughts</span>,<br> <span class="text-yellow"> ideas</span>, and important information in one secure place.
+        <p class="font-hero hero-text text-5xl leading-loose">
+          Keep your <span class="text-green-700">thoughts</span>,<br> <span class="text-amber-400"> ideas</span>, and
+          important
+          information in one secure place.
 
-            <lord-icon src="https://cdn.lordicon.com/svsiboke.json" class="t" trigger="hover" stroke="light"
-              colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347"
-              style="width: 5vw; height: 5vw"></lord-icon>
+          <lord-icon src="https://cdn.lordicon.com/svsiboke.json" class="t" trigger="hover" stroke="light"
+            colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347"
+            style="width: 5vw; height: 5vw"></lord-icon>
 
-            <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" class="t" trigger="hover"
-              style="width: 5vw; height: 5vw"></lord-icon>
-          </p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <img class="img-fluid "  src="/image/notebook.jpg" alt="notebook" />
-        </div>
+          <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" class="t" trigger="hover"
+            style="width: 5vw; height: 5vw"></lord-icon>
+        </p>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
       </div>
     </div>
+    </div>
 
-    
+
   </section>
 
 
@@ -411,8 +430,8 @@
         Why choose NoteValut?
       </h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
-          <div class="bg-teal-500 text-white rounded-full p-4 mb-4">
+        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 rounded-2xl shadow-md">
+          <div class="bg-teal-500 text-white rounded-full p-4 mb-4 hover:bg-teal-600">
             <svg width="100" height="100" viewBox="0 0 24 24" class="w-8 h-8" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <!-- Lock body -->
@@ -434,8 +453,8 @@
             market trends.
           </p>
         </div>
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out" style="border: 5px solid white">
-          <div class="bg-green-500 text-white rounded-full p-4 mb-4">
+        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 shadow-md rounded-2xl">
+          <div class="bg-green-500 text-white rounded-full p-4 mb-4 hover:bg-green-600">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L15 12l-5.25-5"></path>
@@ -449,8 +468,8 @@
             optimizing budgets.
           </p>
         </div>
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out" style="border: 5px solid white">
-          <div class="bg-yellow-500 text-white rounded-full p-4 mb-4">
+        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 shadow-md rounded-2xl">
+          <div class="bg-yellow-500 text-white rounded-full p-4 mb-4 hover:bg-yellow-600">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -466,8 +485,8 @@
             according to Kotler, competitive.
           </p>
         </div>
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out" style="border: 5px solid white  ">
-          <div class="bg-orange-500 text-white rounded-full p-4 mb-4">
+        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 shadow-md rounded-2xl">
+          <div class="bg-orange-500 text-white rounded-full p-4 mb-4 hover:bg-orange-600">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -497,16 +516,19 @@
             <img src="/image/about-sec.png" alt="" />
           </div>
           <div class="a_content" style="font-style: normal; font-family: Poppins; text-align: center;">
-            <h2>NoteVault: Your Note-Taking Powerhouse</h2>
-            <p>
-              Struggling to stay organized and on top of your ever-growing to-do list? Meet NoteVault, your one-stop solution for effortless note-taking and maximized productivity.
+            <h2>NoteVault : Your Note-Taking Powerhouse</h2>
+            <p style="text-align: justify;">
+              Struggling to stay organized and on top of your ever-growing to-do list? Meet NoteVault, your one-stop
+              solution for effortless note-taking and maximized productivity.
             </p>
-            <p>
+            <p style="text-align: justify;">
               Welcome to NoteVault, whether you're a
               student or a professional, NoteVault has everything you need.
             </p>
-            <p>
-              Create, categorize, and find your notes with ease. Keep them up-to-date with quick edits and remove unnecessary ones for a clean workspace. Note Vault secures your notes with encrypted protection, giving you peace of mind. Access your information anytime, anywhere - from your computer, tablet, or smartphone. 
+            <p style="text-align: justify;">
+              Create, categorize, and find your notes with ease. Keep them up-to-date with quick edits and remove
+              unnecessary ones for a clean workspace. Note Vault secures your notes with encrypted protection, giving
+              you peace of mind. Access your information anytime, anywhere - from your computer, tablet, or smartphone.
               <b>Make Note Vault your go-to choice for a powerful note-taking experience.</b>
             </p>
 
@@ -519,7 +541,7 @@
 
   <section class="testimonials" id="testimonials">
     <div class="container text-center">
-      <h2 class="section-title " style="color: pink;">What Our Clients Say</h2>
+      <h2 class="section-title">What Our Clients Say</h2>
     </div>
     <div class="container testimonials-container">
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -528,8 +550,10 @@
             <div class="testimonial-box text-center">
               <!-- <img src="https://img.freepik.com/premium-vector/happy-cute-smile-boy-crossed-arms_97632-1360.jpg" height="100px" width="100px" alt=""> -->
               <div class="img-cont">
-              <img src="https://img.freepik.com/free-photo/smart-business-woman-with-glasses-portrait-isolated-white-wall_231208-8786.jpg" height="200px" width="200px" alt="">
-              <h5 class="test-head">Sarah Johnson</h5>
+                <img
+                  src="https://img.freepik.com/free-photo/smart-business-woman-with-glasses-portrait-isolated-white-wall_231208-8786.jpg"
+                  height="200px" width="200px" alt="">
+                <h5 class="test-head">Sarah Johnson</h5>
               </div>
               <p class="test-role">University Student</p>
               <p class="test-desc">"NoteVault is a game-changer for me. As a student, it helps me stay organized and
@@ -550,9 +574,11 @@
           <div class="carousel-item">
             <div class="testimonial-box text-center">
               <div class="img-cont">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/036/783/072/small_2x/ai-generated-male-lawyer-in-suit-professional-ai-generated-photo.jpg" height="220px" width="220px" alt="">
-                <h5 class="test-head">Mark Jhonson</h5> 
-                </div>
+                <img
+                  src="https://static.vecteezy.com/system/resources/thumbnails/036/783/072/small_2x/ai-generated-male-lawyer-in-suit-professional-ai-generated-photo.jpg"
+                  height="220px" width="220px" alt="">
+                <h5 class="test-head">Mark Jhonson</h5>
+              </div>
               <p class="test-role">Digital Marketer</p>
               <p class="test-desc">"I've been using NoteVault for my personal and professional notes, and it has greatly
                 improved my productivity. The collaboration features are fantastic!"</p>
@@ -572,9 +598,10 @@
           <div class="carousel-item">
             <div class="testimonial-box text-center">
               <div class="img-cont">
-                <img src="https://i.pinimg.com/736x/aa/9e/f0/aa9ef022cdae83df1d96baa6fbbeb380.jpg" height="270px" width="270px" alt="">
+                <img src="https://i.pinimg.com/736x/aa/9e/f0/aa9ef022cdae83df1d96baa6fbbeb380.jpg" height="270px"
+                  width="270px" alt="">
                 <h5 class="test-head">Alina Decluza</h5>
-                </div>
+              </div>
               <p class="test-role">Small Business Owner</p>
               <p class="test-desc">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my
                 devices. Highly recommended for anyone looking for a note-taking solution."</p>
@@ -613,7 +640,6 @@
     .section-title {
       font-size: 2.5em;
       margin-bottom: 30px;
-      color: #5f5f5f;
     }
 
     .testimonials-container {
@@ -642,8 +668,8 @@
       display: inline-block;
     }
 
-    .img-cont img{
-     margin: auto;
+    .img-cont img {
+      margin: auto;
     }
 
     .test-role {
@@ -696,11 +722,13 @@
   <%- include('faqs') %>
     <!-- Scroll Up button -->
     <div id="back-to-top-container">
-    <div class="circle">
-    <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
-      <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
-    </svg>
-    </div>
+      <div class="circle">
+        <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor"
+          class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+          <path
+            d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0" />
+        </svg>
+      </div>
     </div>
 
     <footer>
@@ -709,12 +737,12 @@
           <h3>Company</h3>
           <p>We are committed to delivering the best services to our customers. Your satisfaction is our priority.</p>
         </div>
-        <div class="footer-section links">
+        <div class="footer-section linksFooter">
           <h3>Quick Links</h3>
           <ul>
 
             <li><a href="#title"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#why-us">  <i class="fa-solid fa-circle-question"></i> Why-us?</a></li>
+            <li><a href="#why-us"> <i class="fa-solid fa-circle-question"></i> Why-us?</a></li>
             <li><a href="#aboutus"><i class="fa-solid fa-circle-info"></i> About</a></li>
             <li><a href="#testimonials"><i class="fa-solid fa-users"></i> Clients View</a></li>
 
@@ -741,172 +769,177 @@
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
+      </div>
+      </div>
+      </section>
 
-<script>
-//Scroll to top js
-document.addEventListener("DOMContentLoaded", function () {
-    const backToTopButton = document.getElementById('back-to-top-container');
+      <script>
+        //Scroll to top js
+        document.addEventListener("DOMContentLoaded", function () {
+          const backToTopButton = document.getElementById('back-to-top-container');
 
-    function checkButtonVisibility() {
-        if (window.innerWidth > 100 && window.scrollY > 100) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    }
+          function checkButtonVisibility() {
+            if (window.innerWidth > 100 && window.scrollY > 100) {
+              backToTopButton.style.display = 'block';
+            } else {
+              backToTopButton.style.display = 'none';
+            }
+          }
 
-    window.addEventListener('scroll', checkButtonVisibility);
-    window.addEventListener('resize', checkButtonVisibility);
+          window.addEventListener('scroll', checkButtonVisibility);
+          window.addEventListener('resize', checkButtonVisibility);
 
-    backToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' 
+          backToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+          checkButtonVisibility();
         });
-    });
-    checkButtonVisibility();
-});
 
-function handleScroll() {
-  if (window.pageYOffset > 100) {
-    scrollToTopBtn.classList.add("show");
-  } else {
-    scrollToTopBtn.classList.remove("show");
-  }
-}
-// Add scroll event listener
-window.addEventListener("scroll", handleScroll);
-// Add click event listener
-scrollToTopBtn.addEventListener("click", scrollToTop);
+        function handleScroll() {
+          if (window.pageYOffset > 100) {
+            scrollToTopBtn.classList.add("show");
+          } else {
+            scrollToTopBtn.classList.remove("show");
+          }
+        }
+        // Add scroll event listener
+        window.addEventListener("scroll", handleScroll);
+        // Add click event listener
+        scrollToTopBtn.addEventListener("click", scrollToTop);
 
-  function openDrawer() {
-    console.log("click423")
-    document.getElementById("myDrawer").style.left = "0";
-  }
+        function openDrawer() {
+          console.log("click423")
+          document.getElementById("myDrawer").style.left = "0";
+        }
 
-  function closeDrawer() {
-    console.log("click")
-    document.getElementById("myDrawer").style.left = "-250px";
-  }
-  document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contactForm");
-    const successMessage = document.getElementById("successMessage");
+        function closeDrawer() {
+          console.log("click")
+          document.getElementById("myDrawer").style.left = "-250px";
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("contactForm");
+          const successMessage = document.getElementById("successMessage");
 
-    form.addEventListener("submit", function(event) {
-      event.preventDefault(); 
-      setTimeout(function() {
-        successMessage.style.display = "block";
-        form.reset();
-      }, 1000); 
-    });
-  });
-</script>
-<style>
-/*Scroll to top*/
-.scrollToTopBtn {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
-  background-color: #00ccff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-.scrollToTopBtn.show {
-  opacity: 1;
-  visibility: visible;
-}
-  .Contact-Section {
-    background-color: #f8f9fa;
-    padding: 50px 0;
-  }
-  
-  .c_heading {
-    margin-bottom: 30px;
-  }
-  
-  .c_heading h1 {
-    font-style: normal;
-    font-family: Poppins;
-    font-size: 36px;
-  }
-  
-  .c_content h2 {
-    font-style: normal;
-    font-family: Poppins;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .c_content p {
-    font-family: Poppins;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-  }
-  
-  textarea.form-control {
-    resize: none;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  </style>
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            setTimeout(function () {
+              successMessage.style.display = "block";
+              form.reset();
+            }, 1000);
+          });
+        });
+      </script>
+      <style>
+        /*Scroll to top*/
+        .scrollToTopBtn {
+          position: fixed;
+          bottom: 40px;
+          right: 40px;
+          width: 50px;
+          height: 50px;
+          background-color: #00ccff;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 50px;
+          font-size: 24px;
+          cursor: pointer;
+          transition: opacity 0.3s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 1000;
+        }
 
-<div class="footer-bottom">
-  <p>&copy; 2024 <a href="https://github.com/Note-Vault" target="_blank" style="font-weight: bold; text-decoration: none;">NoteVault</a> | All rights reserved | Made by <a href="https://github.com/Note-Vault" target="_blank" style="font-weight: bold; text-decoration: none;">Note-Vault</a>.</p>
-</div>
+        .scrollToTopBtn.show {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .Contact-Section {
+          background-color: #f8f9fa;
+          padding: 50px 0;
+        }
+
+        .c_heading {
+          margin-bottom: 30px;
+        }
+
+        .c_heading h1 {
+          font-style: normal;
+          font-family: Poppins;
+          font-size: 36px;
+        }
+
+        .c_content h2 {
+          font-style: normal;
+          font-family: Poppins;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+
+        .c_content p {
+          font-family: Poppins;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-control {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ced4da;
+        }
+
+        textarea.form-control {
+          resize: none;
+        }
+
+        .btn-primary {
+          background-color: #007bff;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      </style>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 <a href="https://github.com/Note-Vault" target="_blank"
+            style="font-weight: bold; text-decoration: none;">NoteVault</a> | All rights reserved | Made by <a
+            href="https://github.com/Note-Vault" target="_blank"
+            style="font-weight: bold; text-decoration: none;">Note-Vault</a>.</p>
+      </div>
 
     </footer>
 
-<script>
-      window.onload = function() {
+    <script>
+      window.onload = function () {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' 
+          behavior: 'smooth'
         });
-      function hideLoader() {
-        const loader = document.querySelector('.loader');
-        loader.classList.add('hidden'); 
-        loader.addEventListener('transitionend', function() {
-          loader.style.display = 'none'; 
-          document.body.style.overflow = 'auto';
-        }); 
+        function hideLoader() {
+          const loader = document.querySelector('.loader');
+          loader.classList.add('hidden');
+          loader.addEventListener('transitionend', function () {
+            loader.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          });
+        }
+        setTimeout(hideLoader, 3000);
       }
-      setTimeout(hideLoader, 3000);
-    }
     </script>
 
-  
+
     <%- include("partials/footer") -%>
