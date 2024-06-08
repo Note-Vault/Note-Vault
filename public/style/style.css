@@ -6,9 +6,17 @@ body {
   overflow:hidden;
 
 }
-[data-theme="light"] .vault-card {
-	border-radius: 2rem;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+
+.playfair-display-heading {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+[data-theme="light"] .vault-card{
+border-radius: 2rem;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+
 }
 
 [data-theme="dark"] .vault-card {
@@ -833,23 +841,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 .a_heading h1 {
-	font-size: 3rem;
-	/* Adjusted for responsiveness */
-	color: #000;
-	margin-bottom: 25px;
-	position: relative;
-	font-family: cursive;
-	text-decoration: underline;
+  font-size: 3rem;
+  /* Adjusted for responsiveness */
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
 }
 
-.a_heading h1::after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 4px;
-	display: block;
-	margin: 0 auto;
-}
+/* .a_heading h1::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 16%;
+  height: 4px;
+  display: block;
+  margin-top:0.5rem ;
+  left: 10rem;
+} */
+
 
 .a_container {
 	width: 100%;
