@@ -1,5 +1,10 @@
 <%- include("partials/header") -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <style>
+    
+    
     .testimonials-container {
       max-width: 1000px;
       margin: 0 auto;
@@ -509,7 +514,7 @@
 
   <section class="About-Section" id="aboutus">
     <div class="a_heading">
-      <h1 style="font-style: normal; font-family: Poppins">About NoteVault</h1>
+      <h1 class="playfair-display-heading">About NoteVault</h1>
       <div class="a_container">
         <section class="about">
           <div class="a_image">
@@ -540,8 +545,8 @@
 
 
   <section class="testimonials" id="testimonials">
-    <div class="container text-center">
-      <h2 class="section-title">What Our Clients Say</h2>
+<div class="container  a_heading">
+      <h1 class="section-title playfair-display-heading text-white">What Our Clients Say</h1>
     </div>
     <div class="container testimonials-container">
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -715,9 +720,59 @@
     .test-profile.twitter:hover {
       color: #0c7abf;
     }
+    .form-control:focus {
+    border: none !important;
+    box-shadow: none !important;
+    }
   </style>
 
 
+<div class="a_container">
+  <h1 class="playfair-display-heading text-center mb-4">Contact Us</h1>
+  <section class="about">
+    <div class="a_image">
+      <img src="/image/contact.svg" alt="" />
+    </div>
+    <div class="a_content" style="font-style: normal; font-family: Poppins;">
+      <div class="c_content mt-3" style="font-style: normal; font-family: Poppins">
+        <h2 class="text-center">
+         Our team is happy to assist you. 
+         Fill out the form and we'll be in touch as soon as possible.
+        </h2>
+        <form id="contactForm" action="/submit-contact-form" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required=""></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+        <div id="successMessage" style="color: green; display: none; margin-top:5px">Message sent successfully!</div>
+      </div>
+    
+    </div>
+  </section>
+</div>
+
+
+<section class="Contact-Section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="text-center">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
 
   <%- include('faqs') %>
     <!-- Scroll Up button -->

@@ -4,6 +4,12 @@ body {
   margin: 0;
   overflow:hidden;
 }
+.playfair-display-heading {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 [data-theme="light"] .vault-card{
 border-radius: 2rem;
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
@@ -828,18 +834,18 @@ body::-webkit-scrollbar-thumb {
   color: #000;
   margin-bottom: 25px;
   position: relative;
-  font-family: cursive;
-  text-decoration: underline;
 }
 
-.a_heading h1::after {
+/* .a_heading h1::after {
   content: "";
+  background-color: #000;
   position: absolute;
-  width: 100%;
+  width: 16%;
   height: 4px;
   display: block;
-  margin: 0 auto;
-}
+  margin-top:0.5rem ;
+  left: 10rem;
+} */
 
 .a_container {
   width: 100%;
