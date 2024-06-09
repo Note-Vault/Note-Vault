@@ -717,10 +717,57 @@
       color: #0c7abf;
     }
   </style>
-
-
-
+  <!-- feedback style  -->
+  <style>
+    .small-container {
+        max-width: 200px;
+    }
+    .emoji {
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    .selected {
+        border: 2px solid #007bff;
+        border-radius: 5px;
+    }
+</style>
+  
   <%- include('faqs') %>
+
+  <!-- feedback  -->
+  <section class="feedback" id="feedbackid">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Feedback</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Leave Your Feedback</h5>
+                        <form id="feedbackForm">
+                            <div class="mb-3">
+                                <label for="message" class="form-label">How was your experience?</label>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="emoji selected" data-emoji="😠">😠</span>
+                                    <span class="emoji" data-emoji="😕">😕</span>
+                                    <span class="emoji" data-emoji="😐">😐</span>
+                                    <span class="emoji" data-emoji="🙂">🙂</span>
+                                    <span class="emoji" data-emoji="😄">😄</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Comments:</label>
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Scroll Up button -->
     <div id="back-to-top-container">
       <div class="circle">
@@ -833,6 +880,27 @@
           });
         });
       </script>
+      <!-- feedback js  -->
+      <script>
+        document.querySelectorAll('.emoji').forEach(item => {
+            item.addEventListener('click', event => {
+                document.querySelectorAll('.emoji').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                item.classList.add('selected');
+            });
+        });
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedEmoji = document.querySelector('.emoji.selected').getAttribute('data-emoji');
+            const feedbackMessage = document.getElementById('message').value;
+            console.log('Selected Emoji:', selectedEmoji);
+            console.log('Feedback Message:', feedbackMessage);
+            alert('Feedback submitted successfully!');
+            this.reset();
+        });
+    </script>
       <style>
         /*Scroll to top*/
         .scrollToTopBtn {
