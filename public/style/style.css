@@ -90,7 +90,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
 
 .navbar a:hover {
-	color: rgb(80, 80, 80);
+	color: rgb(39, 38, 38);
 }
 
 .col-lg-8 {
@@ -283,7 +283,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
 
 .container-fluid {
-	height: 98vh;
+	height: 15vh;
 }
 =======
 >>>>>>> main
@@ -367,6 +367,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 .slider {
 	position: absolute;
 	cursor: pointer;
+	margin-top: 10px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -374,7 +375,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 	background-color: transparent;
 	transition: 0.5s;
 	transition: 0.5s;
-	border-radius: 34px;
+	border-radius: 30px;
 	display: flex;
 	justify-content: center;
 }
@@ -382,7 +383,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 .slider-icon {
 	position: relative;
 	/* top: 10px; */
-	font-size: 25px;
+	margin-top: 7px;
+	font-size: 20px;
 	color: #fff;
 	transition: opacity 0.5s ease;
 	/* padding : 5px; */
@@ -404,14 +406,15 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 	content: "";
 	content: "";
 	position: absolute;
-	left: 50%;
+	left: 30%;
 	transform: translateX(-50%);
 	width: 50px;
-	height: 50px;
+	height: 10px;
 	left: 5px;
-	width: 120%;
-	height: 110%;
+	width: 110%;
+	height: 130%;
 	border-radius: 34px;
+	margin-top: 8.5px;
 	background-color: black;
 	transition: background-color 0.4s;
 }
@@ -480,7 +483,7 @@ input:checked + .slider.round .moon {
 }
 
 .note-nav {
-	background-color: #ff4c68;
+	background-color: #292627;
 }
 
 [data-theme="light"] .card {
@@ -926,6 +929,7 @@ body::-webkit-scrollbar-thumb {
 	/* Adjusted for better fit */
 	height: auto;
 	display: block;
+  margin: 0 auto;
 	transition: 0.5s ease;
 }
 
@@ -1437,7 +1441,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .fixed-nav {
-  background-color: rgba(255, 93, 93, 0.9);
+  background-color: rgba(27, 25, 25, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
@@ -1451,7 +1455,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .text-white {
-  color: black !important;
+  color: white !important;
+	text-decoration: underline;
 }
 
 .navbar a {
@@ -1660,5 +1665,5 @@ body::-webkit-scrollbar-thumb:hover {
 .links{
   display: flex;
   flex-direction: row;
-  gap: 45px;
+  gap: 25px;
 }
