@@ -77,16 +77,10 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
 
 .navbar a {
-<<<<<<< scroll
-	font-family: "Poppins", sans-serif;
-	font-weight: 300;
-	font-style: normal;
-=======
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   padding: 10px;
->>>>>>> main
 }
 
 .navbar a:hover {
@@ -274,7 +268,6 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 	left: 1%;
 }
 
-<<<<<<< scroll
 .toggle-container {
 	position: fixed;
 	top: 100px;
@@ -285,8 +278,6 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 .container-fluid {
 	height: 98vh;
 }
-=======
->>>>>>> main
 
 .why_notevault .fa-solid {
 	font-size: 4vmax;
@@ -389,6 +380,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
 
 .sun {
+  right: 30px;
+  opacity: 2;
 	/* left: 5px; */
 	opacity: 2;
 }
@@ -725,7 +718,6 @@ footer {
 }
 
 .footer-container {
-<<<<<<< scroll
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -738,18 +730,6 @@ footer {
 	max-width: 1200px;
 	margin: auto;
 	padding: 20px;
-=======
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  display: flex;
-  width: 100vw;
-  justify-content: space-around;
-  max-width: 1200px;
-  padding: 20px;
-  gap: 20px;
-  margin: auto;
->>>>>>> main
 }
 
 .footer-section {
@@ -836,7 +816,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .About-Section {
-<<<<<<< scroll
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
@@ -846,16 +825,6 @@ body::-webkit-scrollbar-thumb {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	background-color: #f0f0f0;
-=======
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  
->>>>>>> main
 }
 
 .a_heading {
@@ -902,17 +871,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about {
-<<<<<<< scroll
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-=======
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
->>>>>>> main
 }
 
 .a_image {
