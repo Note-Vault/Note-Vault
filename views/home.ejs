@@ -1,333 +1,285 @@
-<%- include("partials/header") -%>
-  <style>
-    .testimonials-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
 
-    .section-title {
-      font-size: 40px;
-      padding-top: 100px;
-      color: rgb(255, 255, 255);
-      /* Change font color to black */
-    }
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="icon" type="image/png" href="/image/logo.png">
+		<title>NoteVault</title>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Kanit:wght@500&family=Lora&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tektur&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="/style/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<style>
+			body{
+				width: 100vw;
+				overflow-x: hidden;
+				
+			}
+		</style>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body></body>
+</html>
+<style>
+  .testimonials-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
+  .section-title {
+    font-size: 40px;
+   padding-top: 100px;
+    color: rgb(255, 255, 255); /* Change font color to black */
+  }
+
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .testimonial-box {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: rgb(247, 247, 247); /* Change font color to black */
+  }
+
+  .test-head {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black; /* Change font color to black */
+  }
+
+  .test-desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black; /* Change font color to black */
+  }
+
+  .test-abt {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .test-profile {
+    font-size: 24px;
+    color: #000;
+    transition: color 0.3s;
+  }
+
+  .test-profile:hover {
+    color: #ee7195;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color:#ee7195;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:#ee7195;
+    border: none;
+    transition: background-color 0.3s;
+  }
+
+  .carousel-indicators .active {
+    background-color: #ee7195;
+  }
+
+  @media (max-width:786px){
     .carousel-inner {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
+    /* Adjust carousel styling for mobile screens */
+    width: 100%; /* Make the carousel width 100% to fit the screen */
+    height: auto; /* Allow the height to adjust automatically */
     }
-
     .testimonial-box {
-      padding: 20px;
-      margin: 20px;
+      padding: 5px;
+      margin: 0px;
       background-color: #f8f9fa;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      color: rgb(247, 247, 247);
-      /* Change font color to black */
+      color: rgb(247, 247, 247); /* Change font color to black */
     }
-
-    .test-head {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: black;
-      /* Change font color to black */
+    .testimonials-container{
+      padding: 0px;
     }
-
-    .test-desc {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: black;
-      /* Change font color to black */
+    .container{
+      padding:0px;
     }
-
-    .test-abt {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
+    .test-desc{
+      padding: 0px 0px;
     }
+  }
 
-    .test-profile {
-      font-size: 24px;
-      color: #000;
-      transition: color 0.3s;
+
+  .fixed-nav{
+    background-color:#333333;
+    position:static;
+    top: 0;
+    left: -10px;
+    width: 100%;     
+    padding: 1em;
+    z-index: 100;
+  }
+  
+
+  .text-green {
+    color: green !important;
+  }
+
+  .text-yellow{
+    color: rgb(255, 200, 0);
+  }
+
+  [data-theme="dark"].hero-text{
+    color: white;
+  }
+   [data-theme="light"].hero-text{
+    color: black;
+  }
+  .font-hero{
+    font-size: 3em;
+  }
+  .hero-margin{
+    margin-top: -3.5em;
+    padding-top: -3.5em;
+  }
+  @media (max-width: 576px) {
+    .fixed-nav{
+      position: static; /* Change to static for smaller screens */
     }
-
-    .test-profile:hover {
-      color: #ee7195;
+    .font-hero{
+      font-size: 1.2em;
+      margin-top: 1rem;
     }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: #ee7195;
-      border-radius: 50%;
-      padding: 10px;
+    .hero-margin{
+      margin-top: 0;
+      padding-top: 0;
     }
+  }
 
-    .carousel-indicators button {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #ee7195;
-      border: none;
-      transition: background-color 0.3s;
-    }
+</style>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
 
+<section id="title">
+  <!-- container row column -->
+  <div class="container-fluid  pt-5">
+    <div class="row m-1 align-items-center fixed-nav ">
+      <!-- NoteVault logo and title -->
+      <div class="col-lg-3 font-weight-bold" style="font-size: 35px; display: flex">
+        <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px"/>
+        <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
+      </div>
+      <!-- Dark mode toggle switch -->
+      <div class="toggle-container col-lg-1">
+        <label class="switch">
+          <input type="checkbox" id="modeToggle" />
+          <span class="slider round">
+            <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
+            <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
+          </span>
+        </label>
+      </div>
 
-    .side-drawer {
-      height: 100%;
-      width: 250px;
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      left: -250px;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 60px;
-    }
-
-    .side-drawer a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .side-drawer a:hover {
-      color: #f1f1f1;
-    }
-
-    .side-drawer .close-btn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-
-    .open-drawer {
-      width: 250px;
-    }
-
-    @media (min-width: 992px) {
-      .side-drawer {
-        display: none;
-      }
-    }
-
-    footer {
-      position: relative;
-      padding: 50px 0;
-    }
-
-    #back-to-top-container {
-      position: fixed;
-      background-color: black;
-      border-radius: 50%;
-      bottom: 20px;
-      right: 30px;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .circle1 {
-      background-color: #0c7abf;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s;
-    }
-
-    #back-to-top {
-      width: 40px;
-      height: 40px;
-      fill: #0c7abf;
-      transition: fill 0.3s;
-    }
-
-    #back-to-top:hover {
-      fill: hsl(203, 98%, 50%);
-    }
-  </style>
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-
-  <div class="loader">
-    <div>
-      <ul>
-        <li>
-          <svg fill="currentColor" viewBox="0 0 90 120">
-            <path
-              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
-            </path>
-          </svg>
-        </li>
-        <li>
-          <svg fill="currentColor" viewBox="0 0 90 120">
-            <path
-              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
-            </path>
-          </svg>
-        </li>
-        <li>
-          <svg fill="currentColor" viewBox="0 0 90 120">
-            <path
-              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
-            </path>
-          </svg>
-        </li>
-        <li>
-          <svg fill="currentColor" viewBox="0 0 90 120">
-            <path
-              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
-            </path>
-          </svg>
-        </li>
-        <li>
-          <svg fill="currentColor" viewBox="0 0 90 120">
-            <path
-              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
-            </path>
-          </svg>
-        </li>
-        <li>
-          <svg fill="currentColor" viewBox="0 0 90 120">
-            <path
-              d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
-            </path>
-          </svg>
-        </li>
-      </ul>
-    </div><span>Loading...</span>
-  </div>
-
-  <section id="title">
-    <!-- container row column -->
-    <div class="container-fluid  pt-5">
-      <div class="row align-items-center fixed-nav">
-        <!-- NoteVault logo and title -->
-        <div class="col-lg-3 font-weight-bold ms-3" style="font-size: 35px; display: flex">
-          <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px" />
-          <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
+      <!-- Links -->
+      <div class="col-lg-2 px-1, d-flex">
+        <div class="navbar text-center">
+          <a href="#why-us" class="text-decoration-none">
+            <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+            Why Us
+          </a>
         </div>
-
-
-        <!-- Links -->
-        <div class="links">
-          <div class="px-1 d-none d-lg-block w-fit">
-            <div class="navbar text-center">
-              <a href="#why-us" class="text-decoration-none">
-                <i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
-                Why Us
-              </a>
-            </div>
-          </div>
-          <div class="px-1 d-none d-lg-block">
-            <div class="navbar text-center">
-              <a href="#aboutus" class="text-decoration-none">
-                <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
-                About Us
-              </a>
-            </div>
-          </div>
-          <div class="px-1 d-none d-lg-block">
-            <div class="navbar text-center">
-              <a href="#testimonials" class="text-decoration-none">
-                <i class="fa-solid fa-users" style="color: #ffffff"></i>
-                Testimonials
-              </a>
-            </div>
-          </div>
-          <div class="px-1 d-none d-lg-block">
-            <div class="navbar text-center">
-              <a href="/pro" class="text-decoration-none">
-                <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
-                Go Pro!
-              </a>
-            </div>
-          </div>
-          <div class="px-1 d-none d-lg-block">
-            <div class="navbar text-center">
-              <a href="/user/login" class="text-decoration-none">
-                <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
-                Login
-              </a>
-            </div>
-          </div>
-          <div class="px-1 d-none d-lg-block">
-            <div class="navbar text-center">
-              <a href="/user/register" class="text-decoration-none">
-                <i class="fa-solid fa-registered" style="color: #ffffff"></i>
-                Register
-              </a>
-            </div>
-          </div>
-          <div class="text-right d-lg-none">
-            <button class="btn btn-primary" onclick="openDrawer()">Menu</button>
-          </div>
-          <!-- Dark mode toggle switch -->
-          <div class="toggle-container col-lg-1">
-            <label class="switch">
-              <input type="checkbox" id="modeToggle" />
-              <span class="slider round">
-                <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
-                <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
-              </span>
-            </label>
-          </div>
+      </div>
+      <div class="col-lg-2 px-1">
+        <div class="navbar text-center">
+          <a href="#aboutus" class="text-decoration-none">
+            <i class="fa-solid fa-address-card" style="color: #ffffff"></i>
+            About Us
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-2 px-1">
+        <div class="navbar text-center">
+          <a href="#testimonials" class="text-decoration-none">
+            <i class="fa-solid fa-users" style="color: #ffffff"></i>
+            Testimonials
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-1 px-1">
+        <div class="navbar text-center">
+          <a href="/user/login" class="text-decoration-none">
+            <i class="fa-solid fa-right-to-bracket" style="color: #ffffff"></i>
+            Login
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-1 px-1">
+        <div class="navbar text-center">
+          <a href="/user/register" class="text-decoration-none">
+            <i class="fa-solid fa-registered" style="color: #ffffff"></i>
+            Register
+          </a>
         </div>
       </div>
     </div>
 
-
-    </div>
-
-
-    <div id="myDrawer" class="side-drawer">
-      <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">X</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#aboutus">About Us</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="/user/login">Login</a>
-      <a href="/user/register">Register</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-
-
-    <div class="row hero-margin items-center h-screen box-border" id="why-us">
+    <div class="row hero-margin align-items-center ">
       <div class="col-lg-8 hero-margin ">
-        <p class="font-hero hero-text text-5xl leading-loose">
-          Keep your <span class="text-green-700">thoughts</span>,<br> <span class="text-amber-400"> ideas</span>, and
-          important
-          information in one secure place.
+        <p class="font-hero hero-text">
+          Keep your <span class="text-green">thoughts</span>,<br> <span class="text-yellow"> ideas</span>, and important information in one secure place.
 
-          <lord-icon src="https://cdn.lordicon.com/svsiboke.json" class="t" trigger="hover" stroke="light"
-            colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347"
-            style="width: 5vw; height: 5vw"></lord-icon>
+          <lord-icon src="https://cdn.lordicon.com/svsiboke.json" trigger="hover" stroke="light" colors="primary:#121331,secondary:#ffffff,tertiary:#8930e8,quaternary:#66a1ee,quinary:#f4dc9c,senary:#3a3347" style="width: 65px; height: 65px"></lord-icon>
 
-          <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" class="t" trigger="hover"
-            style="width: 5vw; height: 5vw"></lord-icon>
+          <lord-icon src="https://cdn.lordicon.com/zfzufhzk.json" trigger="hover" style="width: 65px; height: 65px"></lord-icon>
         </p>
       </div>
-      <div class="col-lg-4 col-sm-6">
+      <div class="col-lg-4">
         <img class="img-fluid" src="/image/notebook.jpg" alt="notebook" />
       </div>
     </div>
-    </div>
+  </div>
+</section>
 
 
-  </section>
-
-
-  <!-- <section class="features p-5">
+<!-- <section class="features p-5">
   <div class="container-fluid">
     <div class="row">
       <div
@@ -425,522 +377,680 @@
     </div>
   </div>
 </section> -->
-  <section class="font-sans">
-    <div class="max-w-3xl mx-auto mt-12 p-6 rounded-lg">
-      <h1 class="text-4xl font-bold text-center mb-8">
-        Why choose NoteValut?
-      </h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 rounded-2xl shadow-md">
-          <div class="bg-teal-500 text-white rounded-full p-4 mb-4 hover:bg-teal-600">
-            <svg width="100" height="100" viewBox="0 0 24 24" class="w-8 h-8" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <!-- Lock body -->
-              <path
-                d="M17 11H7C5.895 11 5 11.895 5 13V19C5 20.105 5.895 21 7 21H17C18.105 21 19 20.105 19 19V13C19 11.895 18.105 11 17 11Z"
-                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <!-- Lock shackle -->
-              <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="white" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <!-- Keyhole -->
-              <circle cx="12" cy="16" r="1" fill="white" />
-            </svg>
-          </div class="border">
-          <h2 class="text-xl font-semibold">
-            Safe
-          </h2>
-          <p class="text-center">
-            The concept of marketing support product range, regardless of the cost
-            market trends.
-          </p>
-        </div>
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 shadow-md rounded-2xl">
-          <div class="bg-green-500 text-white rounded-full p-4 mb-4 hover:bg-green-600">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L15 12l-5.25-5"></path>
-            </svg>
-          </div>
-          <h2 class="text-xl font-semibold">
-            Fast
-          </h2>
-          <p class="text-center">
-            Business plan elegantly transforms sublimated pool of loyal editions,
-            optimizing budgets.
-          </p>
-        </div>
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 shadow-md rounded-2xl">
-          <div class="bg-yellow-500 text-white rounded-full p-4 mb-4 hover:bg-yellow-600">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17 9V5a3 3 0 00-3-3H6a3 3 0 00-3 3v14a3 3 0 003 3h8a3 3 0 003-3v-4"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6M9 11h6"></path>
-            </svg>
-          </div>
-          <h2 class="text-xl font-semibold">
-            Low Fee
-          </h2>
-          <p class="text-center">
-            Sponsorship, summing these examples, it is doable. SWOT-analysis,
-            according to Kotler, competitive.
-          </p>
-        </div>
-        <div class="p-4 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out border-2 shadow-md rounded-2xl">
-          <div class="bg-orange-500 text-white rounded-full p-4 mb-4 hover:bg-orange-600">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 14s1.5-2 4-2 4 2 4 2M9 8h.01M15 8h.01M19 4h-1.586a2 2 0 00-1.414.586L15 6H9L7.414 4.586A2 2 0 006 4H4a2 2 0 00-2 2v12a2 2 0 002 2h15a2 2 0 002-2V6a2 2 0 00-2-2z">
-              </path>
-            </svg>
-          </div>
-          <h2 class="text-xl font-semibold">
-            Quick Support
-          </h2>
-          <p class="text-center">
-            The fact that the advertising platform changes the method of studying
-            the market.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="About-Section" id="aboutus">
-    <div class="a_heading">
-      <h1 style="font-style: normal; font-family: Poppins">About NoteVault</h1>
-      <div class="a_container">
-        <section class="about">
-          <div class="a_image">
-            <img src="/image/about-sec.png" alt="" />
-          </div>
-          <div class="a_content" style="font-style: normal; font-family: Poppins; text-align: center;">
-            <h2>NoteVault : Your Note-Taking Powerhouse</h2>
-            <p style="text-align: justify;">
-              Struggling to stay organized and on top of your ever-growing to-do list? Meet NoteVault, your one-stop
-              solution for effortless note-taking and maximized productivity.
-            </p>
-            <p style="text-align: justify;">
-              Welcome to NoteVault, whether you're a
-              student or a professional, NoteVault has everything you need.
-            </p>
-            <p style="text-align: justify;">
-              Create, categorize, and find your notes with ease. Keep them up-to-date with quick edits and remove
-              unnecessary ones for a clean workspace. Note Vault secures your notes with encrypted protection, giving
-              you peace of mind. Access your information anytime, anywhere - from your computer, tablet, or smartphone.
-              <b>Make Note Vault your go-to choice for a powerful note-taking experience.</b>
-            </p>
-
-          </div>
-        </section>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="testimonials" id="testimonials">
-    <div class="container text-center">
-      <h2 class="section-title">What Our Clients Say</h2>
-    </div>
-    <div class="container testimonials-container">
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="testimonial-box text-center">
-              <!-- <img src="https://img.freepik.com/premium-vector/happy-cute-smile-boy-crossed-arms_97632-1360.jpg" height="100px" width="100px" alt=""> -->
-              <div class="img-cont">
-                <img
-                  src="https://img.freepik.com/free-photo/smart-business-woman-with-glasses-portrait-isolated-white-wall_231208-8786.jpg"
-                  height="200px" width="200px" alt="">
-                <h5 class="test-head">Sarah Johnson</h5>
-              </div>
-              <p class="test-role">University Student</p>
-              <p class="test-desc">"NoteVault is a game-changer for me. As a student, it helps me stay organized and
-                never miss important information. Thank you!"</p>
-              <div class="test-abt">
-                <a href="https://linkedin.com/" target="_blank">
-                  <i class="fab fa-linkedin test-profile"></i>
-                </a>
-                <a href="https://github.com/" target="_blank">
-                  <i class="fab fa-github test-profile"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                  <i class="fab fa-twitter test-profile"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-box text-center">
-              <div class="img-cont">
-                <img
-                  src="https://static.vecteezy.com/system/resources/thumbnails/036/783/072/small_2x/ai-generated-male-lawyer-in-suit-professional-ai-generated-photo.jpg"
-                  height="220px" width="220px" alt="">
-                <h5 class="test-head">Mark Jhonson</h5>
-              </div>
-              <p class="test-role">Digital Marketer</p>
-              <p class="test-desc">"I've been using NoteVault for my personal and professional notes, and it has greatly
-                improved my productivity. The collaboration features are fantastic!"</p>
-              <div class="test-abt">
-                <a href="https://linkedin.com/" target="_blank">
-                  <i class="fab fa-linkedin test-profile"></i>
-                </a>
-                <a href="https://github.com/" target="_blank">
-                  <i class="fab fa-github test-profile"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                  <i class="fab fa-twitter test-profile"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-box text-center">
-              <div class="img-cont">
-                <img src="https://i.pinimg.com/736x/aa/9e/f0/aa9ef022cdae83df1d96baa6fbbeb380.jpg" height="270px"
-                  width="270px" alt="">
-                <h5 class="test-head">Alina Decluza</h5>
-              </div>
-              <p class="test-role">Small Business Owner</p>
-              <p class="test-desc">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my
-                devices. Highly recommended for anyone looking for a note-taking solution."</p>
-              <div class="test-abt">
-                <a href="https://linkedin.com/" target="_blank">
-                  <i class="fab fa-linkedin test-profile"></i>
-                </a>
-                <a href="https://github.com/" target="_blank">
-                  <i class="fab fa-github test-profile"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                  <i class="fab fa-twitter test-profile"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .testimonials {
-      padding: 50px 0;
-      background-color: #f9f9f9;
-    }
-
-    .section-title {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-    }
-
-    .testimonials-container {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .testimonial-box {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .testimonial-box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .test-head {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: inline-block;
-    }
-
-    .img-cont img {
-      margin: auto;
-    }
-
-    .test-role {
-      font-size: 1em;
-      color: #777;
-      margin-bottom: 15px;
-    }
-
-    .test-desc {
-      font-size: 1em;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .test-abt {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .test-profile {
-      font-size: 1.5em;
-      color: #0077b5;
-      transition: color 0.3s;
-    }
-
-    .test-profile:hover {
-      color: #005582;
-    }
-
-    .test-profile.github {
-      color: #333;
-    }
-
-    .test-profile.github:hover {
-      color: #24292e;
-    }
-
-    .test-profile.twitter {
-      color: #1da1f2;
-    }
-
-    .test-profile.twitter:hover {
-      color: #0c7abf;
-    }
-  </style>
-
-
-
-  <%- include('faqs') %>
-    <!-- Scroll Up button -->
-    <div id="back-to-top-container">
-      <div class="circle">
-        <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor"
-          class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
-          <path
-            d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0" />
+<section class="font-sans" id="why-us">
+  <div
+    class="max-w-3xl mx-auto mt-12 p-6 rounded-lg"
+  >
+    <h1
+      class="text-4xl font-bold text-center mb-8"
+    >
+      Why choose NoteValut?
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
+        <div class="bg-teal-500 text-white rounded-full p-4 mb-4">
+          <svg width="100" height="100" viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Lock body -->
+            <path d="M17 11H7C5.895 11 5 11.895 5 13V19C5 20.105 5.895 21 7 21H17C18.105 21 19 20.105 19 19V13C19 11.895 18.105 11 17 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Lock shackle -->
+            <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Keyhole -->
+            <circle cx="12" cy="16" r="1" fill="white"/>
         </svg>
+        </div class="border border-2">
+        <h2 class="text-xl font-semibold">
+          Safe
+        </h2>
+        <p class="text-center">
+          The concept of marketing support product range, regardless of the cost
+          market trends.
+        </p>
+      </div>
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
+        <div class="bg-green-500 text-white rounded-full p-4 mb-4">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.75 17L15 12l-5.25-5"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-semibold">
+          Fast
+        </h2>
+        <p class="text-center">
+          Business plan elegantly transforms sublimated pool of loyal editions,
+          optimizing budgets.
+        </p>
+      </div>
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white">
+        <div class="bg-yellow-500 text-white rounded-full p-4 mb-4">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 9V5a3 3 0 00-3-3H6a3 3 0 00-3 3v14a3 3 0 003 3h8a3 3 0 003-3v-4"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 17h6M9 11h6"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-semibold">
+          Low Fee
+        </h2>
+        <p class="text-center">
+          Sponsorship, summing these examples, it is doable. SWOT-analysis,
+          according to Kotler, competitive.
+        </p>
+      </div>
+      <div class="p-4 flex flex-col items-center" style="border: 5px solid white  ">
+        <div class="bg-orange-500 text-white rounded-full p-4 mb-4">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 14s1.5-2 4-2 4 2 4 2M9 8h.01M15 8h.01M19 4h-1.586a2 2 0 00-1.414.586L15 6H9L7.414 4.586A2 2 0 006 4H4a2 2 0 00-2 2v12a2 2 0 002 2h15a2 2 0 002-2V6a2 2 0 00-2-2z"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-semibold">
+          Quick Support
+        </h2>
+        <p class="text-center">
+          The fact that the advertising platform changes the method of studying
+          the market.
+        </p>
       </div>
     </div>
+  </div>
+</section>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section about">
-          <h3>Company</h3>
-          <p>We are committed to delivering the best services to our customers. Your satisfaction is our priority.</p>
-        </div>
-        <div class="footer-section linksFooter">
-          <h3>Quick Links</h3>
-          <ul>
 
-            <li><a href="#title"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#why-us"> <i class="fa-solid fa-circle-question"></i> Why-us?</a></li>
-            <li><a href="#aboutus"><i class="fa-solid fa-circle-info"></i> About</a></li>
-            <li><a href="#testimonials"><i class="fa-solid fa-users"></i> Clients View</a></li>
-            <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
-          </ul>
+<section class="About-Section" id="aboutus">
+  <div class="a_heading">
+    <h1 style="font-style: normal; font-family: Poppins">About this Website</h1>
+    <div class="a_container">
+      <section class="about">
+        <div class="a_image">
+          <img src="/image/about-sec.png" alt="" />
         </div>
-        <div class="footer-section contact">
-          <h3>Contact Us</h3>
-          <p>Email: companyname@gamail.com</p>
-          <p>Phone: +91 **********</p>
+        <div class="a_content" style="font-style: normal; font-family: Poppins">
+          <h2>NoteVault: Your Ultimate Note-Taking Solution</h2>
+          <p>
+            Welcome to NoteVault, the perfect platform for enhancing your
+            productivity and organizing your notes efficiently. Whether you're a
+            student or a professional, NoteVault has everything you need.
+          </p>
+          <p>
+            Note Vault lets you easily create, categorize, and search your
+            notes. Edit anytime to keep them current, delete unneeded notes for
+            a clutter-free workspace, and enjoy secure, encrypted protection.
+            Access your notes from any device—computer, tablet, or smartphone.
+            Choose Note Vault for the ultimate note-taking solution.
+          </p>
+          <p>Join NoteVault now and transform your note-taking!</p>
         </div>
-        <div class="footer-section social">
-          <h3>Follow Us</h3>
-          <div class="test-abt">
-            <a href="https://linkedin.com/" target="_blank">
-              <i class="fa-brands fa-linkedin test-profile"></i>
-            </a>
-            <a href="https://github.com/" target="_blank">
-              <i class="fa-brands fa-github test-profile"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <i class="fa-brands fa-x-twitter test-profile"></i>
-            </a>
+      </section>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials" id="testimonials">
+  <div class="container text-center">
+    <h2 class="section-title">What Our Clients Say</h2>
+  </div>
+  <div class="container testimonials-container">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial-box">
+            <h6 class="test-head">Sarah Johnson | University Student</h6>
+            <p class="test-desc" style="padding: 0%;">"NoteVault is a game-changer for me. As a student, it helps me stay organized and never miss important information. Thank you!"</p>
+
+            <div class="test-abt">
+              <a href="https://linkedin.com/" target="_blank">
+                <i class="fab fa-linkedin test-profile"></i>
+              </a>
+              <a href="https://github.com/" target="_blank">
+                <i class="fab fa-github test-profile"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter test-profile"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+        <div class="testimonial-box">
+            <h6 class="test-head">Mark Roberts | Digital Marketer</h6>
+            <p class="test-desc" style="padding: 0%;">"I've been using NoteVault for my personal and professional notes, and it has greatly improved my productivity. The collaboration features are fantastic!"</p>
+
+            <div class="test-abt">
+              <a href="https://linkedin.com/" target="_blank">
+                <i class="fab fa-linkedin test-profile"></i>
+              </a>
+              <a href="https://github.com/" target="_blank">
+                <i class="fab fa-github test-profile"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter test-profile"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-box">
+            <h6 class="test-head">Laura Thompson | Small Business Owner</h6>
+            <p class="test-desc" style="padding: 0%;">"NoteVault has simplified my life. It's intuitive, reliable, and accessible on all my devices. Highly recommended for anyone looking for a note-taking solution."</p>
+
+            <div class="test-abt">
+              <a href="https://linkedin.com/" target="_blank">
+                <i class="fab fa-linkedin test-profile"></i>
+              </a>
+              <a href="https://github.com/" target="_blank">
+                <i class="fab fa-github test-profile"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter test-profile"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
 
+<style>
+.testimonials {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #5f5f5f;
+}
+
+.testimonials-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.test-head {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.test-role {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.test-desc {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.test-abt {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.test-profile {
+  font-size: 1.5em;
+  color: #0077b5;
+  transition: color 0.3s;
+}
+
+.test-profile:hover {
+  color: #005582;
+}
+
+.test-profile.github {
+  color: #333;
+}
+
+.test-profile.github:hover {
+  color: #24292e;
+}
+
+.test-profile.twitter {
+  color: #1da1f2;
+}
+
+.test-profile.twitter:hover {
+  color: #0c7abf;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us Section</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  .Contact-Section {
+    padding: 50px 0;
+  }
+  .Contact-Section h1, .Contact-Section h2, .Contact-Section p, .Contact-Section label {
+    color: var(--text-color);
+  }
+  .Contact-Section {
+    background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .form-control {
+    background-color: var(--form-background-color);
+    color: var(--form-text-color);
+    border: 1px solid var(--form-border-color);
+  }
+  .form-control::placeholder {
+    color: var(--form-placeholder-color);
+  }
+  .btn-primary {
+    background-color: var(--btn-background-color);
+    border-color: var(--btn-border-color);
+  }
+  .btn-primary:hover {
+    background-color: var(--btn-hover-background-color);
+    border-color: var(--btn-hover-border-color);
+  }
+  /* Light mode variables */
+  :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --form-background-color: #ffffff;
+    --form-text-color: #000000;
+    --form-border-color: #ced4da;
+    --form-placeholder-color: #6c757d;
+    --btn-background-color: #007bff;
+    --btn-border-color: #007bff;
+    --btn-hover-background-color: #0056b3;
+    --btn-hover-border-color: #0056b3;
+  }
+  /* Dark mode variables */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #333333;
+      --text-color: #ffffff;
+      --form-background-color: #444444;
+      --form-text-color: #ffffff;
+      --form-border-color: #555555;
+      --form-placeholder-color: #aaaaaa;
+      --btn-background-color: #007bff;
+      --btn-border-color: #007bff;
+      --btn-hover-background-color: #0056b3;
+      --btn-hover-border-color: #0056b3;
+    }
+  }
+</style>
+</head>
+<body>
+<section class="Contact-Section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="c_heading text-center">
+          <h1>Contact Us</h1>
+        </div>
       </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="c_content">
+          <h2>Get in Touch</h2>
+          <p>
+            Our team is happy to assist you.
+            Fill out the form and we'll be in touch as soon as possible.
+          </p>
+          <form id="contactForm" action="/submit-contact-form" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <div id="successMessage" style="color: green; display: none; margin-top:5px">Message sent successfully!</div>
+        </div>
       </div>
-      </section>
+    </div>
+  </div>
+</section>
+</body>
+</html>
 
-      <script>
-        //Scroll to top js
-        document.addEventListener("DOMContentLoaded", function () {
-          const backToTopButton = document.getElementById('back-to-top-container');
 
-          function checkButtonVisibility() {
-            if (window.innerWidth > 100 && window.scrollY > 100) {
-              backToTopButton.style.display = 'block';
-            } else {
-              backToTopButton.style.display = 'none';
-            }
-          }
 
-          window.addEventListener('scroll', checkButtonVisibility);
-          window.addEventListener('resize', checkButtonVisibility);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!DOCTYPE ht-
 
-          backToTopButton.addEventListener('click', function () {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          });
-          checkButtonVisibility();
-        });
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="icon" type="image/png" href="/image/logo.png">
+		<title>NoteVault</title>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Kanit:wght@500&family=Lora&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tektur&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="/style/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		
+     />
+		<style>
+			body{
+				width: 100vw;
+				overflow-x: hidden;
+				
+			}
+		</style>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body></body>
+</html>
 
-        function handleScroll() {
-          if (window.pageYOffset > 100) {
-            scrollToTopBtn.classList.add("show");
-          } else {
-            scrollToTopBtn.classList.remove("show");
-          }
-        }
-        // Add scroll event listener
-        window.addEventListener("scroll", handleScroll);
-        // Add click event listener
-        scrollToTopBtn.addEventListener("click", scrollToTop);
+    <div class="max-w-3xl mx-auto mt-12 p-6 rounded-lg shadow-md">
+      <h1 class="text-5xl font-bold text-center font-serif mb-8">FAQs</h1>
+      <p class="" class="text-gray-600 mb-10 text-center">
+        Frequently Asked Questions.<br />Here are some common questions about
+        Note Vault.
+      </p>
 
-        function openDrawer() {
-          console.log("click423")
-          document.getElementById("myDrawer").style.left = "0";
-        }
-
-        function closeDrawer() {
-          console.log("click")
-          document.getElementById("myDrawer").style.left = "-250px";
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-          const form = document.getElementById("contactForm");
-          const successMessage = document.getElementById("successMessage");
-
-          form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            setTimeout(function () {
-              successMessage.style.display = "block";
-              form.reset();
-            }, 1000);
-          });
-        });
-      </script>
-      <style>
-        /*Scroll to top*/
-        .scrollToTopBtn {
-          position: fixed;
-          bottom: 40px;
-          right: 40px;
-          width: 50px;
-          height: 50px;
-          background-color: #00ccff;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 50px;
-          font-size: 24px;
-          cursor: pointer;
-          transition: opacity 0.3s ease-in-out;
-          opacity: 0;
-          visibility: hidden;
-          z-index: 1000;
-        }
-
-        .scrollToTopBtn.show {
-          opacity: 1;
-          visibility: visible;
-        }
-
-        .Contact-Section {
-          background-color: #f8f9fa;
-          padding: 50px 0;
-        }
-
-        .c_heading {
-          margin-bottom: 30px;
-        }
-
-        .c_heading h1 {
-          font-style: normal;
-          font-family: Poppins;
-          font-size: 36px;
-        }
-
-        .c_content h2 {
-          font-style: normal;
-          font-family: Poppins;
-          font-size: 24px;
-          margin-bottom: 20px;
-        }
-
-        .c_content p {
-          font-family: Poppins;
-          font-size: 16px;
-          line-height: 1.6;
-          margin-bottom: 20px;
-        }
-
-        .form-group {
-          margin-bottom: 20px;
-        }
-
-        .form-control {
-          width: 100%;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid #ced4da;
-        }
-
-        textarea.form-control {
-          resize: none;
-        }
-
-        .btn-primary {
-          background-color: #007bff;
-          color: #ffffff;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-      </style>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 <a href="https://github.com/Note-Vault" target="_blank"
-            style="font-weight: bold; text-decoration: none;">NoteVault</a> | All rights reserved | Made by <a
-            href="https://github.com/Note-Vault" target="_blank"
-            style="font-weight: bold; text-decoration: none;">Note-Vault</a>.</p>
+      <div class="divide-y divide-gray-300">
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">What is Note Vault?</h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Note Vault is a secure application for storing and managing your
+              notes safely in one place.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">How do I create a new note?</h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              To create a new note, click on the "New Note" button in your
+              dashboard and start typing your content. Save it once you're done.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">Is my data secure?</h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Yes, Note Vault uses advanced encryption methods to ensure that
+              your data is always secure and private.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">Can I access my notes offline?</h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Currently, Note Vault requires an internet connection to access
+              your notes, but offline access is a feature we are working on.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              How do I share my notes with others?
+            </h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              You can share your notes by clicking the "Share" button and
+              entering the email address of the person you want to share with.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              How do I recover a deleted note?
+            </h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Deleted notes are moved to the "Trash" folder. You can recover a
+              note by going to the Trash folder and restoring it.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              What should I do if I forget my password?
+            </h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              If you forget your password, click on the "Forgot Password" link
+              on the login page and follow the instructions to reset it.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item py-4">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer"
+          >
+            <h5 class="text-lg font-medium">
+              Can I organize my notes into folders?
+            </h5>
+            <span class="text-xl font-bold">+</span>
+          </div>
+          <div class="faq-answer hidden pl-6 mt-2">
+            <p class="">
+              Yes, you can organize your notes into folders for better
+              management. Use the "Create Folder" option to start organizing.
+            </p>
+          </div>
+        </div>
       </div>
-
-    </footer>
-
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Public script file -->
+<script src="https://kit.fontawesome.com/b13b6caa62.js" crossorigin="anonymous"></script>
+<script src="/script/script.js"></script>
+</body>
+</html>
     <script>
-      window.onload = function () {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const answer = item.nextElementSibling;
+          const span = item.querySelector("span");
+          answer.classList.toggle("hidden");
+          span.textContent = span.textContent === "+" ? "−" : "+";
         });
-        function hideLoader() {
-          const loader = document.querySelector('.loader');
-          loader.classList.add('hidden');
-          loader.addEventListener('transitionend', function () {
-            loader.style.display = 'none';
-            document.body.style.overflow = 'auto';
-          });
-        }
-        setTimeout(hideLoader, 3000);
-      }
+      });
     </script>
+  </body>
+</html>
+
+<!-- Scroll Up button -->
+<div class="scroll-to-top invisible">
+  <a href="#title"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
 
 
-    <%- include("partials/footer") -%>
+<footer>
+	<div class="footer-container">
+		<div class="footer-section about">
+			<h3>Company</h3>
+			<p>We are committed to delivering the best services to our customers. Your satisfaction is our priority.</p>
+		</div>
+		<div class="footer-section links">
+			<h3>Quick Links</h3>
+			<ul>
+				<li><a href="#title">Home</a></li>
+				<li><a href="#why-us">Why-us?</a></li>
+				<li><a href="#aboutus">About</a></li>
+				<li><a href="#testimonials">Clients View</a></li>
+			</ul>
+		</div>
+		<div class="footer-section contact">
+			<h3>Contact Us</h3>
+			<p>Email: companyname@gamail.com</p>
+			<p>Phone: +91 **********</p>
+		</div>
+		<div class="footer-section social">
+			<h3>Follow Us</h3>
+			<div class="test-abt">
+				<a href="https://linkedin.com/" target="_blank">
+					<i class="fa-brands fa-linkedin test-profile"></i>
+				</a>
+				<a href="https://github.com/" target="_blank">
+					<i class="fa-brands fa-github test-profile"></i>
+				</a>
+				<a href="https://twitter.com/" target="_blank">
+					<i class="fa-brands fa-x-twitter test-profile"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2024 NoteVault. All rights reserved.</p>
+	</div>
+</footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Public script file -->
+<script src="https://kit.fontawesome.com/b13b6caa62.js" crossorigin="anonymous"></script>
+<script src="/script/script.js"></script>
+</body>
+</html>
