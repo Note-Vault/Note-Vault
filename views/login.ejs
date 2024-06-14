@@ -101,16 +101,18 @@
   
 	Toggle.addEventListener('click', function () 
 	{
-	  const passwordField = this.querySelector('i');
+		const passwordField = this.querySelector('i');
 	  if(passwordInput.getAttribute('type') === 'password'){
 		passwordInput.setAttribute('type','text');
-		passwordField.classList.replace('fa-eye-slash', 'fa-eye');
+		
+		passwordField.classList.replace('fa-eye', 'fa-eye-slash');
 		
 	  } 
 	  else{
 		passwordInput.setAttribute('type','password');
 		
-		passwordField.classList.replace('fa-eye', 'fa-eye-slash');
+		
+		passwordField.classList.replace('fa-eye-slash', 'fa-eye');
 	  }
 	document.querySelector('form').addEventListener('submit', function (e) {
         if (!validateEmail()) {
