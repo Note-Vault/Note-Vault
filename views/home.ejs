@@ -275,48 +275,15 @@
           </a>
 
     .side-drawer {
-      height: 100%;
-      width: 250px;
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      left: -250px;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 60px;
+      display: none;
     }
 
-    .side-drawer a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .side-drawer a:hover {
-      color: #f1f1f1;
-    }
-
-    .side-drawer .close-btn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
+   
 
     .open-drawer {
       width: 250px;
     }
 
-    @media (min-width: 992px) {
-      .side-drawer {
-        display: none;
-      }
-    }
 
     footer {
       position: relative;
@@ -409,14 +376,16 @@
     <div class="container-fluid  pt-5">
       <div class="row align-items-center fixed-nav">
         <!-- NoteVault logo and title -->
-        <div class="col-lg-3 font-weight-bold ms-3" style="font-size: 35px; display: flex">
+        <div class="col-lg-2 font-weight-bold ms-3" style="font-size: 25px; display: flex">
           <img src="image/favicon.png" width="50px" style="border-radius: 25%; height: 50px" />
           <a href="/note/show" class="text-white text-decoration-none ml-2">NoteVault</a>
+          <div class="w-[100px] h-fit flex md:hidden">
+            <button class="p-2 border text-sm ml-5 text-black" onclick="openDrawer()">Menu</button>
+          </div>
         </div>
 
-
         <!-- Links -->
-        <div class="links">
+        <div class="links hidden md:flex gap-1">
           <div class="px-1 d-none d-lg-block w-fit">
             <div class="navbar text-center">
               <a href="#why-us" class="text-decoration-none">
@@ -465,9 +434,6 @@
               </a>
             </div>
           </div>
-          <div class="text-right d-lg-none">
-            <button class="btn btn-primary" onclick="openDrawer()">Menu</button>
-          </div>
           <!-- Dark mode toggle switch -->
           <div class="col-lg-none">
             <label class="switch">
@@ -483,22 +449,17 @@
     </div>
 
 
-    </div>
-
-
-    <div id="myDrawer" class="side-drawer">
+    <div id="myDrawer" class="w-full h-fit mt-5 bg-slate-100 text-white z-50 hidden">
       <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">X</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#aboutus">About Us</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="/user/login">Login</a>
-      <a href="/user/register">Register</a>
-      <a href="#contact">Contact</a>
+      <a href="#why-us"><p class="text-black  ">Why us</p></a>
+      <a href="#aboutus"><p class="text-black">About Us</p></a>
+      <a href="#testimonials"><p class="text-black">Testimonials</p></a>
+      <a href="/user/login"><p class="text-black">Login</p></a>
+      <a href="/user/register"><p class="text-black">Register</p></a>
+      <a href="#contact"><p class="text-black"> Contact</p></a>
     </div>
 
-
-
-    <div class="row hero-margin items-center h-screen box-border" id="why-us">
+    <div class="row hero-margin items-center h-fit box-border" id="why-us">
       <div class="col-lg-8 hero-margin ">
         <p class="font-hero hero-text text-5xl leading-loose">
           Keep your <span class="text-green-700">thoughts</span>,<br> <span class="text-amber-400"> ideas</span>, and
@@ -1056,12 +1017,12 @@
 
         function openDrawer() {
           console.log("click423")
-          document.getElementById("myDrawer").style.left = "0";
+          document.getElementById("myDrawer").style.display = "block";
         }
 
         function closeDrawer() {
           console.log("click")
-          document.getElementById("myDrawer").style.left = "-250px";
+          document.getElementById("myDrawer").style.display = "none";
         }
         document.addEventListener("DOMContentLoaded", function () {
           const form = document.getElementById("contactForm");
